@@ -51,10 +51,7 @@ The refresh is automated by a Python pipeline in `scraper/`:
 
 Run locally with `python -m scraper.run` (needs `pip install -r
 requirements.txt` and an `ANTHROPIC_API_KEY` — env var or a `.env` file at
-the repo root). On GitHub, the **Refresh job board** workflow runs it and
-commits the result; trigger it from the Actions tab (a cron schedule is
-stubbed in `.github/workflows/refresh.yml`, commented out until the cadence
-is settled).
+the repo root).
 
 ## Local preview
 
