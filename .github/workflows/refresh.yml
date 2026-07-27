@@ -1,0 +1,39 @@
+name: Refresh job board
+
+on:
+  workflow_dispatch:  # manual trigger (Actions tab -> Refresh job board -> Run workflow)
+  # Uncomment to put it on a schedule once the pipeline is proven out:
+  # schedule:
+  #   - cron: "0 6 * * 1"   # weekly, Mondays 06:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m scraper.run | tee refresh.log
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add criminology_jobs.csv data.js review.csv
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "$(tail -1 refresh.log)"
+            git push
+          fi
