@@ -9,6 +9,7 @@ import datetime
 import json
 import os
 import re
+import pandas as pd
 
 from . import config, extract, fetch
 
@@ -96,20 +97,20 @@ def scrape(board_counts):
 
 def dedup(rows):
     """Same job on several boards -> one row; merge sources + urls"""
-    merged = {}
-    for row in rows:
-        key = norm_key(row)
-        if key in merged:
-            prior = merged[key]
-            if row["source_site"] not in prior["source_site"].split(", "):
-                prior["source_site"] += ", " + row["source_site"]
-            if row["job_url"] and row["job_url"] not in prior["combined_urls"]:
-                prior["combined_urls"] += ", " + row["job_url"]
-            prior["confidence"] = max(prior["confidence"], row["confidence"])
-        else:
-            row["combined_urls"] = row["job_url"]
-            merged[key] = row
-    return list(merged.values())
+    if not rows:
+        return []
+    df = pd.DataFrame(rows)
+    df["combined_urls"] = df["job_url"]
+    df["confidence"] = df["confidence"].astype(float)
+    df["_key"] = (df["job_title"] + df["institution"]).str.lower().str.replace(r"[^a-z0-9]", "", regex=True)
+    join_unique = lambda values: ", ".join(dict.fromkeys(i for i in values if i))
+    agg = {col: "first" for col in df.columns if col not in ("_key", "source_site", "combined_urls", "confidence")}
+    agg["source_site"] = join_unique
+    agg["combined_urls"] = join_unique
+    agg["confidence"] = "max"
+    merged = df.groupby("_key", sort=False).agg(agg).reset_index(drop=True)
+    merged["confidence"] = merged["confidence"].map(lambda c: f"{c:.2f}")
+    return merged.to_dict("records")
 
 
 def main():
