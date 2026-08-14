@@ -1,10 +1,9 @@
 name: Refresh job board
 
 on:
-  workflow_dispatch:  # manual trigger (Actions tab -> Refresh job board -> Run workflow)
-  # Uncomment to put it on a schedule once the pipeline is proven out:
-  # schedule:
-  #   - cron: "0 6 * * 1"   # weekly, Mondays 06:00 UTC
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, Mondays 06:00 UTC
 
 permissions:
   contents: write

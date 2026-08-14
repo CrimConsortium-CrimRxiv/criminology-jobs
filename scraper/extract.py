@@ -58,22 +58,22 @@ _SEARCH_TOOLS = [
 ]
 
 
-def _call(user_content, tools=None, effort=None):
+def _call(user_content, profile, tools=None):
     """Run one extraction request; returns (job dicts, usage dict)."""
     config.load_env()
-    client = Anthropic()  # reads ANTHROPIC_API_KEY from the environment
+    client = Anthropic()
     messages = [{"role": "user", "content": user_content}]
     usage = {"input": 0, "output": 0, "searches": 0}
+    output_config = {"format": {"type": "json_schema", "schema": _SCHEMA}}
+    if profile.get("effort"):
+        output_config["effort"] = profile["effort"]  # omitted for models like Haiku
     for _ in range(5):  # server-tool turns can pause; resume until finished
         with client.messages.stream(
-            model=config.MODEL,
+            model=profile["model"],
             max_tokens=config.MAX_OUTPUT_TOKENS,
             system=_SYSTEM,
             messages=messages,
-            output_config={
-                "format": {"type": "json_schema", "schema": _SCHEMA},
-                "effort": effort or config.EFFORT,
-            },
+            output_config=output_config,
             **({"tools": tools} if tools else {}),
         ) as stream:
             message = stream.get_final_message()
@@ -101,7 +101,8 @@ def extract_jobs(source_name, text):
         f"(use it to resolve relative dates like 'Posted 4 days ago')\n\n"
         f"job_url must be a URL that actually appears in the text (they are "
         f"inlined in [brackets]); pick the one linking to that job's detail "
-        f"page.\n\nPage text:\n\n{text}"
+        f"page.\n\nPage text:\n\n{text}",
+        config.EXTRACT,
     )  # returns (jobs, usage)
 
 
@@ -129,6 +130,6 @@ def extract_jobs_via_search(source_name, listing_url, expected_count=0):
         f"you actually saw in a fetch or search result — finding fewer than "
         f"expected is acceptable, inventing or padding is not. job_url should "
         f"be the listing's page on the source site.",
+        config.SEARCH,
         tools=_SEARCH_TOOLS,
-        effort=config.SEARCH_EFFORT,
     )  # returns (jobs, usage)

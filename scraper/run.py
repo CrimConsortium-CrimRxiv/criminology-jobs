@@ -64,6 +64,7 @@ def scrape(board_counts):
         try:
             note = ""
             if config.SOURCES[name].get("kind") == "claude_search":
+                profile = config.SEARCH
                 jobs, usage = extract.extract_jobs_via_search(
                     name, config.SOURCES[name]["urls"][0], board_counts.get(name, 0))
                 floor = board_counts.get(name, 0) * config.SEARCH_COUNT_MIN_RATIO
@@ -73,6 +74,7 @@ def scrape(board_counts):
                         f"board currently has {board_counts[name]} from {name} "
                         f"(floor {floor:.0f})")
             else:
+                profile = config.EXTRACT
                 text, note = fetch.fetch_source(name)
                 jobs, usage = extract.extract_jobs(name, text)
             for job in jobs:
@@ -80,8 +82,8 @@ def scrape(board_counts):
                 job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
             rows.extend(jobs)
             ok.append(name)
-            cost = (usage["input"] / 1e6 * config.PRICE_IN_PER_MTOK
-                    + usage["output"] / 1e6 * config.PRICE_OUT_PER_MTOK
+            cost = (usage["input"] / 1e6 * profile["price_in"]
+                    + usage["output"] / 1e6 * profile["price_out"]
                     + usage["searches"] * 0.01)
             total_cost += cost
             searches = f", {usage['searches']} searches" if usage["searches"] else ""
