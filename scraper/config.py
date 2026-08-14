@@ -9,20 +9,12 @@ import os
 CONFIDENCE_PUBLISH = 0.80
 CONFIDENCE_DROP = 0.30
 
+EXTRACT = {"model": "claude-haiku-4-5", "effort": None, "price_in": 1.00, "price_out": 5.00}
+SEARCH = {"model": "claude-sonnet-5", "effort": "high", "price_in": 3.00, "price_out": 15.00}
 # Model parameters
-MODEL = "claude-sonnet-5"
 MAX_OUTPUT_TOKENS = 64000
 MAX_INPUT_CHARS = 300_000
-
-# Define effort levels
-# SEARCH_EFFORT is for Higher Ed Jobs, this source requires a more complex fetch
-EFFORT = "low"
-SEARCH_EFFORT = "high"
 SEARCH_MAX_SEARCHES = 20  # cap on web searches per claude_search
-
-# Approximate prices to estimate API costs per run
-PRICE_IN_PER_MTOK = 3.00
-PRICE_OUT_PER_MTOK = 15.00
 
 # Sanity check for claude_search sources: if results return fewer than X fraction of the jobs the
 # board currently lists from that source, fetch is considered a failure
