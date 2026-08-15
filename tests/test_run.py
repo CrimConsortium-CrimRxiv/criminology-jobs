@@ -1,4 +1,5 @@
 import csv
+import os
 import tempfile
 import unittest
 from contextlib import redirect_stdout
@@ -25,6 +26,17 @@ def job(**overrides):
 
 
 class RunTests(unittest.TestCase):
+    def test_refresh_fails_before_scraping_when_api_key_is_missing(self):
+        with (
+            patch.dict(os.environ, {}, clear=True),
+            patch.object(run.config, "load_env"),
+            patch.object(run, "scrape") as scrape,
+        ):
+            with self.assertRaisesRegex(RuntimeError, "ANTHROPIC_API_KEY is not set"):
+                run.main()
+
+        scrape.assert_not_called()
+
     def test_dedup_combines_sources_urls_and_uses_highest_confidence(self):
         first = job()
         second = job(
@@ -61,6 +73,7 @@ class RunTests(unittest.TestCase):
             )
 
             with (
+                patch.dict(os.environ, {"ANTHROPIC_API_KEY": "test-key"}),
                 patch.object(run, "CSV_PATH", csv_path),
                 patch.object(run, "REVIEW_PATH", review_path),
                 patch.object(run, "DATA_JS_PATH", data_js_path),

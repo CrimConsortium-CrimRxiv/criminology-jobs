@@ -29,6 +29,16 @@ COLUMNS = [
 REVIEW_COLUMNS = COLUMNS[:-3] + ["confidence", "reason", "decision"]
 
 
+def require_api_key():
+    """Load and validate the credential before doing any network or file work."""
+    config.load_env()
+    if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+        raise RuntimeError(
+            "ANTHROPIC_API_KEY is not set. Add it as a GitHub Actions "
+            "repository secret or provide it in the local environment."
+        )
+
+
 def norm_key(row):
     """Match key: normalized title + institution"""
     return re.sub(r"[^a-z0-9]", "", (row["job_title"] + row["institution"]).lower())
@@ -119,7 +129,7 @@ def dedup(rows):
 
 
 def main():
-    config.load_env()
+    require_api_key()
     today = datetime.date.today()
 
     existing = read_csv(CSV_PATH)

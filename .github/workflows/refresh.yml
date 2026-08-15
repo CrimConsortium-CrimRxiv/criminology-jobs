@@ -26,7 +26,9 @@ jobs:
       - name: Run scraper
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m scraper.run | tee refresh.log
+        run: |
+          set -o pipefail
+          python -m scraper.run | tee refresh.log
 
       - name: Commit and push if changed
         run: |
