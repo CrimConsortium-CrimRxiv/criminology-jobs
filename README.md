@@ -42,8 +42,8 @@ The refresh is automated by a Python pipeline in `scraper/`:
    a sanity check against the board's current count so an incomplete search
    can never silently thin the site.
 3. **Merge** — `scraper/run.py` dedups across boards, keeps stable ids for
-   jobs already on the board, and drops jobs no longer listed (jobs from a
-   source that failed to fetch are kept, never silently dropped).
+   jobs already on the board, and adds newly discovered jobs. The published
+   board is append-only: refreshes never automatically remove existing jobs.
 4. **Review** — jobs scoring below the publish threshold land in
    `review.csv` instead of the site. Type `include` or `exclude` in its
    `decision` column; the next run applies the decision. Thresholds, model,

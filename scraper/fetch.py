@@ -31,7 +31,13 @@ def _curl(url):
 
 
 def _blocked(body):
-    return len(body) < 2000 or b"Incapsula" in body or b"_Incapsula_Resource" in body
+    markers = (
+        b"Incapsula",
+        b"_Incapsula_Resource",
+        b"challenges.cloudflare.com",
+        b"<title>Just a moment...</title>",
+    )
+    return len(body) < 2000 or any(marker in body for marker in markers)
 
 
 def _get(url):
@@ -105,6 +111,8 @@ def fetch_source(name):
             body = _get(url)
             texts.append(html_to_text(body.decode("utf-8", errors="ignore"), url))
     text = "\n\n=== NEXT PAGE ===\n\n".join(texts)
+    if len(text.strip()) < 200:
+        raise FetchError(f"extracted page text was empty for {name}")
     note = ""
     if len(text) > config.MAX_INPUT_CHARS:
         text = text[:config.MAX_INPUT_CHARS]

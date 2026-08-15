@@ -53,48 +53,51 @@ def write_csv(path, rows, columns):
 
 
 def scrape(board_counts):
-    """Fetch + extract every source. Returns (rows, ok_sources, failures).
+    """Fetch + extract every source. Returns (rows, failures).
 
     board_counts: how many jobs the board currently lists per source, used for
     preliminary sanity checks
     """
-    rows, ok, failures = [], [], []
+    rows, failures = [], []
     total_cost = 0.0
     for name in config.SOURCES:
+        usage_note = ""
         try:
             note = ""
             if config.SOURCES[name].get("kind") == "claude_search":
                 profile = config.SEARCH
                 jobs, usage = extract.extract_jobs_via_search(
                     name, config.SOURCES[name]["urls"][0], board_counts.get(name, 0))
+            else:
+                profile = config.EXTRACT
+                text, note = fetch.fetch_source(name)
+                jobs, usage = extract.extract_jobs(name, text)
+            cost = (usage["input"] / 1e6 * profile["price_in"]
+                    + usage["output"] / 1e6 * profile["price_out"]
+                    + usage["searches"] * 0.01)
+            total_cost += cost
+            searches = f", {usage['searches']} searches" if usage["searches"] else ""
+            usage_note = (
+                f" ({usage['input']:,} in / {usage['output']:,} out tokens"
+                f"{searches}, ~${cost:.2f})"
+            )
+            if config.SOURCES[name].get("kind") == "claude_search":
                 floor = board_counts.get(name, 0) * config.SEARCH_COUNT_MIN_RATIO
                 if len(jobs) < floor:
                     raise RuntimeError(
                         f"sanity check: search found {len(jobs)} listings but the "
                         f"board currently has {board_counts[name]} from {name} "
                         f"(floor {floor:.0f})")
-            else:
-                profile = config.EXTRACT
-                text, note = fetch.fetch_source(name)
-                jobs, usage = extract.extract_jobs(name, text)
             for job in jobs:
                 job["source_site"] = name
                 job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
             rows.extend(jobs)
-            ok.append(name)
-            cost = (usage["input"] / 1e6 * profile["price_in"]
-                    + usage["output"] / 1e6 * profile["price_out"]
-                    + usage["searches"] * 0.01)
-            total_cost += cost
-            searches = f", {usage['searches']} searches" if usage["searches"] else ""
-            print(f"  {name}: {len(jobs)} listings extracted "
-                  f"({usage['input']:,} in / {usage['output']:,} out tokens{searches}, "
-                  f"~${cost:.2f}) {note}")
+            print(f"  {name}: {len(jobs)} listings extracted{usage_note} {note}")
         except Exception as e:
             failures.append(f"{name}: {e}")
-            print(f"  {name}: FAILED - {e}")
+            print(f"  {name}: FAILED - {e}{usage_note}")
     print(f"API cost this run: ~${total_cost:.2f}")
-    return rows, ok, failures
+    return rows, failures
 
 
 def dedup(rows):
@@ -134,7 +137,7 @@ def main():
             board_counts[source] = board_counts.get(source, 0) + 1
 
     print("Fetching sources...")
-    scraped, ok_sources, failures = scrape(board_counts)
+    scraped, failures = scrape(board_counts)
     scraped = dedup(scraped)
 
     # Index existing rows for matching (by URL, then by normalized title+institution).
@@ -174,16 +177,13 @@ def main():
                 row["confidence"], reason = prior["confidence"], prior.get("reason", reason)
             pending.append({**row, "reason": reason, "decision": ""})
 
-    # Existing rows not seen this run: drop them but only if their sources were actually fetched
-    dropped = 0
+    # The published board is append-only. A missing result can mean a source
+    # changed markup, blocked the fetch, or the model overlooked a listing, so
+    # absence from one refresh is never sufficient evidence to remove a job.
     for row in existing:
         if id(row) in seen_existing:
             continue
-        sources = [s.strip() for s in row["source_site"].split(",")]
-        if all(s in ok_sources for s in sources):
-            dropped += 1
-        else:
-            published.append(row)
+        published.append(row)
 
     published.sort(key=lambda r: (r.get("posted_date", ""), int(r["id"]) if r["id"].isdigit() else 0), reverse=True)
 
@@ -196,7 +196,7 @@ def main():
     if dropped_low:
         print(f"{dropped_low} listings auto-dropped below CONFIDENCE_DROP={config.CONFIDENCE_DROP}")
     n_pending = sum(1 for p in pending if not p["decision"])
-    print(f"Refresh: {today.isoformat()} (+{new_count} new, -{dropped} dropped, {n_pending} pending review)")
+    print(f"Refresh: {today.isoformat()} (+{new_count} new, {n_pending} pending review)")
 
 
 def write_data_js(rows, today):

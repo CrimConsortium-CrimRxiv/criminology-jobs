@@ -19,7 +19,7 @@ fetch  ->  extract  ->  merge/dedup/id  ->  write outputs
 
 | Source | Method |
 |--------|--------|
-| ACJS | Direct fetch (via `curl`) |
+| ACJS | Cloudflare-protected; Claude web search fetches the postings |
 | ASC | Direct fetch |
 | jobs.ac.uk | Direct fetch |
 | TSPA | WordPress AJAX endpoint (returns clean JSON) |
@@ -57,12 +57,16 @@ python -m scraper.run
 ```
 
 The run prints one line per source (listing count + token cost), a total
-cost estimate, and a summary (`+N new, -M dropped, K pending review`). It rewrites
+cost estimate, and a summary (`+N new, K pending review`). It rewrites
 three files at the repo root:
 
 - `criminology_jobs.csv` — the master dataset (existing columns + `confidence`)
 - `data.js` — the data the site reads (`window.JOBS_DATA`)
 - `review.csv` — jobs awaiting a manual include/exclude decision
+
+Published jobs are append-only. A refresh adds new jobs but never removes an
+existing published row merely because it disappeared from a source or was not
+returned by an extraction run.
 
 ## Configuration
 
@@ -70,9 +74,8 @@ three files at the repo root:
 |---------|---------|---------|
 | `CONFIDENCE_PUBLISH` | `0.80` | Auto-publish at/above this score |
 | `CONFIDENCE_DROP` | `0.30` | Auto-discard below this score |
-| `MODEL` | `claude-sonnet-5` | Extraction model |
-| `EFFORT` | `low` | Reasoning effort for direct-fetch sources |
-| `SEARCH_EFFORT` | `high` | Reasoning effort for the HigherEdJobs search (this has trouble below high) |
+| `EXTRACT` | Claude Haiku 4.5, default effort | Model profile for direct-fetch sources |
+| `SEARCH` | Claude Sonnet 5, high effort | Model profile for the HigherEdJobs search |
 | `SEARCH_MAX_SEARCHES` | `20` | Cap on web searches for a search-based source |
 | `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that returns fewer than this fraction of its current board count is treated as a failed fetch |
 | `SOURCES` | — | The five boards, their URLs, and fetch method |

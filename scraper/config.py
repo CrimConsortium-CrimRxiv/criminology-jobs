@@ -3,7 +3,7 @@ import os
 # Confidence thresholds
 # Each entry gets a 0-0.99 confidence score
 # >= CONFIDENCE_PUBLISH -> published
-# < CONFIDENCE_DROP -> dropped silently 
+# < CONFIDENCE_DROP -> dropped silently
 # in between -> written to review.csv for manual decision
 # prelim runs with no lower bound + manual review helped define this lower bound
 CONFIDENCE_PUBLISH = 0.80
@@ -30,10 +30,8 @@ SEARCH_COUNT_MIN_RATIO = 0.5
 #                           listings instead (billed to the same Anthropic key).
 SOURCES = {
     "ACJS": {
-        "urls": [
-            "https://careers.acjs.org/jobs/",
-            "https://careers.acjs.org/jobs/?page=2",
-        ],
+        "urls": ["https://careers.acjs.org/jobs/"],
+        "kind": "claude_search",
     },
     "ASC": {
         "urls": ["https://asc41.org/career-center/position-postings/"],
