@@ -64,6 +64,13 @@ three files at the repo root:
 - `data.js` — the data the site reads (`window.JOBS_DATA`)
 - `review.csv` — jobs awaiting a manual include/exclude decision
 
+It also writes a gitignored `refresh_summary.json`. The GitHub Actions workflow
+uses that summary to email the run date, new jobs grouped by source, pending
+review count, source failures, and existing jobs that were not verified in the
+latest scrape. SMTP configuration uses `SENDER_EMAIL`, `SENDER_PASSWORD`,
+`SENDER_SERVER`, and comma- or semicolon-separated `TO_EMAILS`; Titan defaults
+to SMTP-over-SSL on port 465 (`SENDER_PORT` can override it).
+
 Published jobs are append-only. A refresh adds new jobs but never removes an
 existing published row merely because it disappeared from a source or was not
 returned by an extraction run.

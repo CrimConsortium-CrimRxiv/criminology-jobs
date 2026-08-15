@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
 *.log
+refresh_summary.json
 .env
 __pycache__/

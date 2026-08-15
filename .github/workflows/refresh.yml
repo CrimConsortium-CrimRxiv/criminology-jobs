@@ -51,3 +51,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+
+      - name: Send refresh email
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL || vars.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          SENDER_SERVER: ${{ secrets.SENDER_SERVER || vars.SENDER_SERVER }}
+          TO_EMAILS: ${{ secrets.TO_EMAILS || vars.TO_EMAILS }}
+        run: python -m scraper.email refresh_summary.json

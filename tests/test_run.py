@@ -1,4 +1,5 @@
 import csv
+import json
 import os
 import tempfile
 import threading
@@ -109,6 +110,7 @@ class RunTests(unittest.TestCase):
             csv_path = root / "criminology_jobs.csv"
             review_path = root / "review.csv"
             data_js_path = root / "data.js"
+            summary_path = root / "refresh_summary.json"
             run.write_csv(csv_path, [job()], run.COLUMNS)
 
             new_job = job(
@@ -125,6 +127,7 @@ class RunTests(unittest.TestCase):
                 patch.object(run, "CSV_PATH", csv_path),
                 patch.object(run, "REVIEW_PATH", review_path),
                 patch.object(run, "DATA_JS_PATH", data_js_path),
+                patch.object(run, "SUMMARY_PATH", summary_path),
                 patch.object(run.config, "load_env"),
                 patch.object(run, "scrape", return_value=([new_job], [])),
                 redirect_stdout(StringIO()) as output,
@@ -141,6 +144,13 @@ class RunTests(unittest.TestCase):
             )
             self.assertIn("+1 new, 0 pending review", output.getvalue())
             self.assertNotIn("dropped", output.getvalue())
+            with summary_path.open(encoding="utf-8") as handle:
+                summary = json.load(handle)
+            self.assertEqual([row["job_url"] for row in summary["new_jobs"]], ["https://example.edu/new"])
+            self.assertEqual(
+                [row["job_url"] for row in summary["unverified_jobs"]],
+                ["https://example.edu/existing"],
+            )
 
     def test_failed_search_is_included_in_reported_api_cost(self):
         usage = {"input": 1_000, "output": 100, "searches": 1}

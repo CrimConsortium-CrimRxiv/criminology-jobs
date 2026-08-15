@@ -21,6 +21,7 @@ ROOT = os.path.join(os.path.dirname(__file__), "..")
 CSV_PATH = os.path.join(ROOT, "criminology_jobs.csv")
 DATA_JS_PATH = os.path.join(ROOT, "data.js")
 REVIEW_PATH = os.path.join(ROOT, "review.csv")
+SUMMARY_PATH = os.path.join(ROOT, "refresh_summary.json")
 
 COLUMNS = [
     "source_site", "job_title", "institution", "department_or_school",
@@ -205,6 +206,7 @@ def main():
     max_id = max((int(row["id"]) for row in existing if row["id"].isdigit()), default=0)
 
     published, pending, seen_existing = [], [], set()
+    new_jobs, unverified_jobs = [], []
     new_count = dropped_low = 0
 
     for row in scraped:
@@ -226,6 +228,7 @@ def main():
             max_id += 1
             row["id"] = str(max_id)
             published.append(row)
+            new_jobs.append(row)
             new_count += 1
         elif confidence < config.CONFIDENCE_DROP:
             dropped_low += 1
@@ -243,6 +246,7 @@ def main():
         if id(row) in seen_existing:
             continue
         published.append(row)
+        unverified_jobs.append(row)
 
     published.sort(key=lambda r: (r.get("posted_date", ""), int(r["id"]) if r["id"].isdigit() else 0), reverse=True)
 
@@ -250,12 +254,30 @@ def main():
     write_csv(REVIEW_PATH, pending, REVIEW_COLUMNS)
     write_data_js(published, today)
 
+    n_pending = sum(1 for p in pending if not p["decision"])
+    write_summary({
+        "run_date": today.isoformat(),
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "published_total": len(published),
+        "new_jobs": new_jobs,
+        "verified_existing_count": len(seen_existing),
+        "pending_review_count": n_pending,
+        "dropped_low_confidence_count": dropped_low,
+        "unverified_jobs": unverified_jobs,
+        "source_failures": failures,
+    })
+
     for failure in failures:
         print(f"WARNING: {failure} (its existing jobs were kept)")
     if dropped_low:
         print(f"{dropped_low} listings auto-dropped below CONFIDENCE_DROP={config.CONFIDENCE_DROP}")
-    n_pending = sum(1 for p in pending if not p["decision"])
     print(f"Refresh: {today.isoformat()} (+{new_count} new, {n_pending} pending review)")
+
+
+def write_summary(summary):
+    with open(SUMMARY_PATH, "w", encoding="utf-8", newline="\n") as handle:
+        json.dump(summary, handle, indent=2, ensure_ascii=False)
+        handle.write("\n")
 
 
 def write_data_js(rows, today):

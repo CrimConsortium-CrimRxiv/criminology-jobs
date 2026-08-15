@@ -14,6 +14,11 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("if: steps.publish.outputs.changed == 'true'", WORKFLOW)
         self.assertIn('repos/${GITHUB_REPOSITORY}/pages/builds', WORKFLOW)
 
+    def test_refresh_email_uses_actions_configuration(self):
+        self.assertIn("python -m scraper.email refresh_summary.json", WORKFLOW)
+        for name in ("SENDER_EMAIL", "SENDER_PASSWORD", "SENDER_SERVER", "TO_EMAILS"):
+            self.assertIn(name, WORKFLOW)
+
 
 if __name__ == "__main__":
     unittest.main()
