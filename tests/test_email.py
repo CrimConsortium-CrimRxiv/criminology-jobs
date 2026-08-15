@@ -11,6 +11,7 @@ SUMMARY = {
     "verified_existing_count": 8,
     "pending_review_count": 2,
     "dropped_low_confidence_count": 3,
+    "estimated_api_cost_usd": 0.42,
     "new_jobs": [
         {
             "source_site": "ACJS, ASC",
@@ -49,6 +50,7 @@ class EmailTests(unittest.TestCase):
         self.assertIn("JOBS NOT VERIFIED IN THIS RUN", plain)
         self.assertIn("Existing jobs verified: 8", plain)
         self.assertIn("New results below confidence cutoff: 3", plain)
+        self.assertIn("Estimated Anthropic API cost: $0.42", plain)
         self.assertIn("HigherEdJobs: sanity check failed", plain)
         self.assertIn("https://example.edu/new", html)
 

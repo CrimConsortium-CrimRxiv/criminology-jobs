@@ -126,7 +126,7 @@ def _scrape_source(name, board_count):
 
 
 def scrape(board_counts):
-    """Fetch + extract sources concurrently. Returns (rows, failures).
+    """Fetch + extract sources concurrently. Returns (rows, failures, cost).
 
     board_counts: how many jobs the board currently lists per source, used for
     preliminary sanity checks
@@ -157,7 +157,7 @@ def scrape(board_counts):
         if result.failure:
             failures.append(result.failure)
     print(f"API cost this run: ~${total_cost:.2f}")
-    return rows, failures
+    return rows, failures, total_cost
 
 
 def dedup(rows):
@@ -197,7 +197,7 @@ def main():
             board_counts[source] = board_counts.get(source, 0) + 1
 
     print("Fetching sources...", flush=True)
-    scraped, failures = scrape(board_counts)
+    scraped, failures, total_cost = scrape(board_counts)
     scraped = dedup(scraped)
 
     # Index existing rows for matching (by URL, then by normalized title+institution).
@@ -265,6 +265,7 @@ def main():
         "dropped_low_confidence_count": dropped_low,
         "unverified_jobs": unverified_jobs,
         "source_failures": failures,
+        "estimated_api_cost_usd": total_cost,
     })
 
     for failure in failures:

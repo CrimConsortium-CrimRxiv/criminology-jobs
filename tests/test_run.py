@@ -46,10 +46,11 @@ class RunTests(unittest.TestCase):
             patch.object(run, "_scrape_source", side_effect=fake_scrape_source),
             redirect_stdout(StringIO()),
         ):
-            rows, failures = run.scrape({})
+            rows, failures, cost = run.scrape({})
 
         self.assertEqual(rows, [])
         self.assertEqual(failures, [])
+        self.assertEqual(cost, 0.0)
 
     def test_higher_ed_uses_large_context_profile_without_effort(self):
         usage = {"input": 0, "output": 0, "searches": 0}
@@ -129,7 +130,7 @@ class RunTests(unittest.TestCase):
                 patch.object(run, "DATA_JS_PATH", data_js_path),
                 patch.object(run, "SUMMARY_PATH", summary_path),
                 patch.object(run.config, "load_env"),
-                patch.object(run, "scrape", return_value=([new_job], [])),
+                patch.object(run, "scrape", return_value=([new_job], [], 0.12)),
                 redirect_stdout(StringIO()) as output,
             ):
                 run.main()
@@ -151,6 +152,7 @@ class RunTests(unittest.TestCase):
                 [row["job_url"] for row in summary["unverified_jobs"]],
                 ["https://example.edu/existing"],
             )
+            self.assertEqual(summary["estimated_api_cost_usd"], 0.12)
 
     def test_failed_search_is_included_in_reported_api_cost(self):
         usage = {"input": 1_000, "output": 100, "searches": 1}
@@ -170,13 +172,14 @@ class RunTests(unittest.TestCase):
             ),
             redirect_stdout(StringIO()) as output,
         ):
-            rows, failures = run.scrape({"ProtectedBoard": 8})
+            rows, failures, cost = run.scrape({"ProtectedBoard": 8})
 
         self.assertEqual(rows, [])
         self.assertEqual(len(failures), 1)
         self.assertIn("sanity check", failures[0])
         self.assertIn("1 searches", output.getvalue())
         self.assertIn("API cost this run: ~$0.01", output.getvalue())
+        self.assertGreater(cost, 0.01)
 
 
 if __name__ == "__main__":
