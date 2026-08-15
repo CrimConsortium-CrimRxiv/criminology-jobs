@@ -1,6 +1,7 @@
 import csv
 import os
 import tempfile
+import threading
 import unittest
 from contextlib import redirect_stdout
 from io import StringIO
@@ -26,6 +27,53 @@ def job(**overrides):
 
 
 class RunTests(unittest.TestCase):
+    def test_sources_are_scraped_concurrently_with_bounded_workers(self):
+        sources = {
+            "one": {"urls": ["https://example.edu/one"]},
+            "two": {"urls": ["https://example.edu/two"]},
+            "three": {"urls": ["https://example.edu/three"]},
+        }
+        barrier = threading.Barrier(3)
+
+        def fake_scrape_source(name, board_count):
+            barrier.wait(timeout=1)
+            return run.SourceResult([], None, 0.0, f"  {name}: done")
+
+        with (
+            patch.object(run.config, "SOURCES", sources),
+            patch.object(run.config, "SCRAPE_WORKERS", 3),
+            patch.object(run, "_scrape_source", side_effect=fake_scrape_source),
+            redirect_stdout(StringIO()),
+        ):
+            rows, failures = run.scrape({})
+
+        self.assertEqual(rows, [])
+        self.assertEqual(failures, [])
+
+    def test_higher_ed_uses_large_context_profile_without_effort(self):
+        usage = {"input": 0, "output": 0, "searches": 0}
+
+        with patch.object(
+            run.extract,
+            "extract_jobs_via_search",
+            return_value=([], usage),
+        ) as extraction:
+            result = run._scrape_source("HigherEdJobs", 0)
+
+        self.assertIsNone(result.failure)
+        self.assertIsNone(run.config.SEARCH_LARGE["effort"])
+        self.assertEqual(
+            extraction.call_args.kwargs["profile"],
+            run.config.SEARCH_LARGE,
+        )
+
+    def test_other_sources_use_cheaper_haiku_profile_without_effort(self):
+        self.assertEqual(run.config.EXTRACT["model"], "claude-haiku-4-5")
+        self.assertEqual(run.config.SEARCH["model"], "claude-haiku-4-5")
+        self.assertIsNone(run.config.EXTRACT["effort"])
+        self.assertIsNone(run.config.SEARCH["effort"])
+        self.assertLess(run.config.SEARCH["price_in"], run.config.SEARCH_LARGE["price_in"])
+
     def test_refresh_fails_before_scraping_when_api_key_is_missing(self):
         with (
             patch.dict(os.environ, {}, clear=True),

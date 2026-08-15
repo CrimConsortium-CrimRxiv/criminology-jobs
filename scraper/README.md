@@ -1,6 +1,6 @@
 # scraper/ — automated job-board refresh
 
-Python pipeline that refreshes the criminology jobs board: it collects postings from the sources of interest, uses Anthropic API to extract postings and score each one for relevance, merges the results against the current board, and refreshes the site.
+Python pipeline that refreshes the criminology jobs board: it collects postings from the sources of interest, uses Anthropic API to extract postings and score each one for relevance, merges the results against the current board, and refreshes the site. Independent sources run concurrently with a bounded worker pool.
 
 ## How it works
 
@@ -75,8 +75,10 @@ returned by an extraction run.
 | `CONFIDENCE_PUBLISH` | `0.80` | Auto-publish at/above this score |
 | `CONFIDENCE_DROP` | `0.30` | Auto-discard below this score |
 | `EXTRACT` | Claude Haiku 4.5, default effort | Model profile for direct-fetch sources |
-| `SEARCH` | Claude Sonnet 5, high effort | Model profile for the HigherEdJobs search |
+| `SEARCH` | Claude Haiku 4.5, default effort | Model profile for bot-protected source searches |
+| `SEARCH_LARGE` | Claude Sonnet 5, default effort | Larger-context profile used only for HigherEdJobs |
 | `SEARCH_MAX_SEARCHES` | `20` | Cap on web searches for a search-based source |
+| `SCRAPE_WORKERS` | `3` | Maximum source fetch/extraction calls running concurrently |
 | `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that returns fewer than this fraction of its current board count is treated as a failed fetch |
 | `SOURCES` | — | The five boards, their URLs, and fetch method |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |

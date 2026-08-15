@@ -10,11 +10,13 @@ CONFIDENCE_PUBLISH = 0.80
 CONFIDENCE_DROP = 0.30
 
 EXTRACT = {"model": "claude-haiku-4-5", "effort": None, "price_in": 1.00, "price_out": 5.00}
-SEARCH = {"model": "claude-sonnet-5", "effort": "high", "price_in": 3.00, "price_out": 15.00}
+SEARCH = {"model": "claude-haiku-4-5", "effort": None, "price_in": 1.00, "price_out": 5.00}
+SEARCH_LARGE = {"model": "claude-sonnet-5", "effort": None, "price_in": 3.00, "price_out": 15.00}
 # Model parameters
 MAX_OUTPUT_TOKENS = 64000
 MAX_INPUT_CHARS = 300_000
 SEARCH_MAX_SEARCHES = 20  # cap on web searches per claude_search
+SCRAPE_WORKERS = 3  # bound concurrent source fetch/extraction calls
 
 # Sanity check for claude_search sources: if results return fewer than X fraction of the jobs the
 # board currently lists from that source, fetch is considered a failure
@@ -39,6 +41,7 @@ SOURCES = {
     "HigherEdJobs": {
         "urls": ["https://www.higheredjobs.com/faculty/search.cfm?JobCat=156"],
         "kind": "claude_search",
+        "large_context": True,
     },
     "jobs.ac.uk": {
         "urls": ["https://www.jobs.ac.uk/search/?keywords=criminology"],

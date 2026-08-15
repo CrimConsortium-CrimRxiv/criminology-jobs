@@ -9,6 +9,10 @@ import datetime
 import json
 import os
 import re
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass
+
 import pandas as pd
 
 from . import config, extract, fetch
@@ -27,6 +31,14 @@ COLUMNS = [
     "confidence",
 ]
 REVIEW_COLUMNS = COLUMNS[:-3] + ["confidence", "reason", "decision"]
+
+
+@dataclass
+class SourceResult:
+    rows: list
+    failure: str | None
+    cost: float
+    log: str
 
 
 def require_api_key():
@@ -62,50 +74,87 @@ def write_csv(path, rows, columns):
         writer.writerows({c: row.get(c, "") for c in columns} for row in rows)
 
 
+def _scrape_source(name, board_count):
+    """Fetch and extract one source without mutating shared scraper state."""
+    started = time.monotonic()
+    cost = 0.0
+    usage_note = ""
+    try:
+        note = ""
+        if config.SOURCES[name].get("kind") == "claude_search":
+            profile = (config.SEARCH_LARGE if config.SOURCES[name].get("large_context")
+                       else config.SEARCH)
+            jobs, usage = extract.extract_jobs_via_search(
+                name, config.SOURCES[name]["urls"][0], board_count, profile=profile)
+        else:
+            profile = config.EXTRACT
+            text, note = fetch.fetch_source(name)
+            jobs, usage = extract.extract_jobs(name, text)
+        cost = (usage["input"] / 1e6 * profile["price_in"]
+                + usage["output"] / 1e6 * profile["price_out"]
+                + usage["searches"] * 0.01)
+        searches = f", {usage['searches']} searches" if usage["searches"] else ""
+        usage_note = (
+            f" ({usage['input']:,} in / {usage['output']:,} out tokens"
+            f"{searches}, ~${cost:.2f})"
+        )
+        if config.SOURCES[name].get("kind") == "claude_search":
+            floor = board_count * config.SEARCH_COUNT_MIN_RATIO
+            if len(jobs) < floor:
+                raise RuntimeError(
+                    f"sanity check: search found {len(jobs)} listings but the "
+                    f"board currently has {board_count} from {name} "
+                    f"(floor {floor:.0f})")
+        for job in jobs:
+            job["source_site"] = name
+            job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
+        elapsed = time.monotonic() - started
+        return SourceResult(
+            jobs,
+            None,
+            cost,
+            f"  {name}: {len(jobs)} listings extracted{usage_note} {note} [{elapsed:.1f}s]",
+        )
+    except Exception as error:
+        elapsed = time.monotonic() - started
+        failure = f"{name}: {error}"
+        return SourceResult(
+            [], failure, cost,
+            f"  {name}: FAILED - {error}{usage_note} [{elapsed:.1f}s]",
+        )
+
+
 def scrape(board_counts):
-    """Fetch + extract every source. Returns (rows, failures).
+    """Fetch + extract sources concurrently. Returns (rows, failures).
 
     board_counts: how many jobs the board currently lists per source, used for
     preliminary sanity checks
     """
     rows, failures = [], []
     total_cost = 0.0
-    for name in config.SOURCES:
-        usage_note = ""
-        try:
-            note = ""
-            if config.SOURCES[name].get("kind") == "claude_search":
-                profile = config.SEARCH
-                jobs, usage = extract.extract_jobs_via_search(
-                    name, config.SOURCES[name]["urls"][0], board_counts.get(name, 0))
-            else:
-                profile = config.EXTRACT
-                text, note = fetch.fetch_source(name)
-                jobs, usage = extract.extract_jobs(name, text)
-            cost = (usage["input"] / 1e6 * profile["price_in"]
-                    + usage["output"] / 1e6 * profile["price_out"]
-                    + usage["searches"] * 0.01)
-            total_cost += cost
-            searches = f", {usage['searches']} searches" if usage["searches"] else ""
-            usage_note = (
-                f" ({usage['input']:,} in / {usage['output']:,} out tokens"
-                f"{searches}, ~${cost:.2f})"
-            )
-            if config.SOURCES[name].get("kind") == "claude_search":
-                floor = board_counts.get(name, 0) * config.SEARCH_COUNT_MIN_RATIO
-                if len(jobs) < floor:
-                    raise RuntimeError(
-                        f"sanity check: search found {len(jobs)} listings but the "
-                        f"board currently has {board_counts[name]} from {name} "
-                        f"(floor {floor:.0f})")
-            for job in jobs:
-                job["source_site"] = name
-                job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
-            rows.extend(jobs)
-            print(f"  {name}: {len(jobs)} listings extracted{usage_note} {note}")
-        except Exception as e:
-            failures.append(f"{name}: {e}")
-            print(f"  {name}: FAILED - {e}{usage_note}")
+    source_names = list(config.SOURCES)
+    worker_count = min(config.SCRAPE_WORKERS, len(source_names))
+    print(f"Running {len(source_names)} sources with {worker_count} workers...", flush=True)
+    results = {}
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        futures = {
+            executor.submit(_scrape_source, name, board_counts.get(name, 0)): name
+            for name in source_names
+        }
+        for future in as_completed(futures):
+            name = futures[future]
+            result = future.result()
+            results[name] = result
+            print(result.log, flush=True)
+
+    # Aggregate in configuration order so IDs remain deterministic even though
+    # sources finish in a different order from run to run.
+    for name in source_names:
+        result = results[name]
+        rows.extend(result.rows)
+        total_cost += result.cost
+        if result.failure:
+            failures.append(result.failure)
     print(f"API cost this run: ~${total_cost:.2f}")
     return rows, failures
 
@@ -146,7 +195,7 @@ def main():
             source = source.strip()
             board_counts[source] = board_counts.get(source, 0) + 1
 
-    print("Fetching sources...")
+    print("Fetching sources...", flush=True)
     scraped, failures = scrape(board_counts)
     scraped = dedup(scraped)
 

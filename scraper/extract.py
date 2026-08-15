@@ -53,8 +53,9 @@ values. Dates as YYYY-MM-DD when given.
 
 _SEARCH_TOOLS = [
     {"type": "web_search_20260209", "name": "web_search",
-     "max_uses": config.SEARCH_MAX_SEARCHES},
-    {"type": "web_fetch_20260209", "name": "web_fetch"},
+     "max_uses": config.SEARCH_MAX_SEARCHES, "allowed_callers": ["direct"]},
+    {"type": "web_fetch_20260209", "name": "web_fetch",
+     "allowed_callers": ["direct"]},
 ]
 
 
@@ -106,7 +107,7 @@ def extract_jobs(source_name, text):
     )  # returns (jobs, usage)
 
 
-def extract_jobs_via_search(source_name, listing_url, expected_count=0):
+def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=None):
     """Bot-walled path: Claude's server-side web search/fetch enumerates the
     listings, since the site blocks our own downloads."""
     expectation = (
@@ -130,6 +131,6 @@ def extract_jobs_via_search(source_name, listing_url, expected_count=0):
         f"you actually saw in a fetch or search result — finding fewer than "
         f"expected is acceptable, inventing or padding is not. job_url should "
         f"be the listing's page on the source site.",
-        config.SEARCH,
+        profile or config.SEARCH,
         tools=_SEARCH_TOOLS,
     )  # returns (jobs, usage)

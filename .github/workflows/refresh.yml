@@ -29,7 +29,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -o pipefail
-          python -m scraper.run | tee refresh.log
+          python -u -m scraper.run | tee refresh.log
 
       - name: Commit and push if changed
         id: publish
