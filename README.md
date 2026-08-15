@@ -29,6 +29,30 @@ Postings are aggregated from publicly visible listings only — anything behind 
 
 Postings from [CrimConsortium](https://crimconsortium.com) member institutions are highlighted with an orange rail and "Consortium" pill.
 
+## Automation
+
+The refresh is automated by a Python pipeline in `scraper/`:
+
+1. **Fetch** — `scraper/fetch.py` pulls each board's listing pages (TSPA via
+   its WordPress AJAX endpoint).
+2. **Extract** — `scraper/extract.py` sends the page text to the Claude API,
+   which returns structured rows plus a **confidence score (0–0.99)** that
+   each job fits the coverage rules above. HigherEdJobs blocks direct
+   fetching, so Claude's server-side web search enumerates it instead, with
+   a sanity check against the board's current count so an incomplete search
+   can never silently thin the site.
+3. **Merge** — `scraper/run.py` dedups across boards, keeps stable ids for
+   jobs already on the board, and adds newly discovered jobs. The published
+   board is append-only: refreshes never automatically remove existing jobs.
+4. **Review** — jobs scoring below the publish threshold land in
+   `review.csv` instead of the site. Type `include` or `exclude` in its
+   `decision` column; the next run applies the decision. Thresholds, model,
+   and filter criteria are all in `scraper/config.py`.
+
+Run locally with `python -m scraper.run` (needs `pip install -r
+requirements.txt` and an `ANTHROPIC_API_KEY` — env var or a `.env` file at
+the repo root).
+
 ## Local preview
 
 ```bash
