@@ -300,8 +300,10 @@
     JOBS.forEach(function (j) { if (j.display_country) countries[j.display_country] = true; });
     $("#stat-countries").textContent = Object.keys(countries).length;
     $("#stat-filtered").textContent = filtered.length;
-    var compiledEl = $("#stat-compiled");
-    if (compiledEl) compiledEl.textContent = DATA.compiled || "—";
+    var compiledEls = document.querySelectorAll("[data-compiled-date]");
+    for (var i = 0; i < compiledEls.length; i++) {
+      compiledEls[i].textContent = DATA.compiled || "—";
+    }
   }
 
   // ============================================================
