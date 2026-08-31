@@ -2,7 +2,7 @@
 
 A searchable dashboard of current academic, practitioner, and trust & safety job postings in criminology, criminal justice, and closely related fields.
 
-**Live site:** https://crimconsortium-crimrxiv.github.io/criminology-jobs
+**Live site:** https://jobs.crimconsortium.com/
 
 ## Sources
 
@@ -62,4 +62,4 @@ python3 -m http.server 5000
 
 ## Credits
 
-Built and maintained by [Scott Jacques](https://scottjacques.pubpub.org/) (Georgia State University / [CrimRxiv](https://crimrxiv.com)). Visual design mirrors the [Criminology PhD Faculty Explorer](https://crimconsortium.github.io/criminology-faculty-explorer).
+Built and maintained by [Scott Jacques](https://scottjacques.pubpub.org/) (Georgia State University / [CrimRxiv](https://crimrxiv.com)). Visual design mirrors the [Criminology PhD Faculty Explorer](https://faculty.crimconsortium.com/).
