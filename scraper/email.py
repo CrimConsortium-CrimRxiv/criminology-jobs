@@ -108,7 +108,7 @@ def build_message(summary, sender, recipients, test=False):
         f"New results below confidence cutoff: {dropped_low}",
         f"Existing jobs not verified this run: {len(unverified_jobs)}",
         f"Estimated Anthropic API cost: ${api_cost:.2f}",
-        "Job board: https://crimconsortium.github.io/criminology-jobs/",
+        "Job board: https://crimconsortium-crimrxiv.github.io/criminology-jobs/",
         "",
         "NEW JOBS BY BOARD",
     ]
@@ -152,7 +152,7 @@ def build_message(summary, sender, recipients, test=False):
         f"<strong>New results below confidence cutoff:</strong> {dropped_low}<br>",
         f"<strong>Existing jobs not verified this run:</strong> {len(unverified_jobs)}<br>",
         f"<strong>Estimated Anthropic API cost:</strong> ${api_cost:.2f}<br>",
-        '<a href="https://crimconsortium.github.io/criminology-jobs/">Open the job board</a></p>',
+        '<a href="https://crimconsortium-crimrxiv.github.io/criminology-jobs/">Open the job board</a></p>',
         "<h3>New jobs by board</h3>",
     ]
     if not new_by_source:

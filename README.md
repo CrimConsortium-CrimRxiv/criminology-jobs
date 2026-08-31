@@ -2,7 +2,7 @@
 
 A searchable dashboard of current academic, practitioner, and trust & safety job postings in criminology, criminal justice, and closely related fields.
 
-**Live site:** https://crimconsortium.github.io/criminology-jobs
+**Live site:** https://crimconsortium-crimrxiv.github.io/criminology-jobs
 
 ## Sources
 
