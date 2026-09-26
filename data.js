@@ -369,7 +369,7 @@ window.JOBS_DATA = {
       "id": "881",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -392,7 +392,7 @@ window.JOBS_DATA = {
       "id": "878",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -438,7 +438,7 @@ window.JOBS_DATA = {
       "id": "842",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -645,7 +645,7 @@ window.JOBS_DATA = {
       "id": "815",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -668,7 +668,7 @@ window.JOBS_DATA = {
       "id": "814",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -8261,52 +8261,6 @@ window.JOBS_DATA = {
       "last_probed": "2026-09-26"
     },
     {
-      "source_site": "HigherEdJobs",
-      "job_title": "Visiting Assistant Professor Criminology, Law & Society-Sociology",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Visiting Assistant Professor",
-      "area_specialization": "Criminology, Law & Society",
-      "contract_type": "Visiting/Non-tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-04-07",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179410228",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179410228",
-      "id": "586",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminology",
-      "institution": "Reinhardt University",
-      "department_or_school": "College of Humanities, Sciences, and Technology",
-      "country": "USA",
-      "city_or_region": "Waleska, GA",
-      "rank_type": "Assistant/Associate Professor",
-      "area_specialization": "Criminology, criminal justice, sociology",
-      "contract_type": "Tenure-track, 9-month",
-      "teaching_expectations": "Teach up to 24 contact hours per year, advise students",
-      "research_expectations": "Professional development plan expected",
-      "posted_date": "2026-04-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179409669",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179409669",
-      "id": "555",
-      "consortium_member": "",
-      "confidence": "0.93",
-      "last_probed": ""
-    },
-    {
       "source_site": "ASC",
       "job_title": "Visiting Instructor in Criminal Justice",
       "institution": "Purdue University Fort Wayne",
@@ -8350,168 +8304,7 @@ window.JOBS_DATA = {
       "id": "767",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer-Criminal Justice - 2825",
-      "institution": "The University of North Carolina at Pembroke",
-      "department_or_school": "Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Pembroke, NC",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminology or Criminal Justice",
-      "contract_type": "Full-Time",
-      "teaching_expectations": "Teaching, advising, service",
-      "research_expectations": "",
-      "posted_date": "2026-03-06",
-      "deadline_or_review_date": "Open Until Filled",
-      "salary_currency": "USD",
-      "salary_range": "Commensurate with Education and Experience",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179382733",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179382733",
-      "id": "561",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer In Criminal Justice And Criminology",
-      "institution": "Metropolitan State University of Denver",
-      "department_or_school": "Department of Criminal Justice and Criminology",
-      "country": "USA",
-      "city_or_region": "Denver, CO",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminal Justice, Criminology, Cybersecurity",
-      "contract_type": "Full-time faculty lecturer, potential year-to-year renewal",
-      "teaching_expectations": "5/5 teaching load, intro and advanced CJ/criminology/cybersecurity courses",
-      "research_expectations": "",
-      "posted_date": "2026-03-02",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/details.cfm?JobCode=179378190",
-      "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179378190",
-      "id": "560",
-      "consortium_member": "",
-      "confidence": "0.88",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor-Tenure Track, Criminal Justice & Criminology",
-      "institution": "Washington State University",
-      "department_or_school": "Department of Criminal Justice and Criminology",
-      "country": "USA",
-      "city_or_region": "Pullman, WA",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Gender-based violence; research methods/quantitative data analysis",
-      "contract_type": "Permanent, full-time, nine-month, tenure-track",
-      "teaching_expectations": "Teach in criminal justice and criminology",
-      "research_expectations": "Conduct research on gender-based violence",
-      "posted_date": "2026-02-20",
-      "deadline_or_review_date": "2026-03-23",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179370370",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179370370",
-      "id": "567",
-      "consortium_member": "",
-      "confidence": "0.95",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer Criminal Justice and Criminology",
-      "institution": "Georgia Southern University",
-      "department_or_school": "Criminal Justice and Criminology",
-      "country": "USA",
-      "city_or_region": "Georgia",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminal Justice, Criminology, Cybercrime",
-      "contract_type": "Academic (10-month), non-tenure-track",
-      "teaching_expectations": "Teach combination of courses in CJ/criminology degree programs",
-      "research_expectations": "",
-      "posted_date": "2026-02-19",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/details.cfm?JobCode=179370062",
-      "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179370062",
-      "id": "563",
-      "consortium_member": "",
-      "confidence": "0.88",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer in Criminal Justice and Criminology",
-      "institution": "Norwich University",
-      "department_or_school": "School of Criminology and Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Northfield, VT",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminal Justice and Criminology",
-      "contract_type": "Full-time, renewable",
-      "teaching_expectations": "8 courses/academic year",
-      "research_expectations": "",
-      "posted_date": "2026-02-16",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179366230",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179366230",
-      "id": "596",
-      "consortium_member": "",
-      "confidence": "0.92",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor in Criminal Justice",
-      "institution": "Fairmont State University",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "Fairmont, WV",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-02-12",
-      "deadline_or_review_date": "2026-03-04",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179363452",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179363452",
-      "id": "631",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminal Justice",
-      "institution": "University of Arkansas at Monticello",
-      "department_or_school": "Criminal Justice",
-      "country": "United States",
-      "city_or_region": "Monticello, AR",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Policing, law and legal practice, research methods",
-      "contract_type": "Full-time",
-      "teaching_expectations": "In-person teaching required",
-      "research_expectations": "Interest in undergraduate research",
-      "posted_date": "2026-02-10",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179361233",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179361233",
-      "id": "831",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8534,7 +8327,7 @@ window.JOBS_DATA = {
       "id": "622",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8557,7 +8350,7 @@ window.JOBS_DATA = {
       "id": "619",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8580,7 +8373,7 @@ window.JOBS_DATA = {
       "id": "866",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8603,7 +8396,7 @@ window.JOBS_DATA = {
       "id": "591",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8626,7 +8419,7 @@ window.JOBS_DATA = {
       "id": "853",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
