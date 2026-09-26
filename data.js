@@ -691,7 +691,7 @@ window.JOBS_DATA = {
       "id": "813",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -714,7 +714,7 @@ window.JOBS_DATA = {
       "id": "812",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -737,7 +737,7 @@ window.JOBS_DATA = {
       "id": "811",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -760,7 +760,7 @@ window.JOBS_DATA = {
       "id": "810",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -783,7 +783,7 @@ window.JOBS_DATA = {
       "id": "808",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -8423,98 +8423,6 @@ window.JOBS_DATA = {
     },
     {
       "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor - Criminology & Criminal Justice Program",
-      "institution": "Indiana State University",
-      "department_or_school": "School of Criminology and Security Studies",
-      "country": "US",
-      "city_or_region": "Terre Haute, IN",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology & Criminal Justice",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-01-26",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/state/details.cfm?JobCode=179347710&Title=Assistant+Professor+-+Criminology+%26+Criminal+Justice+Program=",
-      "combined_urls": "https://www.higheredjobs.com/state/details.cfm?JobCode=179347710&Title=Assistant+Professor+-+Criminology+%26+Criminal+Justice+Program=",
-      "id": "779",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer - Criminology",
-      "institution": "University of North Carolina Wilmington",
-      "department_or_school": "Department of Sociology and Criminology",
-      "country": "USA",
-      "city_or_region": "Wilmington, NC",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminology",
-      "contract_type": "Nine-month non-tenure track",
-      "teaching_expectations": "4 courses per semester",
-      "research_expectations": "",
-      "posted_date": "2026-01-23",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/region/details.cfm?JobCode=179348630&Title=Lecturer+-+Criminology",
-      "combined_urls": "https://www.higheredjobs.com/region/details.cfm?JobCode=179348630&Title=Lecturer+-+Criminology",
-      "id": "629",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor, Criminology and Criminal Justice",
-      "institution": "University of Rhode Island",
-      "department_or_school": "Criminology and Criminal Justice Department",
-      "country": "US",
-      "city_or_region": "Kingston, RI",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology and Criminal Justice",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-01-22",
-      "deadline_or_review_date": "2026-03-06",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179346682",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179346682",
-      "id": "777",
-      "consortium_member": "",
-      "confidence": "0.95",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Criminal Justice - Full-Time, Tenure-Track Assistant Professor",
-      "institution": "University of Central Oklahoma",
-      "department_or_school": "School of Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Edmond, OK",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice/Criminology",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "2-2 load",
-      "research_expectations": "",
-      "posted_date": "2026-01-18",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/details.cfm?JobCode=179342034",
-      "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179342034",
-      "id": "623",
-      "consortium_member": "",
-      "confidence": "0.92",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
       "job_title": "Postdoctoral Scholar in Sentencing Research and Policy",
       "institution": "",
       "department_or_school": "",
@@ -8534,122 +8442,7 @@ window.JOBS_DATA = {
       "id": "856",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Department Chair, Criminal Justice",
-      "institution": "Lamar University",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "US",
-      "city_or_region": "Beaumont, TX",
-      "rank_type": "Department Chair/Professor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "Full-time Faculty",
-      "teaching_expectations": "",
-      "research_expectations": "Documented record of teaching, scholarship, service",
-      "posted_date": "2025-12-05",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179313911",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179313911",
-      "id": "769",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor/Instructor of Criminal Justice",
-      "institution": "Lees-McRae College",
-      "department_or_school": "School of Education and Social Sciences",
-      "country": "USA",
-      "city_or_region": "Banner Elk, NC",
-      "rank_type": "Assistant Professor/Instructor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "Full-time faculty",
-      "teaching_expectations": "Judicial Process, Criminal Law, Global Justice Systems",
-      "research_expectations": "",
-      "posted_date": "2025-12-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/details.cfm?JobCode=179309745",
-      "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179309745",
-      "id": "590",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Department Head - Department of Criminal Justice",
-      "institution": "",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "US",
-      "city_or_region": "",
-      "rank_type": "Department Head/Tenured Associate or Full Professor",
-      "area_specialization": "Criminal Justice, Intelligence",
-      "contract_type": "Full-time",
-      "teaching_expectations": "Reduced teaching load",
-      "research_expectations": "Active scholarly record",
-      "posted_date": "2025-11-24",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305599",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305599",
-      "id": "770",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor-Criminal Justice, Social Work and Sociology-Criminal Justice",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2025-11-24",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305921",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305921",
-      "id": "592",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor - Criminology and Criminal Justice",
-      "institution": "University of Texas at Arlington",
-      "department_or_school": "Department of Criminology and Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Arlington, TX",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Environmental/financial crimes; quantitative analysis",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "Teach undergraduate and graduate courses in criminology and criminal justice",
-      "research_expectations": "Conduct and publish research in criminology and criminal justice",
-      "posted_date": "2025-11-15",
-      "deadline_or_review_date": "2025-10-06",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/details.cfm?JobCode=179298371",
-      "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179298371",
-      "id": "558",
-      "consortium_member": "",
-      "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8672,7 +8465,7 @@ window.JOBS_DATA = {
       "id": "771",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8695,7 +8488,7 @@ window.JOBS_DATA = {
       "id": "570",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8718,7 +8511,7 @@ window.JOBS_DATA = {
       "id": "597",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8741,7 +8534,7 @@ window.JOBS_DATA = {
       "id": "556",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8764,7 +8557,7 @@ window.JOBS_DATA = {
       "id": "764",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
