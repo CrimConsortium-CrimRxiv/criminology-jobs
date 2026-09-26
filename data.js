@@ -47,7 +47,7 @@ window.JOBS_DATA = {
       "id": "880",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3083,7 +3083,7 @@ window.JOBS_DATA = {
       "id": "656",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -4141,7 +4141,7 @@ window.JOBS_DATA = {
       "id": "654",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4624,76 +4624,7 @@ window.JOBS_DATA = {
       "id": "572",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminal Justice and Criminology - Tenure-Track",
-      "institution": "Georgia State University",
-      "department_or_school": "Department of Criminal Justice and Criminology",
-      "country": "USA",
-      "city_or_region": "Atlanta, GA",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice and Criminology",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "University teaching experience, record of publication, funded research capacity preferred",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "2025-11-05",
-      "salary_currency": "",
-      "salary_range": "TBD",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179294769",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179294769",
-      "id": "571",
-      "consortium_member": "",
-      "confidence": "0.95",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminology, Tenure Track",
-      "institution": "University of South Florida",
-      "department_or_school": "Department of Criminology",
-      "country": "USA",
-      "city_or_region": "Tampa, FL",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Open area of specialization",
-      "contract_type": "Nine-month tenure-track, 2 positions",
-      "teaching_expectations": "Evidence of effective teaching preferred",
-      "research_expectations": "Strong record of research productivity and grant potential",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "2025-09-12",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179220912",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179220912",
-      "id": "568",
-      "consortium_member": "",
-      "confidence": "0.95",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminology, Tenure Track, Fall 2026",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179210107",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179210107",
-      "id": "566",
-      "consortium_member": "",
-      "confidence": "0.80",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4716,76 +4647,7 @@ window.JOBS_DATA = {
       "id": "565",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer - School of Criminal Justice",
-      "institution": "University at Albany, SUNY",
-      "department_or_school": "School of Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Albany, NY",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179130129",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179130129",
-      "id": "564",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer - Criminal Justice and Conflict Management",
-      "institution": "Boise State University",
-      "department_or_school": "School of Public Service",
-      "country": "USA",
-      "city_or_region": "Boise, ID",
-      "rank_type": "Lecturer I",
-      "area_specialization": "Criminal justice and conflict management",
-      "contract_type": "Full-time, nine-month",
-      "teaching_expectations": "Design and deliver undergraduate and graduate learning experiences",
-      "research_expectations": "",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305136",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305136",
-      "id": "559",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminology, Law Enforcement, and Security Studies",
-      "institution": "Fisk University",
-      "department_or_school": "Criminology, Law Enforcement, and Security Studies Program",
-      "country": "USA",
-      "city_or_region": "Nashville, TN",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology, law enforcement, security studies, homeland security",
-      "contract_type": "Full-time, Tenure-track",
-      "teaching_expectations": "Teach undergraduate courses in criminology, law enforcement, security studies",
-      "research_expectations": "Maintain active research agenda; publications and conference presentations",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179088919",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179088919",
-      "id": "554",
-      "consortium_member": "",
-      "confidence": "0.92",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4946,7 +4808,7 @@ window.JOBS_DATA = {
       "id": "657",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5981,7 +5843,7 @@ window.JOBS_DATA = {
       "id": "458",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, HigherEdJobs",
@@ -6099,29 +5961,6 @@ window.JOBS_DATA = {
       "last_probed": "2026-09-26"
     },
     {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor",
-      "institution": "New Mexico State University",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "United States",
-      "city_or_region": "Las Cruces, NM",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology and Criminal Justice (open; quantitative methods, policing, cyber)",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-06",
-      "deadline_or_review_date": "2026-09-07",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521057",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521057",
-      "id": "459",
-      "consortium_member": "",
-      "confidence": "",
-      "last_probed": ""
-    },
-    {
       "source_site": "ASC",
       "job_title": "Tenure-Track Assistant Professor of Criminal Justice (Position #330650)",
       "institution": "New Mexico State University",
@@ -6211,7 +6050,7 @@ window.JOBS_DATA = {
       "id": "461",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6234,7 +6073,7 @@ window.JOBS_DATA = {
       "id": "460",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -6280,7 +6119,7 @@ window.JOBS_DATA = {
       "id": "462",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7135,29 +6974,6 @@ window.JOBS_DATA = {
     },
     {
       "source_site": "HigherEdJobs",
-      "job_title": "Director, Criminal Justice Graduate Program",
-      "institution": "Endicott College",
-      "department_or_school": "School of Social Sciences, Communication and Legal Studies",
-      "country": "United States",
-      "city_or_region": "Beverly, MA",
-      "rank_type": "Other",
-      "area_specialization": "Criminal Justice Graduate Program (director/administrative)",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-31",
-      "deadline_or_review_date": "Open until filled",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514770",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514770",
-      "id": "420",
-      "consortium_member": "",
-      "confidence": "",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
       "job_title": "Assistant Professor of Criminal Justice",
       "institution": "University of Wisconsin - Eau Claire",
       "department_or_school": "Department of Political Science & Criminal Justice",
@@ -7177,30 +6993,7 @@ window.JOBS_DATA = {
       "id": "422",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Department Chair of Public Safety and Instructor - Criminal Justice",
-      "institution": "Weatherford College",
-      "department_or_school": "Public Safety",
-      "country": "United States",
-      "city_or_region": "Weatherford, TX",
-      "rank_type": "Other",
-      "area_specialization": "Public Safety / Criminal Justice (chair)",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-30",
-      "deadline_or_review_date": "Open until filled",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514093",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514093",
-      "id": "421",
-      "consortium_member": "",
-      "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7223,7 +7016,7 @@ window.JOBS_DATA = {
       "id": "426",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7246,7 +7039,7 @@ window.JOBS_DATA = {
       "id": "425",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7269,7 +7062,7 @@ window.JOBS_DATA = {
       "id": "424",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7292,7 +7085,7 @@ window.JOBS_DATA = {
       "id": "423",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -7338,7 +7131,7 @@ window.JOBS_DATA = {
       "id": "418",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7361,7 +7154,7 @@ window.JOBS_DATA = {
       "id": "427",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7407,7 +7200,7 @@ window.JOBS_DATA = {
       "id": "463",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -7637,7 +7430,7 @@ window.JOBS_DATA = {
       "id": "464",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7660,7 +7453,7 @@ window.JOBS_DATA = {
       "id": "404",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7706,7 +7499,7 @@ window.JOBS_DATA = {
       "id": "405",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -7756,29 +7549,6 @@ window.JOBS_DATA = {
     },
     {
       "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor (Tenure Track) - Criminology (27-28)",
-      "institution": "DePaul University",
-      "department_or_school": "Criminology Department",
-      "country": "United States",
-      "city_or_region": "Chicago, IL",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-18",
-      "deadline_or_review_date": "2026-09-15",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179503571",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179503571",
-      "id": "407",
-      "consortium_member": "",
-      "confidence": "",
-      "last_probed": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
       "job_title": "Faculty, Criminal Justice (Security Management), Full-Time, Tenure-Track",
       "institution": "Salem State University",
       "department_or_school": "Criminal Justice Department",
@@ -7798,7 +7568,7 @@ window.JOBS_DATA = {
       "id": "406",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -7867,7 +7637,7 @@ window.JOBS_DATA = {
       "id": "408",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7890,7 +7660,7 @@ window.JOBS_DATA = {
       "id": "383",
       "consortium_member": "",
       "confidence": "",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -7937,29 +7707,6 @@ window.JOBS_DATA = {
       "consortium_member": "",
       "confidence": "",
       "last_probed": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Director, Criminal Justice and Criminology",
-      "institution": "",
-      "department_or_school": "School of Criminal Justice and Criminology",
-      "country": "USA",
-      "city_or_region": "Texas",
-      "rank_type": "Director (Executive Officer)",
-      "area_specialization": "Criminal Justice and Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-10",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/fouryear/details.cfm?JobCode=179494575&Title=Director%2C+Criminal+Justice+and+Criminology",
-      "combined_urls": "https://www.higheredjobs.com/fouryear/details.cfm?JobCode=179494575&Title=Director%2C+Criminal+Justice+and+Criminology",
-      "id": "638",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -8419,7 +8166,7 @@ window.JOBS_DATA = {
       "id": "587",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8442,7 +8189,7 @@ window.JOBS_DATA = {
       "id": "562",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8465,7 +8212,7 @@ window.JOBS_DATA = {
       "id": "827",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8488,7 +8235,7 @@ window.JOBS_DATA = {
       "id": "588",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8511,7 +8258,7 @@ window.JOBS_DATA = {
       "id": "593",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
