@@ -24,7 +24,7 @@ window.JOBS_DATA = {
       "id": "892",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -47,7 +47,7 @@ window.JOBS_DATA = {
       "id": "880",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -70,7 +70,7 @@ window.JOBS_DATA = {
       "id": "877",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -93,7 +93,7 @@ window.JOBS_DATA = {
       "id": "876",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -116,7 +116,7 @@ window.JOBS_DATA = {
       "id": "875",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -139,7 +139,7 @@ window.JOBS_DATA = {
       "id": "886",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -162,7 +162,7 @@ window.JOBS_DATA = {
       "id": "885",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -185,7 +185,7 @@ window.JOBS_DATA = {
       "id": "884",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -208,7 +208,7 @@ window.JOBS_DATA = {
       "id": "883",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -231,7 +231,7 @@ window.JOBS_DATA = {
       "id": "882",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -254,7 +254,7 @@ window.JOBS_DATA = {
       "id": "888",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -277,7 +277,7 @@ window.JOBS_DATA = {
       "id": "887",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -300,7 +300,7 @@ window.JOBS_DATA = {
       "id": "879",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -323,7 +323,7 @@ window.JOBS_DATA = {
       "id": "874",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -346,7 +346,7 @@ window.JOBS_DATA = {
       "id": "855",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -369,7 +369,7 @@ window.JOBS_DATA = {
       "id": "881",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -392,7 +392,7 @@ window.JOBS_DATA = {
       "id": "878",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -415,7 +415,7 @@ window.JOBS_DATA = {
       "id": "873",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -438,7 +438,7 @@ window.JOBS_DATA = {
       "id": "842",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -461,7 +461,7 @@ window.JOBS_DATA = {
       "id": "841",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -484,7 +484,7 @@ window.JOBS_DATA = {
       "id": "840",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -507,7 +507,7 @@ window.JOBS_DATA = {
       "id": "845",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -530,7 +530,7 @@ window.JOBS_DATA = {
       "id": "839",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -553,7 +553,7 @@ window.JOBS_DATA = {
       "id": "838",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -576,7 +576,7 @@ window.JOBS_DATA = {
       "id": "847",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -599,7 +599,7 @@ window.JOBS_DATA = {
       "id": "846",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -622,7 +622,7 @@ window.JOBS_DATA = {
       "id": "843",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -645,7 +645,7 @@ window.JOBS_DATA = {
       "id": "815",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -668,7 +668,7 @@ window.JOBS_DATA = {
       "id": "814",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -691,7 +691,7 @@ window.JOBS_DATA = {
       "id": "813",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -714,7 +714,7 @@ window.JOBS_DATA = {
       "id": "812",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -737,7 +737,7 @@ window.JOBS_DATA = {
       "id": "811",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -760,7 +760,7 @@ window.JOBS_DATA = {
       "id": "810",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -783,7 +783,7 @@ window.JOBS_DATA = {
       "id": "808",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -806,7 +806,7 @@ window.JOBS_DATA = {
       "id": "807",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -829,7 +829,7 @@ window.JOBS_DATA = {
       "id": "805",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -852,7 +852,7 @@ window.JOBS_DATA = {
       "id": "804",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -875,7 +875,7 @@ window.JOBS_DATA = {
       "id": "803",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -898,7 +898,7 @@ window.JOBS_DATA = {
       "id": "802",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -921,7 +921,7 @@ window.JOBS_DATA = {
       "id": "801",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -944,7 +944,7 @@ window.JOBS_DATA = {
       "id": "800",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -967,7 +967,7 @@ window.JOBS_DATA = {
       "id": "799",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -990,7 +990,7 @@ window.JOBS_DATA = {
       "id": "798",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1013,7 +1013,7 @@ window.JOBS_DATA = {
       "id": "797",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1036,7 +1036,7 @@ window.JOBS_DATA = {
       "id": "796",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1059,7 +1059,7 @@ window.JOBS_DATA = {
       "id": "795",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1082,7 +1082,7 @@ window.JOBS_DATA = {
       "id": "794",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1105,7 +1105,7 @@ window.JOBS_DATA = {
       "id": "793",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1128,7 +1128,7 @@ window.JOBS_DATA = {
       "id": "792",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1151,7 +1151,7 @@ window.JOBS_DATA = {
       "id": "789",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1174,7 +1174,7 @@ window.JOBS_DATA = {
       "id": "788",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -1197,7 +1197,7 @@ window.JOBS_DATA = {
       "id": "895",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -1220,7 +1220,7 @@ window.JOBS_DATA = {
       "id": "837",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -1243,7 +1243,7 @@ window.JOBS_DATA = {
       "id": "817",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1266,7 +1266,7 @@ window.JOBS_DATA = {
       "id": "816",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1289,7 +1289,7 @@ window.JOBS_DATA = {
       "id": "791",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1312,7 +1312,7 @@ window.JOBS_DATA = {
       "id": "790",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -1335,7 +1335,7 @@ window.JOBS_DATA = {
       "id": "896",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1358,7 +1358,7 @@ window.JOBS_DATA = {
       "id": "821",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1381,7 +1381,7 @@ window.JOBS_DATA = {
       "id": "820",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1404,7 +1404,7 @@ window.JOBS_DATA = {
       "id": "819",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1427,7 +1427,7 @@ window.JOBS_DATA = {
       "id": "786",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1450,7 +1450,7 @@ window.JOBS_DATA = {
       "id": "785",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1473,7 +1473,7 @@ window.JOBS_DATA = {
       "id": "897",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1496,7 +1496,7 @@ window.JOBS_DATA = {
       "id": "787",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1519,7 +1519,7 @@ window.JOBS_DATA = {
       "id": "783",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -1542,7 +1542,7 @@ window.JOBS_DATA = {
       "id": "762",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1565,7 +1565,7 @@ window.JOBS_DATA = {
       "id": "745",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1588,7 +1588,7 @@ window.JOBS_DATA = {
       "id": "733",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1611,7 +1611,7 @@ window.JOBS_DATA = {
       "id": "732",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1634,7 +1634,7 @@ window.JOBS_DATA = {
       "id": "731",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1657,7 +1657,7 @@ window.JOBS_DATA = {
       "id": "730",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1680,7 +1680,7 @@ window.JOBS_DATA = {
       "id": "729",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1703,7 +1703,7 @@ window.JOBS_DATA = {
       "id": "728",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1726,7 +1726,7 @@ window.JOBS_DATA = {
       "id": "660",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -1749,7 +1749,7 @@ window.JOBS_DATA = {
       "id": "848",
       "consortium_member": "",
       "confidence": "0.94",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -1772,7 +1772,7 @@ window.JOBS_DATA = {
       "id": "748",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -1795,7 +1795,7 @@ window.JOBS_DATA = {
       "id": "661",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1818,7 +1818,7 @@ window.JOBS_DATA = {
       "id": "659",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -1841,7 +1841,7 @@ window.JOBS_DATA = {
       "id": "653",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -1864,7 +1864,7 @@ window.JOBS_DATA = {
       "id": "844",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -1887,7 +1887,7 @@ window.JOBS_DATA = {
       "id": "761",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1910,7 +1910,7 @@ window.JOBS_DATA = {
       "id": "759",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1933,7 +1933,7 @@ window.JOBS_DATA = {
       "id": "758",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1956,7 +1956,7 @@ window.JOBS_DATA = {
       "id": "755",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1979,7 +1979,7 @@ window.JOBS_DATA = {
       "id": "749",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -2002,7 +2002,7 @@ window.JOBS_DATA = {
       "id": "747",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2025,7 +2025,7 @@ window.JOBS_DATA = {
       "id": "717",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2048,7 +2048,7 @@ window.JOBS_DATA = {
       "id": "716",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2071,7 +2071,7 @@ window.JOBS_DATA = {
       "id": "715",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2094,7 +2094,7 @@ window.JOBS_DATA = {
       "id": "714",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2117,7 +2117,7 @@ window.JOBS_DATA = {
       "id": "713",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2140,7 +2140,7 @@ window.JOBS_DATA = {
       "id": "712",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2163,7 +2163,7 @@ window.JOBS_DATA = {
       "id": "711",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2186,7 +2186,7 @@ window.JOBS_DATA = {
       "id": "710",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2209,7 +2209,7 @@ window.JOBS_DATA = {
       "id": "709",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2232,7 +2232,7 @@ window.JOBS_DATA = {
       "id": "708",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2255,7 +2255,7 @@ window.JOBS_DATA = {
       "id": "707",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2278,7 +2278,7 @@ window.JOBS_DATA = {
       "id": "706",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2301,7 +2301,7 @@ window.JOBS_DATA = {
       "id": "705",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2324,7 +2324,7 @@ window.JOBS_DATA = {
       "id": "704",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2347,7 +2347,7 @@ window.JOBS_DATA = {
       "id": "703",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2370,7 +2370,7 @@ window.JOBS_DATA = {
       "id": "702",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2393,7 +2393,7 @@ window.JOBS_DATA = {
       "id": "701",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2416,7 +2416,7 @@ window.JOBS_DATA = {
       "id": "700",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2439,7 +2439,7 @@ window.JOBS_DATA = {
       "id": "699",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2462,7 +2462,7 @@ window.JOBS_DATA = {
       "id": "698",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2485,7 +2485,7 @@ window.JOBS_DATA = {
       "id": "697",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2508,7 +2508,7 @@ window.JOBS_DATA = {
       "id": "696",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2531,7 +2531,7 @@ window.JOBS_DATA = {
       "id": "695",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2554,7 +2554,7 @@ window.JOBS_DATA = {
       "id": "693",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2577,7 +2577,7 @@ window.JOBS_DATA = {
       "id": "692",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2600,7 +2600,7 @@ window.JOBS_DATA = {
       "id": "691",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2623,7 +2623,7 @@ window.JOBS_DATA = {
       "id": "690",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2646,7 +2646,7 @@ window.JOBS_DATA = {
       "id": "689",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2669,7 +2669,7 @@ window.JOBS_DATA = {
       "id": "688",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2692,7 +2692,7 @@ window.JOBS_DATA = {
       "id": "687",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2715,7 +2715,7 @@ window.JOBS_DATA = {
       "id": "686",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2738,7 +2738,7 @@ window.JOBS_DATA = {
       "id": "683",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2761,7 +2761,7 @@ window.JOBS_DATA = {
       "id": "682",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2784,7 +2784,7 @@ window.JOBS_DATA = {
       "id": "681",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2807,7 +2807,7 @@ window.JOBS_DATA = {
       "id": "680",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2830,7 +2830,7 @@ window.JOBS_DATA = {
       "id": "679",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2853,7 +2853,7 @@ window.JOBS_DATA = {
       "id": "678",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2876,7 +2876,7 @@ window.JOBS_DATA = {
       "id": "677",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2899,7 +2899,7 @@ window.JOBS_DATA = {
       "id": "676",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2922,7 +2922,7 @@ window.JOBS_DATA = {
       "id": "675",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2945,7 +2945,7 @@ window.JOBS_DATA = {
       "id": "674",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2968,7 +2968,7 @@ window.JOBS_DATA = {
       "id": "672",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2991,7 +2991,7 @@ window.JOBS_DATA = {
       "id": "671",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3014,7 +3014,7 @@ window.JOBS_DATA = {
       "id": "665",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3037,7 +3037,7 @@ window.JOBS_DATA = {
       "id": "664",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3060,7 +3060,7 @@ window.JOBS_DATA = {
       "id": "662",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -3083,7 +3083,7 @@ window.JOBS_DATA = {
       "id": "656",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -3106,7 +3106,7 @@ window.JOBS_DATA = {
       "id": "655",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -3129,7 +3129,7 @@ window.JOBS_DATA = {
       "id": "893",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3152,7 +3152,7 @@ window.JOBS_DATA = {
       "id": "890",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3175,7 +3175,7 @@ window.JOBS_DATA = {
       "id": "889",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3198,7 +3198,7 @@ window.JOBS_DATA = {
       "id": "849",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3221,7 +3221,7 @@ window.JOBS_DATA = {
       "id": "753",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3244,7 +3244,7 @@ window.JOBS_DATA = {
       "id": "752",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3267,7 +3267,7 @@ window.JOBS_DATA = {
       "id": "750",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3290,7 +3290,7 @@ window.JOBS_DATA = {
       "id": "746",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3313,7 +3313,7 @@ window.JOBS_DATA = {
       "id": "744",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3336,7 +3336,7 @@ window.JOBS_DATA = {
       "id": "743",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3359,7 +3359,7 @@ window.JOBS_DATA = {
       "id": "742",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3382,7 +3382,7 @@ window.JOBS_DATA = {
       "id": "741",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3405,7 +3405,7 @@ window.JOBS_DATA = {
       "id": "740",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3428,7 +3428,7 @@ window.JOBS_DATA = {
       "id": "739",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3451,7 +3451,7 @@ window.JOBS_DATA = {
       "id": "737",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3474,7 +3474,7 @@ window.JOBS_DATA = {
       "id": "736",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3497,7 +3497,7 @@ window.JOBS_DATA = {
       "id": "735",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3520,7 +3520,7 @@ window.JOBS_DATA = {
       "id": "734",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3543,7 +3543,7 @@ window.JOBS_DATA = {
       "id": "727",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3566,7 +3566,7 @@ window.JOBS_DATA = {
       "id": "726",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3589,7 +3589,7 @@ window.JOBS_DATA = {
       "id": "725",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3612,7 +3612,7 @@ window.JOBS_DATA = {
       "id": "724",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3635,7 +3635,7 @@ window.JOBS_DATA = {
       "id": "722",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3658,7 +3658,7 @@ window.JOBS_DATA = {
       "id": "721",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3681,7 +3681,7 @@ window.JOBS_DATA = {
       "id": "720",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3704,7 +3704,7 @@ window.JOBS_DATA = {
       "id": "719",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3727,7 +3727,7 @@ window.JOBS_DATA = {
       "id": "718",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3750,7 +3750,7 @@ window.JOBS_DATA = {
       "id": "685",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3773,7 +3773,7 @@ window.JOBS_DATA = {
       "id": "684",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3796,7 +3796,7 @@ window.JOBS_DATA = {
       "id": "670",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3819,7 +3819,7 @@ window.JOBS_DATA = {
       "id": "669",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3842,7 +3842,7 @@ window.JOBS_DATA = {
       "id": "668",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3865,7 +3865,7 @@ window.JOBS_DATA = {
       "id": "667",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3888,7 +3888,7 @@ window.JOBS_DATA = {
       "id": "666",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -3911,7 +3911,7 @@ window.JOBS_DATA = {
       "id": "649",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -3934,7 +3934,7 @@ window.JOBS_DATA = {
       "id": "648",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -3957,7 +3957,7 @@ window.JOBS_DATA = {
       "id": "647",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -3980,7 +3980,7 @@ window.JOBS_DATA = {
       "id": "646",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4003,7 +4003,7 @@ window.JOBS_DATA = {
       "id": "645",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4026,7 +4026,7 @@ window.JOBS_DATA = {
       "id": "644",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4049,7 +4049,7 @@ window.JOBS_DATA = {
       "id": "643",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -4072,7 +4072,7 @@ window.JOBS_DATA = {
       "id": "642",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4095,7 +4095,7 @@ window.JOBS_DATA = {
       "id": "641",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4118,7 +4118,7 @@ window.JOBS_DATA = {
       "id": "640",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -4141,7 +4141,7 @@ window.JOBS_DATA = {
       "id": "654",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -4164,7 +4164,7 @@ window.JOBS_DATA = {
       "id": "751",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -4187,7 +4187,7 @@ window.JOBS_DATA = {
       "id": "650",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4210,7 +4210,7 @@ window.JOBS_DATA = {
       "id": "760",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4233,7 +4233,7 @@ window.JOBS_DATA = {
       "id": "754",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -4256,7 +4256,7 @@ window.JOBS_DATA = {
       "id": "651",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4279,7 +4279,7 @@ window.JOBS_DATA = {
       "id": "630",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4302,7 +4302,7 @@ window.JOBS_DATA = {
       "id": "891",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4325,7 +4325,7 @@ window.JOBS_DATA = {
       "id": "625",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -4348,7 +4348,7 @@ window.JOBS_DATA = {
       "id": "639",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4371,7 +4371,7 @@ window.JOBS_DATA = {
       "id": "757",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4394,191 +4394,7 @@ window.JOBS_DATA = {
       "id": "626",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Full-Time Teaching Faculty: Criminal Justice (Restorative Justice & Victimology)",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Full-Time Teaching Faculty",
-      "area_specialization": "Restorative Justice and Victimology",
-      "contract_type": "Full-time",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178963359",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178963359",
-      "id": "617",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "FT Tenure-Track Faculty: Asst/Associate Professor, Sociology, Criminology, & Criminal Justice",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant/Associate Professor",
-      "area_specialization": "Sociology, Criminology, & Criminal Justice",
-      "contract_type": "Full-time, tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178524127",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178524127",
-      "id": "610",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Visiting Assistant Professor or Instructor (Sociology & Criminology)",
-      "institution": "University of Iowa",
-      "department_or_school": "Department of Sociology & Criminology",
-      "country": "USA",
-      "city_or_region": "Iowa City, IA",
-      "rank_type": "Visiting Assistant Professor/Instructor",
-      "area_specialization": "Sociology and Criminology",
-      "contract_type": "Visiting, 1-year",
-      "teaching_expectations": "Undergraduate sociology/criminology courses",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "USD",
-      "salary_range": "$30,792 - $61,584",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179127964",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179127964",
-      "id": "606",
-      "consortium_member": "",
-      "confidence": "0.80",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor, Sociology and Criminology - Fall 2026",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Sociology and Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179202812",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179202812",
-      "id": "604",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Chair of the Department of Sociology and Criminal Justice",
-      "institution": "Kennesaw State University",
-      "department_or_school": "Norman J. Radow College of Humanities and Social Sciences",
-      "country": "USA",
-      "city_or_region": "Kennesaw, GA",
-      "rank_type": "Professor/Chair",
-      "area_specialization": "Sociology and Criminal Justice",
-      "contract_type": "Tenured Professor, administrative",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179279019",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179279019",
-      "id": "602",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Professor/Chair, Criminal Justice",
-      "institution": "University of Nevada, Reno",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Reno, NV",
-      "rank_type": "Professor/Chair",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "Tenured, Full Professor",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178188723",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178188723",
-      "id": "600",
-      "consortium_member": "",
-      "confidence": "0.90",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Postdoctoral Scholar - Department of Sociology & Criminology",
-      "institution": "Pennsylvania State University",
-      "department_or_school": "Department of Sociology and Criminology",
-      "country": "USA",
-      "city_or_region": "University Park, PA",
-      "rank_type": "Postdoctoral Scholar",
-      "area_specialization": "Computational methods in sociology/criminology",
-      "contract_type": "Full-time, term position",
-      "teaching_expectations": "",
-      "research_expectations": "Collaborate with faculty mentor and graduate students",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179326684",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179326684",
-      "id": "598",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_checked": ""
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Lecturer of Criminal Justice and Criminology",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Lecturer",
-      "area_specialization": "Criminal Justice and Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178671766",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178671766",
-      "id": "595",
-      "consortium_member": "",
-      "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4601,7 +4417,7 @@ window.JOBS_DATA = {
       "id": "589",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4624,7 +4440,7 @@ window.JOBS_DATA = {
       "id": "585",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -4647,7 +4463,7 @@ window.JOBS_DATA = {
       "id": "756",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -4670,7 +4486,7 @@ window.JOBS_DATA = {
       "id": "658",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4693,7 +4509,7 @@ window.JOBS_DATA = {
       "id": "580",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4716,7 +4532,7 @@ window.JOBS_DATA = {
       "id": "579",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4739,7 +4555,7 @@ window.JOBS_DATA = {
       "id": "578",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4762,7 +4578,7 @@ window.JOBS_DATA = {
       "id": "577",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4785,7 +4601,7 @@ window.JOBS_DATA = {
       "id": "573",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4808,7 +4624,7 @@ window.JOBS_DATA = {
       "id": "572",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4831,7 +4647,7 @@ window.JOBS_DATA = {
       "id": "571",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4854,7 +4670,7 @@ window.JOBS_DATA = {
       "id": "568",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4877,7 +4693,7 @@ window.JOBS_DATA = {
       "id": "566",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4900,7 +4716,7 @@ window.JOBS_DATA = {
       "id": "565",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4923,7 +4739,7 @@ window.JOBS_DATA = {
       "id": "564",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4946,7 +4762,7 @@ window.JOBS_DATA = {
       "id": "559",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4969,7 +4785,7 @@ window.JOBS_DATA = {
       "id": "554",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -4992,7 +4808,7 @@ window.JOBS_DATA = {
       "id": "487",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -5015,7 +4831,7 @@ window.JOBS_DATA = {
       "id": "486",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5038,7 +4854,7 @@ window.JOBS_DATA = {
       "id": "485",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -5061,7 +4877,7 @@ window.JOBS_DATA = {
       "id": "475",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5084,7 +4900,7 @@ window.JOBS_DATA = {
       "id": "474",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5107,7 +4923,7 @@ window.JOBS_DATA = {
       "id": "473",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -5130,7 +4946,7 @@ window.JOBS_DATA = {
       "id": "657",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -5153,7 +4969,7 @@ window.JOBS_DATA = {
       "id": "492",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5176,7 +4992,7 @@ window.JOBS_DATA = {
       "id": "491",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5199,7 +5015,7 @@ window.JOBS_DATA = {
       "id": "894",
       "consortium_member": "",
       "confidence": "0.99",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5222,7 +5038,7 @@ window.JOBS_DATA = {
       "id": "850",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5245,7 +5061,7 @@ window.JOBS_DATA = {
       "id": "495",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5268,7 +5084,7 @@ window.JOBS_DATA = {
       "id": "494",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5291,7 +5107,7 @@ window.JOBS_DATA = {
       "id": "493",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5314,7 +5130,7 @@ window.JOBS_DATA = {
       "id": "490",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5337,7 +5153,7 @@ window.JOBS_DATA = {
       "id": "476",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -5360,7 +5176,7 @@ window.JOBS_DATA = {
       "id": "477",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -5383,7 +5199,7 @@ window.JOBS_DATA = {
       "id": "478",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -5406,7 +5222,7 @@ window.JOBS_DATA = {
       "id": "529",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5429,7 +5245,7 @@ window.JOBS_DATA = {
       "id": "528",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5452,7 +5268,7 @@ window.JOBS_DATA = {
       "id": "527",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5475,7 +5291,7 @@ window.JOBS_DATA = {
       "id": "526",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5498,7 +5314,7 @@ window.JOBS_DATA = {
       "id": "525",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5521,7 +5337,7 @@ window.JOBS_DATA = {
       "id": "523",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5544,7 +5360,7 @@ window.JOBS_DATA = {
       "id": "522",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5567,7 +5383,7 @@ window.JOBS_DATA = {
       "id": "521",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5590,7 +5406,7 @@ window.JOBS_DATA = {
       "id": "520",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5613,7 +5429,7 @@ window.JOBS_DATA = {
       "id": "519",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5636,7 +5452,7 @@ window.JOBS_DATA = {
       "id": "518",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5659,7 +5475,7 @@ window.JOBS_DATA = {
       "id": "517",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5682,7 +5498,7 @@ window.JOBS_DATA = {
       "id": "516",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5705,7 +5521,7 @@ window.JOBS_DATA = {
       "id": "515",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5728,7 +5544,7 @@ window.JOBS_DATA = {
       "id": "514",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5751,7 +5567,7 @@ window.JOBS_DATA = {
       "id": "513",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5774,7 +5590,7 @@ window.JOBS_DATA = {
       "id": "512",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5797,7 +5613,7 @@ window.JOBS_DATA = {
       "id": "511",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5820,7 +5636,7 @@ window.JOBS_DATA = {
       "id": "510",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5843,7 +5659,7 @@ window.JOBS_DATA = {
       "id": "509",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5866,7 +5682,7 @@ window.JOBS_DATA = {
       "id": "507",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5889,7 +5705,7 @@ window.JOBS_DATA = {
       "id": "506",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5912,7 +5728,7 @@ window.JOBS_DATA = {
       "id": "505",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5935,7 +5751,7 @@ window.JOBS_DATA = {
       "id": "503",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5958,7 +5774,7 @@ window.JOBS_DATA = {
       "id": "502",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5981,7 +5797,7 @@ window.JOBS_DATA = {
       "id": "501",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6004,7 +5820,7 @@ window.JOBS_DATA = {
       "id": "500",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6027,7 +5843,7 @@ window.JOBS_DATA = {
       "id": "499",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6050,7 +5866,7 @@ window.JOBS_DATA = {
       "id": "498",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6073,7 +5889,7 @@ window.JOBS_DATA = {
       "id": "497",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6096,7 +5912,7 @@ window.JOBS_DATA = {
       "id": "496",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6119,7 +5935,7 @@ window.JOBS_DATA = {
       "id": "852",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6142,7 +5958,7 @@ window.JOBS_DATA = {
       "id": "851",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6165,7 +5981,7 @@ window.JOBS_DATA = {
       "id": "458",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, HigherEdJobs",
@@ -6188,7 +6004,7 @@ window.JOBS_DATA = {
       "id": "454",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, HigherEdJobs",
@@ -6211,7 +6027,7 @@ window.JOBS_DATA = {
       "id": "453",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -6234,7 +6050,7 @@ window.JOBS_DATA = {
       "id": "410",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6257,7 +6073,7 @@ window.JOBS_DATA = {
       "id": "360",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -6280,7 +6096,7 @@ window.JOBS_DATA = {
       "id": "479",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6303,7 +6119,7 @@ window.JOBS_DATA = {
       "id": "459",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -6326,7 +6142,7 @@ window.JOBS_DATA = {
       "id": "455",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -6349,7 +6165,7 @@ window.JOBS_DATA = {
       "id": "451",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -6372,7 +6188,7 @@ window.JOBS_DATA = {
       "id": "480",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6395,7 +6211,7 @@ window.JOBS_DATA = {
       "id": "461",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -6418,7 +6234,7 @@ window.JOBS_DATA = {
       "id": "460",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -6441,7 +6257,7 @@ window.JOBS_DATA = {
       "id": "466",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6464,7 +6280,7 @@ window.JOBS_DATA = {
       "id": "462",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -6487,7 +6303,7 @@ window.JOBS_DATA = {
       "id": "652",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -6510,7 +6326,7 @@ window.JOBS_DATA = {
       "id": "488",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6533,7 +6349,7 @@ window.JOBS_DATA = {
       "id": "457",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6556,7 +6372,7 @@ window.JOBS_DATA = {
       "id": "456",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -6579,7 +6395,7 @@ window.JOBS_DATA = {
       "id": "452",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "TSPA",
@@ -6602,7 +6418,7 @@ window.JOBS_DATA = {
       "id": "450",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6625,7 +6441,7 @@ window.JOBS_DATA = {
       "id": "448",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6648,7 +6464,7 @@ window.JOBS_DATA = {
       "id": "447",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6671,7 +6487,7 @@ window.JOBS_DATA = {
       "id": "444",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6694,7 +6510,7 @@ window.JOBS_DATA = {
       "id": "443",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6717,7 +6533,7 @@ window.JOBS_DATA = {
       "id": "442",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6740,7 +6556,7 @@ window.JOBS_DATA = {
       "id": "441",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6763,7 +6579,7 @@ window.JOBS_DATA = {
       "id": "440",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6786,7 +6602,7 @@ window.JOBS_DATA = {
       "id": "439",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6809,7 +6625,7 @@ window.JOBS_DATA = {
       "id": "437",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6832,7 +6648,7 @@ window.JOBS_DATA = {
       "id": "436",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6855,7 +6671,7 @@ window.JOBS_DATA = {
       "id": "582",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6878,7 +6694,7 @@ window.JOBS_DATA = {
       "id": "581",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6901,7 +6717,7 @@ window.JOBS_DATA = {
       "id": "553",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6924,7 +6740,7 @@ window.JOBS_DATA = {
       "id": "552",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6947,7 +6763,7 @@ window.JOBS_DATA = {
       "id": "549",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6970,7 +6786,7 @@ window.JOBS_DATA = {
       "id": "548",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6993,7 +6809,7 @@ window.JOBS_DATA = {
       "id": "547",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7016,7 +6832,7 @@ window.JOBS_DATA = {
       "id": "545",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7039,7 +6855,7 @@ window.JOBS_DATA = {
       "id": "543",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7062,7 +6878,7 @@ window.JOBS_DATA = {
       "id": "542",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7085,7 +6901,7 @@ window.JOBS_DATA = {
       "id": "541",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7108,7 +6924,7 @@ window.JOBS_DATA = {
       "id": "539",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7131,7 +6947,7 @@ window.JOBS_DATA = {
       "id": "538",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7154,7 +6970,7 @@ window.JOBS_DATA = {
       "id": "535",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7177,7 +6993,7 @@ window.JOBS_DATA = {
       "id": "534",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7200,7 +7016,7 @@ window.JOBS_DATA = {
       "id": "533",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7223,7 +7039,7 @@ window.JOBS_DATA = {
       "id": "532",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7246,7 +7062,7 @@ window.JOBS_DATA = {
       "id": "531",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7269,7 +7085,7 @@ window.JOBS_DATA = {
       "id": "530",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7292,7 +7108,7 @@ window.JOBS_DATA = {
       "id": "489",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7315,7 +7131,7 @@ window.JOBS_DATA = {
       "id": "471",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7338,7 +7154,7 @@ window.JOBS_DATA = {
       "id": "420",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7361,7 +7177,7 @@ window.JOBS_DATA = {
       "id": "422",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7384,7 +7200,7 @@ window.JOBS_DATA = {
       "id": "421",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7407,7 +7223,7 @@ window.JOBS_DATA = {
       "id": "426",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7430,7 +7246,7 @@ window.JOBS_DATA = {
       "id": "425",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7453,7 +7269,7 @@ window.JOBS_DATA = {
       "id": "424",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7476,7 +7292,7 @@ window.JOBS_DATA = {
       "id": "423",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -7499,7 +7315,7 @@ window.JOBS_DATA = {
       "id": "419",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -7522,7 +7338,7 @@ window.JOBS_DATA = {
       "id": "418",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7545,7 +7361,7 @@ window.JOBS_DATA = {
       "id": "427",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -7568,7 +7384,7 @@ window.JOBS_DATA = {
       "id": "481",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7591,7 +7407,7 @@ window.JOBS_DATA = {
       "id": "463",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -7614,7 +7430,7 @@ window.JOBS_DATA = {
       "id": "401",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -7637,7 +7453,7 @@ window.JOBS_DATA = {
       "id": "400",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -7660,7 +7476,7 @@ window.JOBS_DATA = {
       "id": "399",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7683,7 +7499,7 @@ window.JOBS_DATA = {
       "id": "398",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -7706,7 +7522,7 @@ window.JOBS_DATA = {
       "id": "482",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7729,7 +7545,7 @@ window.JOBS_DATA = {
       "id": "470",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7752,7 +7568,7 @@ window.JOBS_DATA = {
       "id": "469",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7775,7 +7591,7 @@ window.JOBS_DATA = {
       "id": "465",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7798,7 +7614,7 @@ window.JOBS_DATA = {
       "id": "483",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7821,7 +7637,7 @@ window.JOBS_DATA = {
       "id": "464",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7844,7 +7660,7 @@ window.JOBS_DATA = {
       "id": "404",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7867,7 +7683,7 @@ window.JOBS_DATA = {
       "id": "468",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7890,7 +7706,7 @@ window.JOBS_DATA = {
       "id": "405",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -7913,7 +7729,7 @@ window.JOBS_DATA = {
       "id": "402",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7936,7 +7752,7 @@ window.JOBS_DATA = {
       "id": "484",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7959,7 +7775,7 @@ window.JOBS_DATA = {
       "id": "407",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7982,7 +7798,7 @@ window.JOBS_DATA = {
       "id": "406",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -8005,7 +7821,7 @@ window.JOBS_DATA = {
       "id": "378",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -8028,7 +7844,7 @@ window.JOBS_DATA = {
       "id": "365",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8051,7 +7867,7 @@ window.JOBS_DATA = {
       "id": "408",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8074,7 +7890,7 @@ window.JOBS_DATA = {
       "id": "383",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -8097,7 +7913,7 @@ window.JOBS_DATA = {
       "id": "379",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -8120,7 +7936,7 @@ window.JOBS_DATA = {
       "id": "358",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8143,7 +7959,7 @@ window.JOBS_DATA = {
       "id": "638",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -8166,7 +7982,7 @@ window.JOBS_DATA = {
       "id": "361",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -8189,7 +8005,7 @@ window.JOBS_DATA = {
       "id": "359",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -8212,7 +8028,7 @@ window.JOBS_DATA = {
       "id": "380",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8235,7 +8051,7 @@ window.JOBS_DATA = {
       "id": "467",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -8258,7 +8074,7 @@ window.JOBS_DATA = {
       "id": "363",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8281,7 +8097,7 @@ window.JOBS_DATA = {
       "id": "357",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8304,7 +8120,7 @@ window.JOBS_DATA = {
       "id": "354",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8327,7 +8143,7 @@ window.JOBS_DATA = {
       "id": "350",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8350,7 +8166,7 @@ window.JOBS_DATA = {
       "id": "349",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8373,7 +8189,7 @@ window.JOBS_DATA = {
       "id": "348",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8396,7 +8212,7 @@ window.JOBS_DATA = {
       "id": "347",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8419,7 +8235,7 @@ window.JOBS_DATA = {
       "id": "344",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8442,7 +8258,7 @@ window.JOBS_DATA = {
       "id": "340",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8465,7 +8281,7 @@ window.JOBS_DATA = {
       "id": "339",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8488,7 +8304,7 @@ window.JOBS_DATA = {
       "id": "337",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8511,7 +8327,7 @@ window.JOBS_DATA = {
       "id": "336",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8534,7 +8350,7 @@ window.JOBS_DATA = {
       "id": "335",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8557,7 +8373,7 @@ window.JOBS_DATA = {
       "id": "472",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8580,7 +8396,7 @@ window.JOBS_DATA = {
       "id": "114",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8603,7 +8419,7 @@ window.JOBS_DATA = {
       "id": "587",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8626,7 +8442,7 @@ window.JOBS_DATA = {
       "id": "562",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8649,7 +8465,7 @@ window.JOBS_DATA = {
       "id": "827",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8672,7 +8488,7 @@ window.JOBS_DATA = {
       "id": "588",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8695,7 +8511,7 @@ window.JOBS_DATA = {
       "id": "593",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8718,7 +8534,7 @@ window.JOBS_DATA = {
       "id": "586",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8741,7 +8557,7 @@ window.JOBS_DATA = {
       "id": "555",
       "consortium_member": "",
       "confidence": "0.93",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ASC",
@@ -8764,7 +8580,7 @@ window.JOBS_DATA = {
       "id": "4",
       "consortium_member": "",
       "confidence": "",
-      "last_checked": "2026-09-26"
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8787,7 +8603,7 @@ window.JOBS_DATA = {
       "id": "767",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8810,7 +8626,7 @@ window.JOBS_DATA = {
       "id": "561",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8833,7 +8649,7 @@ window.JOBS_DATA = {
       "id": "560",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8856,7 +8672,7 @@ window.JOBS_DATA = {
       "id": "567",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8879,7 +8695,7 @@ window.JOBS_DATA = {
       "id": "563",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8902,7 +8718,7 @@ window.JOBS_DATA = {
       "id": "596",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8925,7 +8741,7 @@ window.JOBS_DATA = {
       "id": "631",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8948,7 +8764,7 @@ window.JOBS_DATA = {
       "id": "831",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8971,7 +8787,7 @@ window.JOBS_DATA = {
       "id": "622",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8994,7 +8810,7 @@ window.JOBS_DATA = {
       "id": "619",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9017,7 +8833,7 @@ window.JOBS_DATA = {
       "id": "866",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9040,7 +8856,7 @@ window.JOBS_DATA = {
       "id": "591",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9063,7 +8879,7 @@ window.JOBS_DATA = {
       "id": "853",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9086,7 +8902,7 @@ window.JOBS_DATA = {
       "id": "779",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9109,7 +8925,7 @@ window.JOBS_DATA = {
       "id": "629",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9132,7 +8948,7 @@ window.JOBS_DATA = {
       "id": "777",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9155,7 +8971,7 @@ window.JOBS_DATA = {
       "id": "623",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9178,7 +8994,7 @@ window.JOBS_DATA = {
       "id": "856",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9201,7 +9017,7 @@ window.JOBS_DATA = {
       "id": "769",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9224,7 +9040,7 @@ window.JOBS_DATA = {
       "id": "590",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9247,7 +9063,7 @@ window.JOBS_DATA = {
       "id": "770",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9270,7 +9086,7 @@ window.JOBS_DATA = {
       "id": "592",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9293,7 +9109,7 @@ window.JOBS_DATA = {
       "id": "558",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9316,7 +9132,7 @@ window.JOBS_DATA = {
       "id": "771",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9339,7 +9155,7 @@ window.JOBS_DATA = {
       "id": "570",
       "consortium_member": "",
       "confidence": "0.92",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9362,7 +9178,7 @@ window.JOBS_DATA = {
       "id": "597",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9385,7 +9201,7 @@ window.JOBS_DATA = {
       "id": "556",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9408,7 +9224,7 @@ window.JOBS_DATA = {
       "id": "764",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9431,7 +9247,7 @@ window.JOBS_DATA = {
       "id": "857",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9454,7 +9270,7 @@ window.JOBS_DATA = {
       "id": "584",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9477,7 +9293,7 @@ window.JOBS_DATA = {
       "id": "569",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9500,7 +9316,7 @@ window.JOBS_DATA = {
       "id": "773",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9523,7 +9339,7 @@ window.JOBS_DATA = {
       "id": "829",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9546,7 +9362,7 @@ window.JOBS_DATA = {
       "id": "774",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9569,7 +9385,7 @@ window.JOBS_DATA = {
       "id": "612",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9592,7 +9408,7 @@ window.JOBS_DATA = {
       "id": "618",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9615,7 +9431,7 @@ window.JOBS_DATA = {
       "id": "611",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9638,7 +9454,7 @@ window.JOBS_DATA = {
       "id": "823",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9661,7 +9477,7 @@ window.JOBS_DATA = {
       "id": "772",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9684,7 +9500,7 @@ window.JOBS_DATA = {
       "id": "628",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9707,7 +9523,7 @@ window.JOBS_DATA = {
       "id": "828",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9730,7 +9546,7 @@ window.JOBS_DATA = {
       "id": "609",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9753,7 +9569,7 @@ window.JOBS_DATA = {
       "id": "864",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9776,7 +9592,7 @@ window.JOBS_DATA = {
       "id": "872",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9799,7 +9615,7 @@ window.JOBS_DATA = {
       "id": "574",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9822,7 +9638,7 @@ window.JOBS_DATA = {
       "id": "858",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9845,7 +9661,7 @@ window.JOBS_DATA = {
       "id": "603",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9868,7 +9684,7 @@ window.JOBS_DATA = {
       "id": "557",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9891,7 +9707,7 @@ window.JOBS_DATA = {
       "id": "634",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9914,7 +9730,7 @@ window.JOBS_DATA = {
       "id": "615",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9937,7 +9753,7 @@ window.JOBS_DATA = {
       "id": "613",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9960,7 +9776,7 @@ window.JOBS_DATA = {
       "id": "870",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -9983,7 +9799,7 @@ window.JOBS_DATA = {
       "id": "806",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10006,7 +9822,7 @@ window.JOBS_DATA = {
       "id": "621",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10029,7 +9845,7 @@ window.JOBS_DATA = {
       "id": "830",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10052,7 +9868,7 @@ window.JOBS_DATA = {
       "id": "860",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10075,7 +9891,7 @@ window.JOBS_DATA = {
       "id": "776",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10098,7 +9914,7 @@ window.JOBS_DATA = {
       "id": "835",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10121,7 +9937,7 @@ window.JOBS_DATA = {
       "id": "822",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10144,7 +9960,7 @@ window.JOBS_DATA = {
       "id": "869",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10167,7 +9983,7 @@ window.JOBS_DATA = {
       "id": "608",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10190,7 +10006,7 @@ window.JOBS_DATA = {
       "id": "868",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10213,7 +10029,7 @@ window.JOBS_DATA = {
       "id": "832",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10236,7 +10052,7 @@ window.JOBS_DATA = {
       "id": "607",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10259,7 +10075,7 @@ window.JOBS_DATA = {
       "id": "768",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10282,7 +10098,7 @@ window.JOBS_DATA = {
       "id": "601",
       "consortium_member": "",
       "confidence": "0.88",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10305,7 +10121,7 @@ window.JOBS_DATA = {
       "id": "605",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10328,7 +10144,7 @@ window.JOBS_DATA = {
       "id": "825",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10351,7 +10167,7 @@ window.JOBS_DATA = {
       "id": "575",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10374,7 +10190,7 @@ window.JOBS_DATA = {
       "id": "594",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10397,7 +10213,7 @@ window.JOBS_DATA = {
       "id": "616",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10420,7 +10236,7 @@ window.JOBS_DATA = {
       "id": "781",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10443,7 +10259,7 @@ window.JOBS_DATA = {
       "id": "636",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10466,7 +10282,7 @@ window.JOBS_DATA = {
       "id": "871",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10489,7 +10305,7 @@ window.JOBS_DATA = {
       "id": "766",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10512,7 +10328,7 @@ window.JOBS_DATA = {
       "id": "834",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10535,7 +10351,7 @@ window.JOBS_DATA = {
       "id": "614",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10558,7 +10374,7 @@ window.JOBS_DATA = {
       "id": "637",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10581,7 +10397,7 @@ window.JOBS_DATA = {
       "id": "833",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "ACJS",
@@ -10604,7 +10420,7 @@ window.JOBS_DATA = {
       "id": "809",
       "consortium_member": "",
       "confidence": "0.95",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10627,7 +10443,7 @@ window.JOBS_DATA = {
       "id": "763",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10650,7 +10466,7 @@ window.JOBS_DATA = {
       "id": "836",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10673,7 +10489,7 @@ window.JOBS_DATA = {
       "id": "599",
       "consortium_member": "",
       "confidence": "0.80",
-      "last_checked": ""
+      "last_probed": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10696,7 +10512,7 @@ window.JOBS_DATA = {
       "id": "780",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_checked": ""
+      "last_probed": ""
     }
   ]
 };
