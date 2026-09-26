@@ -83,13 +83,37 @@ _BROWSE_EXACT = ("", "/", "/jobs", "/jobs/", "/careers", "/careers/",
                  "/search", "/positions", "/positions/")
 
 
+# Named exactly, not by substring: matching any param containing "job" let
+# "?JobCat=156" — a category browse page — look like a posting id, and three
+# rows ended up linking to HigherEdJobs' own search page.
 _POSTING_PARAMS = re.compile(
-    r"(^|&)[^=&]*(jid|job|jobid|jobcode|req|reqid|posting|vacancy|gh_jid|lever|"
-    r"opportunity|position)[^=&]*=[^&]+", re.I)
+    r"(^|&)(gh_jid|ashby_jid|lever_id|jid|jobid|job_id|jobcode|job_code|"
+    r"jobnumber|req|reqid|requisition|requisitionid|posting|postingid|"
+    r"vacancy|vacancyid|opportunityid|positionid|id)=[^&]+", re.I)
+
+# A path whose last segment is a search or browse endpoint is not a posting,
+# whatever its query says.
+_BROWSE_ENDPOINTS = ("search", "search.cfm", "search.php", "search.aspx",
+                     "results", "results.cfm", "browse", "browse.cfm",
+                     "jobs.cfm", "listings", "openings")
 
 
 def _identifies_a_posting(query):
     return bool(query) and bool(_POSTING_PARAMS.search(query))
+
+
+def _normalize(url):
+    return url.rstrip("/").lower()
+
+
+def _is_source_listing(url):
+    """A board's own listing page is never one posting's page.
+
+    Rows were stored pointing at higheredjobs.com/faculty/search.cfm?JobCat=156,
+    the very page we scrape, as if it were the posting."""
+    return _normalize(url) in {_normalize(u)
+                               for source in config.SOURCES.values()
+                               for u in source["urls"]}
 
 
 def valid_url(url, page_text=None):
@@ -107,6 +131,10 @@ def valid_url(url, page_text=None):
             or " " in url):
         return False
     path = parsed.path.rstrip()
+    if path.rsplit("/", 1)[-1].lower() in _BROWSE_ENDPOINTS:
+        return False
+    if _is_source_listing(url):
+        return False
     if path.lower() in _BROWSE_EXACT and not _identifies_a_posting(parsed.query):
         # A bare /jobs/ or /careers is a landing page, but plenty of ATS links
         # name the posting in the query instead: classdojo.com/jobs/?ashby_jid=...

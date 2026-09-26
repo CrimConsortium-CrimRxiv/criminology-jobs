@@ -6,6 +6,7 @@ Outputs: criminology_jobs.csv, data.js (site data), review.csv"""
 
 import collections
 import csv
+import hashlib
 import datetime
 import json
 import os
@@ -23,6 +24,7 @@ CSV_PATH = os.path.join(ROOT, "criminology_jobs.csv")
 DATA_JS_PATH = os.path.join(ROOT, "data.js")
 REVIEW_PATH = os.path.join(ROOT, "review.csv")
 SUMMARY_PATH = os.path.join(ROOT, "refresh_summary.json")
+INDEX_PATH = os.path.join(ROOT, "index.html")
 
 COLUMNS = [
     "source_site", "job_title", "institution", "department_or_school",
@@ -398,6 +400,7 @@ def main():
     write_csv(CSV_PATH, published, COLUMNS)
     write_csv(REVIEW_PATH, pending, REVIEW_COLUMNS)
     write_data_js(published, today)
+    stamp_data_version(DATA_JS_PATH, INDEX_PATH)
 
     n_pending = sum(1 for p in pending if not p["decision"])
     write_summary({
@@ -431,6 +434,27 @@ def write_summary(summary):
     with open(SUMMARY_PATH, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(summary, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
+
+
+def stamp_data_version(data_js_path, index_path):
+    """Point index.html at data.js?v=<content hash>.
+
+    index.html asked for a bare "data.js", which the CDN serves with
+    max-age=600 and browsers hold onto for longer, so a refresh that removed a
+    dead posting could still be showing it to a reader afterwards. Versioning
+    the reference means a changed board is a changed URL. Returns the version,
+    or None if nothing needed rewriting."""
+    with open(data_js_path, "rb") as handle:
+        version = hashlib.sha256(handle.read()).hexdigest()[:12]
+    with open(index_path, encoding="utf-8") as handle:
+        html = handle.read()
+    updated = re.sub(r'<script src="data\.js(?:\?v=[0-9a-f]+)?"></script>',
+                     f'<script src="data.js?v={version}"></script>', html)
+    if updated == html:
+        return None
+    with open(index_path, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write(updated)
+    return version
 
 
 def write_data_js(rows, today):

@@ -220,6 +220,24 @@ class RunTests(unittest.TestCase):
         self.assertIn("no url", retired[0]["retired_reason"])
         self.assertIn("d old", retired[0]["retired_detail"])
 
+    def test_data_version_is_stamped_into_index(self):
+        """A bare "data.js" is cached by the CDN and the browser, so a refresh
+        that removed a dead posting could still be showing it afterwards."""
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data_js, index = root / "data.js", root / "index.html"
+            data_js.write_text("window.JOBS_DATA = {}", encoding="utf-8")
+            index.write_text('<script src="data.js"></script>', encoding="utf-8")
+
+            version = run.stamp_data_version(data_js, index)
+
+            self.assertRegex(index.read_text(encoding="utf-8"),
+                             r'src="data\.js\?v=[0-9a-f]{12}"')
+            self.assertIsNone(run.stamp_data_version(data_js, index))  # idempotent
+
+            data_js.write_text("window.JOBS_DATA = {\"changed\": 1}", encoding="utf-8")
+            self.assertNotEqual(run.stamp_data_version(data_js, index), version)
+
     def test_review_columns_do_not_leak_internal_fields(self):
         for field in ("id", "consortium_member", "last_probed"):
             self.assertNotIn(field, run.REVIEW_COLUMNS)

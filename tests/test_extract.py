@@ -53,6 +53,26 @@ class ExtractTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], url)
 
+    def test_a_boards_own_search_page_is_not_a_posting(self):
+        """Three rows linked to higheredjobs.com/faculty/search.cfm?JobCat=156 —
+        the page we scrape — because "JobCat" matched a substring test for a job
+        id param."""
+        for url in ("https://www.higheredjobs.com/faculty/search.cfm?JobCat=156",
+                    "https://www.higheredjobs.com/faculty/search.cfm",
+                    "https://example.org/jobs/search.cfm?JobCat=99",
+                    "https://example.org/results.cfm?JobCat=1",
+                    "https://example.org/browse"):
+            with self.subTest(url=url):
+                self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], "")
+
+    def test_a_configured_source_listing_url_is_rejected(self):
+        listing = config.SOURCES["jobs.ac.uk"]["urls"][0]
+        self.assertFalse(extract.valid_url(listing))
+
+    def test_an_id_in_the_path_is_not_a_browse_page(self):
+        """TikTok serves real postings at /search/<id>."""
+        self.assertTrue(extract.valid_url("https://lifeattiktok.com/search/7556619364734208264"))
+
     def test_good_urls_survive(self):
         for url in ("https://www.jobs.ac.uk/job/DSX170/senior-lecturer",
                     "http://example.edu/jobs/1",
