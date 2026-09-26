@@ -179,6 +179,36 @@ class RunTests(unittest.TestCase):
         self.assertEqual(probe.call_args.kwargs["max_per_host"],
                          run.config.LIVENESS_MAX_PER_HOST)
 
+    def test_old_unconfirmed_postings_are_retired(self):
+        """The reported dead posting was 329 days old and its host refuses every
+        check, so liveness alone would have kept it on the board for good."""
+        rows = [{"id": "old-unreadable", "job_url": "https://b.example/1",
+                 "posted_date": "2025-11-01"},
+                {"id": "old-but-live", "job_url": "https://b.example/2",
+                 "posted_date": "2025-11-01"},
+                {"id": "recent-unreadable", "job_url": "https://b.example/3",
+                 "posted_date": "2026-09-01"}]
+
+        with patch.object(run.fetch, "listing_states",
+                          return_value={"https://b.example/1": "unknown",
+                                        "https://b.example/2": "live",
+                                        "https://b.example/3": "unknown"}):
+            kept, retired = run.prune_dead(rows, datetime.date(2026, 9, 26))
+
+        self.assertEqual([r["id"] for r in retired], ["old-unreadable"])
+        self.assertIn("not confirmed open", retired[0]["retired_reason"])
+        self.assertEqual([r["id"] for r in kept], ["old-but-live", "recent-unreadable"])
+
+    def test_an_old_posting_never_reached_is_still_retired(self):
+        """Otherwise a row past the budget every run stays forever."""
+        rows = [{"id": "1", "job_url": "https://b.example/1", "posted_date": "2025-01-01"}]
+
+        with patch.object(run.fetch, "listing_states", return_value={}):
+            kept, retired = run.prune_dead(rows, datetime.date(2026, 9, 26))
+
+        self.assertEqual(kept, [])
+        self.assertIn("not confirmed open", retired[0]["retired_reason"])
+
     def test_unverifiable_rows_age_out(self):
         rows = [{"id": "fresh", "job_url": "", "posted_date": "2026-09-01"},
                 {"id": "stale", "job_url": "", "posted_date": "2025-01-01"}]

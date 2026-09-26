@@ -74,6 +74,13 @@ LIVENESS_MAX_PER_HOST = 200
 # A row with no URL cannot be checked. Those are kept, but they are also the
 # rows most likely to be stale, so they are retired after this many days.
 UNVERIFIABLE_MAX_AGE_DAYS = 120
+# An upper bound on age for everything else. Chasing a bot wall cannot clear old
+# cruft: the posting reported as dead was 329 days old and higheredjobs.com will
+# not answer a check on it, so liveness alone would have kept it indefinitely.
+# No academic posting is still open after eight months, so past this age a row
+# has to be confirmed live to stay — absence of confirmation is enough to retire
+# it, which is the opposite of the rule for a recent posting.
+MAX_AGE_DAYS = 240
 
 # --- Sources ----------------------------------------------------------------
 # Every source is scraped directly first — that gives exact listings and real

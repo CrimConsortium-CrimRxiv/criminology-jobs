@@ -60,6 +60,11 @@ Deleted on 1/02/2026". Every refresh now re-checks stored postings:
   read is not a board without jobs.
 - rows with no URL cannot be checked at all, so they age out after
   `UNVERIFIABLE_MAX_AGE_DAYS`.
+- past `MAX_AGE_DAYS` (240) the rule inverts: a posting has to be confirmed
+  **live** to stay. Chasing the bot wall cannot clear old cruft on its own — the
+  posting reported as dead was 329 days old on a host that answers almost no
+  checks, so a liveness-only rule would have kept it indefinitely. No academic
+  posting is still open after eight months.
 
 Volume is what gets us blocked: 8 concurrent requests made higheredjobs.com
 report 144 of 154 postings unverifiable, and a few hundred checks in a day made
@@ -153,5 +158,6 @@ returned by an extraction run.
 | `PRUNE_DEAD_LISTINGS` | `True` | Retire postings that are definitely gone |
 | `LIVENESS_MAX_PER_HOST` | `200` | Liveness checks per host per run |
 | `UNVERIFIABLE_MAX_AGE_DAYS` | `120` | Age-out for rows with no URL |
+| `MAX_AGE_DAYS` | `240` | Past this age a posting must be confirmed live to stay |
 | `SOURCES` | — | The five boards and their URLs |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |
