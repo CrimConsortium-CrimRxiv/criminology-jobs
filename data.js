@@ -23,7 +23,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DTB032/senior-lecturer-in-criminology-criminal-justice",
       "id": "892",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -45,7 +46,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor/86117879/",
       "id": "880",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -67,7 +69,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.theesa.com/jobs/counsel-technology-policy/",
       "id": "877",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -89,7 +92,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apply.workable.com/moonshot/j/DFD0F0BF9D/",
       "id": "876",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -111,7 +115,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-Trust-Building-AR-Bentonville-Home-Office/XMLNAME--USA--Director--Specialty-Compliance-and-Ethics---Global-User-Generated-Content--UGC--Compliance_R-2614692",
       "id": "875",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -133,7 +138,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/uta_crcj_assistant_professor___public_health_and_criminal_justice.pdf",
       "id": "886",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -155,7 +161,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/cjus_fy_2027_2028_tt_job_posting.pdf",
       "id": "885",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -177,7 +184,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/tenure_track_assistant_professor_of_criminal_justice.pdf",
       "id": "884",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -199,7 +207,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/job_ad_assistant_professor_start_date_fall_27.pdf",
       "id": "883",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -221,7 +230,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/fy28_crcj_tenure_track_assistant_professor_position_ad.docx",
       "id": "882",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -243,7 +253,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/assistant_associate_ad_9182026.pdf",
       "id": "888",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -265,7 +276,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/crim_quantmethods_ap_20260918.pdf",
       "id": "887",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -283,11 +295,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "2026-10-23",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://hrs.wsu.edu/careers",
-      "combined_urls": "https://hrs.wsu.edu/careers, https://careers.acjs.org/job/assistant-professor-career-track/86092291/",
+      "job_url": "",
+      "combined_urls": "https://careers.acjs.org/job/assistant-professor-career-track/86092291/",
       "id": "879",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -309,139 +322,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "874",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Teaching Professor, Criminal Justice and Criminology, UMKC School of Humanities and Social Sciences",
-      "institution": "University of Missouri-Kansas City",
-      "department_or_school": "School of Humanities and Social Sciences",
-      "country": "USA",
-      "city_or_region": "Kansas City, MO",
-      "rank_type": "Assistant Teaching Professor",
-      "area_specialization": "Criminal Justice and Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178993141",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178993141",
-      "id": "867",
-      "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Teaching Professor, Department of Sociology and Criminology",
-      "institution": "",
-      "department_or_school": "Department of Sociology and Criminology",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Teaching Professor",
-      "area_specialization": "Sociology and Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179059374",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179059374",
-      "id": "865",
-      "consortium_member": "",
-      "confidence": "0.80"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant or Associate Professor of Criminal Justice",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant/Associate Professor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179129289",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179129289",
-      "id": "863",
-      "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Faculty Position in Sociology and Criminal Justice Studies",
-      "institution": "Truman State University",
-      "department_or_school": "Sociology/Criminal Justice Studies",
-      "country": "USA",
-      "city_or_region": "Kirksville, MO",
-      "rank_type": "Non-tenure track Faculty",
-      "area_specialization": "Criminal Justice Studies/Sociology",
-      "contract_type": "9-month, renewable",
-      "teaching_expectations": "Intro sociology and CJ courses",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179094237",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179094237",
-      "id": "862",
-      "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminal Justice, College of Liberal Arts - F22088F1",
-      "institution": "University of Southern Indiana",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Evansville, IN",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Policing and Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "12 credit hours per semester",
-      "research_expectations": "Scholarly activity",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178192047",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178192047",
-      "id": "861",
-      "consortium_member": "",
-      "confidence": "0.90"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor - Criminology and Justice Studies",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology and Justice Studies",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/search/details.cfm?JobCode=176574066",
-      "combined_urls": "https://www.higheredjobs.com/search/details.cfm?JobCode=176574066",
-      "id": "859",
-      "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -463,29 +345,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179295206",
       "id": "855",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Tenure-Track Assistant Professor in Criminal Justice",
-      "institution": "Appalachian State University",
-      "department_or_school": "Department of Government & Justice Studies",
-      "country": "USA",
-      "city_or_region": "Boone, NC",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice/Criminology - Policing/Law Enforcement",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-21",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "Competitive, commensurate with experience",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179129448",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179129448",
-      "id": "854",
-      "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -507,7 +368,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-or-associate-professor/86038559/",
       "id": "881",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -529,7 +391,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/criminal-justice-assistant-professor-alfred-state-college/86049992/",
       "id": "878",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -548,10 +411,11 @@ window.JOBS_DATA = {
       "salary_currency": "",
       "salary_range": "",
       "job_url": "https://careers.acjs.org/job/tenure-track-assistant-professor-of-criminology/86028682/",
-      "combined_urls": "https://careers.acjs.org/job/tenure-track-assistant-professor-of-criminology/86028682/, https://employment.umn.edu/",
+      "combined_urls": "https://careers.acjs.org/job/tenure-track-assistant-professor-of-criminology/86028682/",
       "id": "873",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -573,7 +437,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/criminal-justice-specialist-pt/83325362/",
       "id": "842",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -595,7 +460,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-tenure-track-department-of-sociology-criminology/86012451/",
       "id": "841",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -617,7 +483,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice/86012285/",
       "id": "840",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -639,7 +506,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.villanova.edu/university/human-resources/work-at-villanova.html",
       "id": "845",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -661,7 +529,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://albany.interviewexchange.com/jobofferdetails.jsp?JOBID=204696, https://careers.acjs.org/job/assistant-professor-school-of-criminal-justice/85994884/",
       "id": "839",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -679,11 +548,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open Until Filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://www.uhd.edu/",
-      "combined_urls": "https://www.uhd.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "838",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -705,7 +575,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_ut0926-13470.pdf",
       "id": "847",
       "consortium_member": "",
-      "confidence": "0.93"
+      "confidence": "0.93",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -727,7 +598,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_hi0926-13345.pdf",
       "id": "846",
       "consortium_member": "",
-      "confidence": "0.93"
+      "confidence": "0.93",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -749,29 +621,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/details/Assistant-Professor---9-MONTH_R0090240",
       "id": "843",
       "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Visiting Assistant Teaching Professor or Visiting Instructor of Criminal Justice",
-      "institution": "University of Southern Mississippi",
-      "department_or_school": "School of Criminal Justice, Forensic Science, and Security",
-      "country": "United States",
-      "city_or_region": "Hattiesburg, MS",
-      "rank_type": "Visiting Assistant Teaching Professor/Instructor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "Full-time, 9-month, visiting",
-      "teaching_expectations": "Standard CJ courses",
-      "research_expectations": "Not heavily emphasized",
-      "posted_date": "2026-09-14",
-      "deadline_or_review_date": "Open Until Filled",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179176022",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179176022",
-      "id": "826",
-      "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -793,7 +644,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=178936966",
       "id": "824",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -815,7 +667,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/instructor-assistant-professor-criminal-justice-vcu/",
       "id": "815",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -837,7 +690,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/teaching-specialist-criminal-justice-stockton/",
       "id": "814",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -859,7 +713,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/associate-professor-practice-criminal-justice/",
       "id": "813",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -881,7 +736,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-human-services-criminal-justice/",
       "id": "812",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -903,7 +759,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-bgsu/",
       "id": "811",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -925,7 +782,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-instructor-criminal-justice-howard/",
       "id": "810",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -947,7 +805,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-alfred/",
       "id": "808",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -969,7 +828,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/visiting-assistant-professor-high-point/",
       "id": "807",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -991,7 +851,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/lecturer-school-criminal-justice-albany/",
       "id": "805",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1013,7 +874,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-sociology-criminal-justice-wcu/",
       "id": "804",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1035,7 +897,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-stedwards/",
       "id": "803",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1057,7 +920,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminology-criminal-justice-plymouth/",
       "id": "802",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1079,7 +943,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-associate-professor-odu-sociology-criminal-justice/",
       "id": "801",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1101,7 +966,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-oshkosh/",
       "id": "800",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1123,7 +989,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/lecturer-assistant-teaching-professor-criminal-justice-reno/",
       "id": "799",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1145,7 +1012,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-ut/",
       "id": "798",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1167,7 +1035,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/instructional-faculty-tenured-tenure-track-fresno/",
       "id": "797",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1189,7 +1058,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-fresno/",
       "id": "796",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1211,7 +1081,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/director-school-criminology-criminal-justice/",
       "id": "795",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1233,7 +1104,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminology-criminal-justice-isu/",
       "id": "794",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1255,7 +1127,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-restorative-justice/",
       "id": "793",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1277,7 +1150,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/full-time-teaching-professor-uncc/",
       "id": "792",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1299,7 +1173,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminology-race-inequality/",
       "id": "789",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1321,7 +1196,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-rit/",
       "id": "788",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -1343,29 +1219,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSX296/assistant-professor-in-the-sociology-of-crime",
       "id": "837",
       "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "ASC",
-      "job_title": "Assistant Professor of Criminology",
-      "institution": "Virginia Tech",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Blacksburg, Virginia",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-11",
-      "deadline_or_review_date": "2026-10-14",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.apply.vt.edu/jobs/assistant-professor-incriminology-blacksburg-virginia-united-states",
-      "combined_urls": "https://jobs.apply.vt.edu/jobs/assistant-professor-incriminology-blacksburg-virginia-united-states",
-      "id": "818",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -1387,7 +1242,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://zahr-prd-candidate-ada.utshare.utsystem.edu/psc/ZAHRPRDADA/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=21&JobOpeningId=16253&PostingSeq=1&, https://www.higheredjobs.com/state/details.cfm?JobCode=178917376&Title=Assistant+Professor+-+College+for+Health%2C+Community+and+Policy%2C+Criminology+",
       "id": "817",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1409,7 +1265,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://recruit.ap.uci.edu/JPF10413",
       "id": "816",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1431,7 +1288,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/r0071026-instructors-criminal-justice/",
       "id": "791",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1453,7 +1311,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminal-justice-tamvu/",
       "id": "790",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -1475,7 +1334,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://uofl.wd1.myworkdayjobs.com/en-US/UofLCareerSite/details/Assistant-Professor--Tenure-Track---Criminal-Justice_R109255?q=R109255",
       "id": "821",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1497,7 +1357,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://recruit.ap.uci.edu/JPF10329",
       "id": "820",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -1519,7 +1380,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.utep.edu/human-resources/services/employment/",
       "id": "819",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1541,7 +1403,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/suno/dba162e0-97f1-4efe-b4ff-c7d671a01b11",
       "id": "786",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1563,7 +1426,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/suno/2058717a-ac2a-4092-9c83-dc7f3241e789",
       "id": "785",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1585,29 +1449,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor/85885784/",
       "id": "787",
       "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "ASC",
-      "job_title": "Assistant Professor – Criminology",
-      "institution": "Simon Fraser University",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-09",
-      "deadline_or_review_date": "2026-10-09",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.sfu.ca/vpacademic/academic-careers/faculty-positions/arts-social-sciences.html",
-      "combined_urls": "https://www.sfu.ca/vpacademic/academic-careers/faculty-positions/arts-social-sciences.html",
-      "id": "784",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -1629,7 +1472,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice/85886069/",
       "id": "783",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -1651,7 +1495,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178170673",
       "id": "782",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -1673,7 +1518,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=178951654",
       "id": "778",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -1695,7 +1541,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/search/details.cfm?JobCode=176571203",
       "id": "775",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -1717,7 +1564,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=177314502",
       "id": "765",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -1739,7 +1587,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.lockedinai.com/careers/llm-developer",
       "id": "762",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1761,7 +1610,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://concentrix-portugal.talkpush.com/site/campaigns/Z2lkOi8vYXN0cmFldXMvQ2FtcGFpZ246OlJlY29yZC80ODQ",
       "id": "745",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1783,7 +1633,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.goodimpressionsmedia.com/jobs/engagement-manager-ai-risk",
       "id": "733",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1805,7 +1656,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.thorn.org/careers/application/?gh_jid=8592619002",
       "id": "732",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1827,7 +1679,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7556619364734208264",
       "id": "731",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1849,7 +1702,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.twilio.com/careers/job/1099553375023",
       "id": "730",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1871,7 +1725,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.amazon.jobs/en/jobs/10489252/risk-manager-ii-tsi-sci-res-q",
       "id": "729",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -1893,7 +1748,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/78116554922697414-policy-specialist/",
       "id": "728",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1915,7 +1771,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-tenure-track-criminal-justice/85843647/",
       "id": "660",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -1937,7 +1794,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_unr_ap_0926.pdf",
       "id": "848",
       "consortium_member": "",
-      "confidence": "0.94"
+      "confidence": "0.94",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -1959,7 +1817,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://eeik.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/262403/?utm_medium=jobshare&utm_source=External+Job+Share, https://careers.acjs.org/job/assistant-professor-of-practice/85825004/",
       "id": "748",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, ACJS",
@@ -1981,7 +1840,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://nshe.wd1.myworkdayjobs.com/en-US/UNR-external/details/Lecturer-Teaching-Assistant-Professor--Criminal-Justice_R0153143, https://careers.acjs.org/job/lecturerteaching-assistant-professor/85825220/",
       "id": "661",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -2003,7 +1863,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apply.interfolio.com/192837",
       "id": "659",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -2025,7 +1886,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice/85825193/, https://nshe.wd1.myworkdayjobs.com/en-US/UNR-external/details/Assistant-Professor--Criminal-Justice_R0153145",
       "id": "653",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -2047,7 +1909,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/deputy-director-independent-pretrial-services-agency-uc/85809795/",
       "id": "844",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -2069,7 +1932,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apply.careers.microsoft.com/careers/job/1970393556956249",
       "id": "761",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2091,7 +1955,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.pinterestcareers.com/jobs/7901910/product-manager-ii-content-compliance/",
       "id": "759",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2113,7 +1978,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/83749891473318598-engineering-manager/",
       "id": "758",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -2135,7 +2001,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://ibqzjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001",
       "id": "755",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -2157,7 +2024,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://oregonstate.wd501.myworkdayjobs.com/en-US/OSU_Careers_Site/job/Assistant-Professor--Sociology---Crime--Law--and-Deviance_JR0000609?locations=3117a637d9ad1000a887920282040000",
       "id": "749",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -2179,7 +2047,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://shsu.peopleadmin.com/postings/48267",
       "id": "747",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -2201,7 +2070,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.dayforcehcm.com/en-CA/intouchcx/CANDIDATEPORTAL/jobs/18157",
       "id": "717",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2223,7 +2093,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.dayforcehcm.com/en-CA/intouchcx/CANDIDATEPORTAL/jobs/18153",
       "id": "716",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2245,7 +2116,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/2089248255800918/",
       "id": "715",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2267,7 +2139,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/xai/jobs/5097907007",
       "id": "714",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2289,7 +2162,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://block.xyz/careers/jobs/5383497008",
       "id": "713",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2311,7 +2185,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.airbnb.com/positions/8029984/",
       "id": "712",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2333,7 +2208,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5207565008",
       "id": "711",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2355,7 +2231,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/reddit/jobs/8070669",
       "id": "710",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2377,7 +2254,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5319626008",
       "id": "709",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2399,7 +2277,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/1363038282464671/",
       "id": "708",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2421,7 +2300,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc",
       "id": "707",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2443,7 +2323,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/98958383553356486-vendor-operations-manager/",
       "id": "706",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2465,7 +2346,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/115386947530040006-technical-program-manager-iii/",
       "id": "705",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2487,7 +2369,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/103407334016852678-launch-manager/",
       "id": "704",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2509,7 +2392,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.wipro.com/job/Austin-Trust-and-Safety-Manager-USA-78753/194781-en_US/",
       "id": "703",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2531,7 +2415,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5410004008",
       "id": "702",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2553,7 +2438,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.tiktokusds.com/usds/position/7679221866898360581/detail",
       "id": "701",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2575,7 +2461,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.tiktokusds.com/usds/position/7652105639095142709/detail",
       "id": "700",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2597,7 +2484,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/super.com/52197c13-cdb7-4c12-acc7-17330cf56544",
       "id": "699",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2619,7 +2507,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/26e8c199-7dcb-4144-b263-f35220421a6d",
       "id": "698",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2641,7 +2530,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7672363743466916149",
       "id": "697",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2663,7 +2553,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5403775008",
       "id": "696",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2685,29 +2576,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://wd1.myworkdaysite.com/en-US/recruiting/snapchat/snap/job/Los-Angeles-California/Lead--Proactive-Trust---Safety-Operations_R0045042-1",
       "id": "695",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Investigation Associate, TORX",
-      "institution": "Amazon",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Bangalore, India",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-02",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.amazon.jobs/en/jobs/10513267/investigation-associate-torx",
-      "combined_urls": "https://www.amazon.jobs/en/jobs/10513267/investigation-associate-torx",
-      "id": "694",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2729,7 +2599,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7666082367443290373",
       "id": "693",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2751,7 +2622,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.dayforcehcm.com/en-CA/intouchcx/CANDIDATEPORTAL/jobs/18150",
       "id": "692",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2773,7 +2645,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/deliveroo/cbf27db0-5a18-43cb-912b-0ba698d8830a",
       "id": "691",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2795,7 +2668,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/chile/jobs/8163275",
       "id": "690",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2817,7 +2691,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.tp.com/en-us/job-opportunities/vietnam/content-moderator/",
       "id": "689",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2839,7 +2714,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/fanaticscollectibles/jobs/4283778009",
       "id": "688",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2861,7 +2737,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://stripe.com/careers/listing/risk-operations-associate-partner-risk-operations-cdmx/8158090",
       "id": "687",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2883,7 +2760,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7678718293411186997",
       "id": "686",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2905,7 +2783,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7575276581457578245",
       "id": "683",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2927,7 +2806,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/eneba/8c5be2e3-8ce2-46e2-a009-e62736e16f65",
       "id": "682",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2949,7 +2829,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/108206790318924486-transformation-governance-lead/",
       "id": "681",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2971,7 +2852,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/patreon/37b9ae12-b503-42b7-b16e-ee6281c6a0c5",
       "id": "680",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -2993,7 +2875,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/whatnot/1b48b946-a6ea-408e-abe6-50fa5ca803a1",
       "id": "679",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3015,7 +2898,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.booking.com/booking/jobs/29649",
       "id": "678",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3037,7 +2921,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://concentrix-portugal.talkpush.com/site/campaigns/Z2lkOi8vYXN0cmFldXMvQ2FtcGFpZ246OlJlY29yZC8xNDM4",
       "id": "677",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3059,7 +2944,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.accenture.com/pl-en/careers/jobdetails?id=R00349461_en",
       "id": "676",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3081,7 +2967,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.comeet.com/jobs/tango/B7.007/head-of-content-moderation/73.D63",
       "id": "675",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -3103,29 +2990,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.telusdigital.com/jobs/17280623-digital-trust-and-safety-specialist-with-polish-and-english",
       "id": "674",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Program Manager, Safety",
-      "institution": "Bolt",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Tallinn, Estonia",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-02",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://bolt.eu/en/careers/positions/255361b7-dd2c-439f-bf23-696959d0a164/",
-      "combined_urls": "https://bolt.eu/en/careers/positions/255361b7-dd2c-439f-bf23-696959d0a164/",
-      "id": "673",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -3147,7 +3013,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.pentasia.com/careers/responsible-gaming-analyst-malta-39116-29301",
       "id": "672",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3169,7 +3036,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://join.matchgroupcareers.com/careers/job/44320913-content-strategist-dublin-ireland",
       "id": "671",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3191,7 +3059,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/checkout.com/2dc6e7d8-6d42-4058-a2c9-311a973d2f0a",
       "id": "665",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3213,29 +3082,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/80614954578649798-social-support-lead-trust-and-safety-compute",
       "id": "664",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Crisis Response Management Agent",
-      "institution": "Cognizant",
-      "department_or_school": "",
-      "country": "Argentina",
-      "city_or_region": "Buenos Aires, Argentina",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-02",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.cognizant.com/global-en/jobs/00069884131/crisis-response-management-agent/",
-      "combined_urls": "https://careers.cognizant.com/global-en/jobs/00069884131/crisis-response-management-agent/",
-      "id": "663",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3257,7 +3105,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://zeel.bamboohr.com/careers/181",
       "id": "662",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS, ASC",
@@ -3279,7 +3128,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice/85791308/, https://www.schooljobs.com/careers/susqu/jobs/5452653/assistant-professor-of-criminal-justice?pagetype=jobOpportunitiesJobs",
       "id": "656",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -3301,7 +3151,31 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistantassociate-professor-of-criminal-justice/85792389/, https://olemiss.edu/legalstudies/",
       "id": "655",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
+    },
+    {
+      "source_site": "ASC",
+      "job_title": "Assistant/Associate Professor",
+      "institution": "University of Mississippi",
+      "department_or_school": "Department of Criminal Justice & Legal Studies",
+      "country": "",
+      "city_or_region": "",
+      "rank_type": "Assistant/Associate Professor",
+      "area_specialization": "Open",
+      "contract_type": "",
+      "teaching_expectations": "",
+      "research_expectations": "",
+      "posted_date": "2026-09-01",
+      "deadline_or_review_date": "2026-10-01",
+      "salary_currency": "",
+      "salary_range": "",
+      "job_url": "",
+      "combined_urls": "",
+      "id": "893",
+      "consortium_member": "",
+      "confidence": "0.93",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -3323,7 +3197,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_fsu_ap_0926.pdf",
       "id": "890",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3345,7 +3220,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_fsu_sr_0926.pdf",
       "id": "889",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3367,7 +3243,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_olemiss_0926.pdf",
       "id": "849",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3385,11 +3262,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open until filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://criminology.fsu.edu/",
-      "combined_urls": "https://criminology.fsu.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "753",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -3411,7 +3289,8 @@ window.JOBS_DATA = {
       "combined_urls": "http://www.schooljobs.com/careers/stonehill",
       "id": "752",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -3429,11 +3308,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open until filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://criminology.fsu.edu/",
-      "combined_urls": "https://criminology.fsu.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "750",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -3455,7 +3335,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://nshe.wd1.myworkdayjobs.com/UNLV-External/job/UNLV1-Main-Campus-Las-Vegas/Assistant-Professor--Sociology--Inequalities--R0153346-_R0153346",
       "id": "746",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3477,7 +3358,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5320469008",
       "id": "744",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3499,7 +3381,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5407418008",
       "id": "743",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3521,7 +3404,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5400010008",
       "id": "742",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3543,7 +3427,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.lever.co/spotify/5b6b17ce-a676-49b1-b9a7-62362a75f9d8",
       "id": "741",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3565,7 +3450,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.linkedin.com/jobs/view/4445956889/",
       "id": "740",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3587,29 +3473,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7679074046370138421",
       "id": "739",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Senior Manager, Trust Investigations",
-      "institution": "LinkedIn",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Mountain View, CA",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.linkedin.com/jobs/view/4435323125/",
-      "combined_urls": "https://www.linkedin.com/jobs/view/4435323125/",
-      "id": "738",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3631,7 +3496,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.linkedin.com/jobs/view/4453129447/",
       "id": "737",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3653,7 +3519,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/gofundme/jobs/8031337",
       "id": "736",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3675,7 +3542,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/gofundme/jobs/8096849",
       "id": "735",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3697,7 +3565,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7670160044276812085",
       "id": "734",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3719,7 +3588,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/91653d95-27fc-44bd-bbb3-7078fd6a5718",
       "id": "727",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3741,7 +3611,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7674005672132069637",
       "id": "726",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3763,7 +3634,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.lever.co/rover/1c334d74-861c-4872-8906-499e1d4202ce",
       "id": "725",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3785,29 +3657,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.lever.co/rover/7cd71faa-5b4b-4476-ace6-0a19623569cf",
       "id": "724",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Social Media Specialist (Trust and Safety)",
-      "institution": "Rover",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "US: FL, GA, ID, NC, TX, WA, MI",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-09-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.lever.co/rover/fda6e912-02c1-4bd8-9fde-6df2905be5b5",
-      "combined_urls": "https://jobs.lever.co/rover/fda6e912-02c1-4bd8-9fde-6df2905be5b5",
-      "id": "723",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3829,7 +3680,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Purchase-New-York/Director--Artificial-Intelligence-Policy_R-281628",
       "id": "722",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3851,7 +3703,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lovable.dev/careers/community-manager-virtual-spaces-41d9ea",
       "id": "721",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3873,7 +3726,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7671148679395133749",
       "id": "720",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3895,7 +3749,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5137183008",
       "id": "719",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3917,7 +3772,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/anthropic/jobs/5066995008",
       "id": "718",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3939,7 +3795,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.roblox.com/jobs/7983067",
       "id": "685",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3961,7 +3818,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7657161146902808837",
       "id": "684",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -3983,7 +3841,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://cantina.com/careers?ashby_jid=fb9a1183-3932-4a5f-83e7-65eac64da966",
       "id": "670",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -4005,7 +3864,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.uber.com/en/jobs/300574/",
       "id": "669",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -4027,7 +3887,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apply.workable.com/digital-catapult/j/F8D932574D/",
       "id": "668",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -4049,7 +3910,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7662458878210656565",
       "id": "667",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -4071,7 +3933,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7670158653347727621",
       "id": "666",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4093,7 +3956,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "649",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4115,7 +3979,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "648",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4137,7 +4002,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "647",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4159,7 +4025,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "646",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4181,7 +4048,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "645",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4203,7 +4071,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "644",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4225,7 +4094,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/jobs/function/Faculty/",
       "id": "643",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4247,7 +4117,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "642",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4269,7 +4140,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "641",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4291,7 +4163,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/jobs/view/contract-renewable-faculty-member-of-criminology-and-criminal-justice/72494947/",
       "id": "640",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -4313,7 +4186,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminology/85738225/, https://phe.tbe.taleo.net/phe02/ats/careers/v2/viewRequisition?org=ARKASTAT2&cws=40&rid=39644",
       "id": "654",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -4335,7 +4209,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://fa-ewca-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3064",
       "id": "751",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -4357,7 +4232,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DST584/visiting-lecturer-in-criminology",
       "id": "650",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4379,7 +4255,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://waynetalent.csod.com/ux/ats/careersite/2/home?c=waynetalent&_gl=1*10hm8ta*_ga*NTkyNzg2NjY3LjE3NzY5NjQxMTI.*_ga_4WSTEGY0C8*czE3Nzg4NjQ4NzgkbzI4JGcxJHQxNzc4ODY0OTg1JGo2MCRsMCRoMA",
       "id": "760",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4401,7 +4278,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.cnu.edu/postings/21164",
       "id": "754",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -4423,7 +4301,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/ezcaterinc/jobs/5123263007",
       "id": "651",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4445,7 +4324,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179060379",
       "id": "635",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4467,7 +4347,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178721494",
       "id": "633",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4489,7 +4370,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179528415",
       "id": "632",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4511,7 +4393,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179476316",
       "id": "630",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -4533,7 +4416,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_hilo_ins_0826.pdf",
       "id": "891",
       "consortium_member": "",
-      "confidence": "0.99"
+      "confidence": "0.99",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4555,7 +4439,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_hilo_ap_0826.pdf",
       "id": "625",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -4577,7 +4462,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSQ966/postdoctoral-research-associate-criminology",
       "id": "639",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4599,7 +4485,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.utoronto.ca/job/Mississauga-Assistant-Professor-Law-and-SocietySociology-of-Law-ON/605230417/",
       "id": "757",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -4621,7 +4508,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://slu.wd5.myworkdayjobs.com/Careers/job/Tegeler-Hall/XMLNAME-9-Month--NTT-Faculty-Criminology---Criminal-Justice-Program_2026-09955",
       "id": "626",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -4643,7 +4531,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179235896",
       "id": "620",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4665,7 +4554,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178963359",
       "id": "617",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4687,7 +4577,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178524127",
       "id": "610",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4709,7 +4600,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179127964",
       "id": "606",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4731,7 +4623,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179202812",
       "id": "604",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4753,7 +4646,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179279019",
       "id": "602",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4775,7 +4669,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178188723",
       "id": "600",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4797,7 +4692,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179326684",
       "id": "598",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4819,7 +4715,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178671766",
       "id": "595",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4841,7 +4738,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178674211",
       "id": "589",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4863,7 +4761,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178781531",
       "id": "585",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -4885,7 +4784,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/instructor-of-administration-of-justice-position-no-87561/85560879/, https://www.schooljobs.com/careers/hawaii.edu",
       "id": "756",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -4907,7 +4807,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/tenure-track-position-in-criminal-justice/85559651/",
       "id": "658",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4929,7 +4830,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/search.cfm?JobCat=156",
       "id": "580",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4951,7 +4853,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/search.cfm?JobCat=156",
       "id": "579",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4973,7 +4876,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/search.cfm?JobCat=156",
       "id": "578",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -4995,7 +4899,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179342530",
       "id": "577",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5017,7 +4922,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179254281",
       "id": "573",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5039,7 +4945,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179251987",
       "id": "572",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5061,7 +4968,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179294769",
       "id": "571",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5083,7 +4991,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179220912",
       "id": "568",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5105,7 +5014,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179210107",
       "id": "566",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5127,7 +5037,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179260010",
       "id": "565",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5149,7 +5060,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179130129",
       "id": "564",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5171,7 +5083,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305136",
       "id": "559",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -5193,7 +5106,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179088919",
       "id": "554",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5215,7 +5129,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/faculty-position-sociology-and-criminal-justice/80117188/",
       "id": "487",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5237,7 +5152,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "486",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5259,7 +5175,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminology-sociology/80068284/",
       "id": "485",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5281,7 +5198,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "475",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5303,7 +5221,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "474",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5325,7 +5244,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/tenure-track-assistant-professor-of-criminology-and-justice-studies/",
       "id": "473",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -5347,7 +5267,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-criminology-criminal-justice/85543638/, https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d687b185-ab48-45f0-afcf-5b1ceb8d32ea&ccId=9200921635429_3&lang=en_US&jobId=619173&jwId=9200921635429_1",
       "id": "657",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -5369,7 +5290,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://ukjobs.uky.edu/postings/642681",
       "id": "492",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -5387,11 +5309,35 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "2026-09-30",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://www.msujobs.msstate.edu/",
-      "combined_urls": "https://www.msujobs.msstate.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "491",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
+    },
+    {
+      "source_site": "ASC",
+      "job_title": "Political Science and Criminal Justice: Assistant Professor in Criminal Justice — JR10013506",
+      "institution": "UW-Eau Claire",
+      "department_or_school": "Political Science and Criminal Justice",
+      "country": "",
+      "city_or_region": "",
+      "rank_type": "Assistant Professor",
+      "area_specialization": "Criminal Justice",
+      "contract_type": "",
+      "teaching_expectations": "",
+      "research_expectations": "",
+      "posted_date": "2026-08-12",
+      "deadline_or_review_date": "2026-10-01",
+      "salary_currency": "",
+      "salary_range": "",
+      "job_url": "",
+      "combined_urls": "",
+      "id": "894",
+      "consortium_member": "",
+      "confidence": "0.99",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -5413,7 +5359,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_uwec_0826.pdf",
       "id": "850",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5435,7 +5382,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.uwec.edu/job-postings/10013506",
       "id": "495",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5457,7 +5405,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.uwf.edu/jobs/assistant-professor-of-criminal-justice-and-criminology-109500-pensacola-main-campus-florida-united-states",
       "id": "494",
       "consortium_member": "",
-      "confidence": "0.93"
+      "confidence": "0.93",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -5479,7 +5428,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apptrkr.com/9758233",
       "id": "493",
       "consortium_member": "",
-      "confidence": "0.93"
+      "confidence": "0.93",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5501,7 +5451,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "490",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5523,7 +5474,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justicecriminology/",
       "id": "476",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5545,29 +5497,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "477",
       "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Content Review and Tagging Specialist / Team Leader",
-      "institution": "Temu",
-      "department_or_school": "",
-      "country": "Philippines",
-      "city_or_region": "Manila",
-      "rank_type": "Specialist/Team Leader",
-      "area_specialization": "Content Review",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-10",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.linkedin.com/jobs/view/4449392296/",
-      "combined_urls": "https://www.linkedin.com/jobs/view/4449392296/",
-      "id": "624",
-      "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -5589,7 +5520,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/criminal-justice-faculty/80662205/",
       "id": "478",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -5611,7 +5543,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://joinbytedance.com/search/7635862587825785141",
       "id": "529",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5633,7 +5566,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7669736773510465845",
       "id": "528",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5655,7 +5589,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7600399268318578949",
       "id": "527",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5677,7 +5612,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7633073790776215861",
       "id": "526",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5699,29 +5635,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7652299089034299653",
       "id": "525",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Content Review and Tagging Team Leader",
-      "institution": "Temu",
-      "department_or_school": "",
-      "country": "Philippines",
-      "city_or_region": "Manila",
-      "rank_type": "",
-      "area_specialization": "Content Moderation",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-08",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.linkedin.com/jobs/view/4449702026/",
-      "combined_urls": "https://www.linkedin.com/jobs/view/4449702026/",
-      "id": "524",
-      "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5743,7 +5658,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7594767288634755381",
       "id": "523",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5765,7 +5681,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7624366224198355253",
       "id": "522",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5787,7 +5704,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7605598846446094645",
       "id": "521",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5809,7 +5727,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.shopee.sg/job-detail/J02172517/1",
       "id": "520",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5831,7 +5750,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.smartrecruiters.com/Grab/744000141402439-assistant-manager-platform-safety?trid=2d92f286-613b-4daf-9dfa-6340ffbecf73",
       "id": "519",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5853,7 +5773,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/1560401342358676/",
       "id": "518",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5875,7 +5796,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/128016694000919238-product-manager/",
       "id": "517",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5897,7 +5819,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/twitch/jobs/8596758002",
       "id": "516",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5919,7 +5842,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/92263044934968006-senior-strategist/",
       "id": "515",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5941,7 +5865,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.gem.com/linktree/am9icG9zdDpqDh5o5sniDjN8K-_2XbdL",
       "id": "514",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5963,7 +5888,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/1427677602772274/",
       "id": "513",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -5985,7 +5911,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://sggovterp.wd102.myworkdayjobs.com/en-US/PublicServiceCareers/job/IMD---Mapletree-Business-City-MBC-BLK-10/Manager--Senior-Manager--Online-Safety-Regulation_JR-10000052398",
       "id": "512",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6007,7 +5934,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01643060_en",
       "id": "511",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6029,7 +5957,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.smartrecruiters.com/Grab/744000141078449-lead-ai-analytics-engineer-trust-safety",
       "id": "510",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6051,29 +5980,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.roblox.com/jobs/8069989",
       "id": "509",
       "consortium_member": "",
-      "confidence": "0.90"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Moderation Escalation Specialist",
-      "institution": "Roblox",
-      "department_or_school": "",
-      "country": "India",
-      "city_or_region": "Gurugram, Haryana",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-08",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.roblox.com/jobs/8097435?gh_jid=8097435&gh_src=da92d0c91",
-      "combined_urls": "https://careers.roblox.com/jobs/8097435?gh_jid=8097435&gh_src=da92d0c91",
-      "id": "508",
-      "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6095,7 +6003,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.roblox.com/jobs/7886349",
       "id": "507",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6117,7 +6026,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/80512588328116934-operations-support-lead/",
       "id": "506",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6139,29 +6049,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/104127100205572806-policy-enforcement-manager/",
       "id": "505",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Legal Counsel – Content Safety, Product & Privacy",
-      "institution": "Canva",
-      "department_or_school": "",
-      "country": "Australia",
-      "city_or_region": "Melbourne VIC",
-      "rank_type": "",
-      "area_specialization": "Content Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-08",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.smartrecruiters.com/Canva/6000000001170493-legal-counsel-content-safety-product-privacy",
-      "combined_urls": "https://jobs.smartrecruiters.com/Canva/6000000001170493-legal-counsel-content-safety-product-privacy",
-      "id": "504",
-      "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6183,7 +6072,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/cinder/5cc00bde-02a4-409b-aa54-e3f78574f70f",
       "id": "503",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6205,7 +6095,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://beehiiv.bamboohr.com/careers/59",
       "id": "502",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6227,7 +6118,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/twitch/jobs/8590327002",
       "id": "501",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6249,7 +6141,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/discord/jobs/8635949002",
       "id": "500",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6271,7 +6164,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/doordashusa/jobs/8077587",
       "id": "499",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6293,7 +6187,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.classdojo.com/jobs/?ashby_jid=050fee06-9cff-479f-8627-7dda82b13029#open-roles",
       "id": "498",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6315,7 +6210,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.gem.com/fetch/am9icG9zdDp2nE0ol89gj3f8WhoqJ-6t",
       "id": "497",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6337,7 +6233,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://discord.com/jobs/8680047002",
       "id": "496",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6359,7 +6256,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_wcu_0826.pdf",
       "id": "852",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6381,7 +6279,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_csu_cjc_0826.pdf, https://asc41.org/wp-content/uploads/position_ad_csu_ri_0826.pdf",
       "id": "851",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6403,7 +6302,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521663",
       "id": "458",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, HigherEdJobs",
@@ -6425,7 +6325,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/director-of-undergraduate-studies-in-criminal-justice-assistant-associate-or-professor/85493485/, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521661",
       "id": "454",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, HigherEdJobs",
@@ -6447,7 +6348,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/lecturer-in-criminal-justice/85492880/, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521662",
       "id": "453",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -6469,7 +6371,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.governmentjobs.com/jobs/5400928-0/26-152-tenure-track-assistant-professor-of-criminal-justice",
       "id": "410",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -6491,29 +6394,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://csucareers.calstate.edu/en-us/job/559690/assistant-professor-department-of-criminal-justice-race-inequality",
       "id": "360",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "ASC",
-      "job_title": "Tenure-Track Assistant Professor of Criminal Justice (Position #330650)",
-      "institution": "New Mexico State University/Criminal Justice Department",
-      "department_or_school": "Criminal Justice Department",
-      "country": "United States",
-      "city_or_region": "Las Cruces, New Mexico",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology, Criminal Justice, or closely related discipline",
-      "contract_type": "Tenure-Track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-06",
-      "deadline_or_review_date": "2026-09-06",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://asc41.org/wp-content/uploads/position_ad_nmsu_0826.pdf",
-      "combined_urls": "https://asc41.org/wp-content/uploads/position_ad_nmsu_0826.pdf",
-      "id": "627",
-      "consortium_member": "",
-      "confidence": "0.94"
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -6535,7 +6417,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "479",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -6557,7 +6440,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179521057",
       "id": "459",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -6575,11 +6459,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "2026-09-06",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://crimjust.nmsu.edu/",
-      "combined_urls": "https://crimjust.nmsu.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "455",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -6601,7 +6486,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/postdoctoral-fellow/85426635/, https://umd.wd1.myworkdayjobs.com/UMCP/job/University-of-Maryland-College-Park/Post-Doctoral-Associate_JR104578",
       "id": "451",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -6623,7 +6509,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "480",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -6645,7 +6532,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179518641",
       "id": "461",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -6667,7 +6555,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179518642",
       "id": "460",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -6689,7 +6578,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSM552/lecturer-in-criminology-policing",
       "id": "466",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -6711,7 +6601,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179517931",
       "id": "462",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -6733,7 +6624,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/xai/jobs/5202550007",
       "id": "652",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -6755,7 +6647,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "488",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -6773,11 +6666,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open until filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://cj.ua.edu/",
-      "combined_urls": "https://cj.ua.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "457",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -6795,11 +6689,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open until filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://cj.ua.edu/",
-      "combined_urls": "https://cj.ua.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "456",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -6821,7 +6716,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/tenure-track-assistant-professor-department-of-criminology-law-and-society/85401192/, https://listings.jobs.gmu.edu/jobs/tenure-track-assistant-professor-fairfax-va-virginia-united-states-other-7327cee6-e47e-4c43-aceb-9c4425407d72",
       "id": "452",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -6843,29 +6739,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7613157691968112949",
       "id": "450",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Senior Data Analyst – Trust, Safety, and Fraud Analytics",
-      "institution": "Rover",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Seattle, WA",
-      "rank_type": "Other",
-      "area_specialization": "Analytics",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-03",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.lever.co/rover/a79df802-9fbc-42af-a698-44ac68ab538f",
-      "combined_urls": "https://jobs.lever.co/rover/a79df802-9fbc-42af-a698-44ac68ab538f",
-      "id": "449",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6887,7 +6762,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210765390",
       "id": "448",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6909,51 +6785,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/roadie/jobs/8608837002",
       "id": "447",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Director, Trust & Safety, Content Moderation – GIPHY",
-      "institution": "Giphy",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "New York, NY",
-      "rank_type": "Other",
-      "area_specialization": "Trust and Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-03",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.shutterstock.com/us/en/job/R0003122/Director-Trust-Safety-Content-Moderation-GIPHY",
-      "combined_urls": "https://careers.shutterstock.com/us/en/job/R0003122/Director-Trust-Safety-Content-Moderation-GIPHY",
-      "id": "446",
-      "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Trust & Safety Specialist I",
-      "institution": "GitHub",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Remote",
-      "rank_type": "Other",
-      "area_specialization": "Trust and Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-03",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://githubinc.jibeapply.com/jobs/5549",
-      "combined_urls": "https://githubinc.jibeapply.com/jobs/5549",
-      "id": "445",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6975,7 +6808,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/mozilla/jobs/8029047",
       "id": "444",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -6997,7 +6831,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/hasbro/jobs/4267523009",
       "id": "443",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7019,7 +6854,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/reflectionai/b1c2e64b-6fd5-4562-96e5-fa5dea31d12f",
       "id": "442",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7041,7 +6877,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/suno/5ea04ae1-a27f-4fda-900b-fcc0327c7692",
       "id": "441",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7063,7 +6900,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/133586655624733382-associate-principal-analyst/",
       "id": "440",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7085,29 +6923,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Washington---Seattle/Manager--Technology-Program-Management_JR349279-1",
       "id": "439",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Director, Operations Trust & Safety",
-      "institution": "Care.com",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Dallas, TX",
-      "rank_type": "Other",
-      "area_specialization": "Operations",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-03",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.smartrecruiters.com/Carecom1/3743990013971358-director-operations-trust-safety",
-      "combined_urls": "https://jobs.smartrecruiters.com/Carecom1/3743990013971358-director-operations-trust-safety",
-      "id": "438",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7129,7 +6946,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/c9e9e3a5-fb93-4162-b876-6266016819c0",
       "id": "437",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7151,29 +6969,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/119642245434352326-technical-program-manager-iii/",
       "id": "436",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Digital Regulation Research Manager/Senior Manager",
-      "institution": "Reset Tech",
-      "department_or_school": "",
-      "country": "Germany",
-      "city_or_region": "Berlin",
-      "rank_type": "",
-      "area_specialization": "Digital Regulation",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://reset-tech.jobs.personio.com/job/2692995",
-      "combined_urls": "https://reset-tech.jobs.personio.com/job/2692995",
-      "id": "583",
-      "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7195,7 +6992,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/98191910669034182-product-manager/",
       "id": "582",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7217,7 +7015,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/1716228459591115/",
       "id": "581",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7239,7 +7038,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.telusdigital.com/jobs/17794551-trust-and-safety-evaluator-with-english-from-united-kingdom",
       "id": "553",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -7261,51 +7061,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.accenture.com/ie-en/careers/jobdetails?id=R00348003_en",
       "id": "552",
       "consortium_member": "",
-      "confidence": "0.80"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Staff Machine Learning Engineer – Policy & Safety",
-      "institution": "Spotify",
-      "department_or_school": "",
-      "country": "United Kingdom; Sweden",
-      "city_or_region": "London, UK; Stockholm, Sweden",
-      "rank_type": "",
-      "area_specialization": "Policy & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.lever.co/spotify/b441bb85-24c0-4ef4-971a-1372952c1c32",
-      "combined_urls": "https://jobs.lever.co/spotify/b441bb85-24c0-4ef4-971a-1372952c1c32",
-      "id": "551",
-      "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Senior Decision Scientist, Trust & Safety, Detection",
-      "institution": "Vinted",
-      "department_or_school": "",
-      "country": "Lithuania",
-      "city_or_region": "Vilnius; Kaunas",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.vinted.com/jobs/j/4895120101",
-      "combined_urls": "https://careers.vinted.com/jobs/j/4895120101",
-      "id": "550",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.80",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7327,7 +7084,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/75903530073760454-crossproduct-abuse-analyst/",
       "id": "549",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7349,7 +7107,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/lovable/13c2f37b-a60c-4601-993b-88baac9cbdfc",
       "id": "548",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7371,29 +7130,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.metacareers.com/profile/job_details/37938422802423956/",
       "id": "547",
       "consortium_member": "",
-      "confidence": "0.85"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Decision Scientist, Trust & Safety",
-      "institution": "Vinted",
-      "department_or_school": "",
-      "country": "Lithuania",
-      "city_or_region": "Vilnius; Kaunas",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.vinted.com/jobs/j/4786907101",
-      "combined_urls": "https://careers.vinted.com/jobs/j/4786907101",
-      "id": "546",
-      "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7415,29 +7153,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/lovable/9b35a15d-6abb-4b60-a9e7-270a68491850",
       "id": "545",
       "consortium_member": "",
-      "confidence": "0.90"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Senior Product Policy Manager, Regional Policy (Europe)",
-      "institution": "Roblox",
-      "department_or_school": "",
-      "country": "Netherlands",
-      "city_or_region": "Amsterdam",
-      "rank_type": "",
-      "area_specialization": "Policy",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.roblox.com/jobs/7962542",
-      "combined_urls": "https://careers.roblox.com/jobs/7962542",
-      "id": "544",
-      "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7459,7 +7176,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/143562527844770502-trust-and-safety-analyst-manager/",
       "id": "543",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7481,7 +7199,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/125761722353885894-manager/",
       "id": "542",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7503,29 +7222,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/112252190487126726-senior-analyst/",
       "id": "541",
       "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Sr. Safety Specialist",
-      "institution": "Pinterest",
-      "department_or_school": "",
-      "country": "Ireland",
-      "city_or_region": "Dublin",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.pinterestcareers.com/jobs/8078133/sr-safety-specialist/",
-      "combined_urls": "https://www.pinterestcareers.com/jobs/8078133/sr-safety-specialist/",
-      "id": "540",
-      "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7547,7 +7245,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7667947497975367941",
       "id": "539",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7569,51 +7268,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.wolt.com/en/jobs/1/8014101",
       "id": "538",
       "consortium_member": "",
-      "confidence": "0.90"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Director, Global Safety Regulatory Compliance",
-      "institution": "Match Group",
-      "department_or_school": "",
-      "country": "Ireland",
-      "city_or_region": "Dublin",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://join.matchgroupcareers.com/careers/job/43064690-director-global-safety-regulatory-compliance-dublin-ireland",
-      "combined_urls": "https://join.matchgroupcareers.com/careers/job/43064690-director-global-safety-regulatory-compliance-dublin-ireland",
-      "id": "537",
-      "consortium_member": "",
-      "confidence": "0.95"
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Lead, Payment Abuse Operations",
-      "institution": "LinkedIn",
-      "department_or_school": "",
-      "country": "Ireland",
-      "city_or_region": "Dublin",
-      "rank_type": "",
-      "area_specialization": "Trust & Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-01",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.linkedin.com/jobs/view/4449001680/",
-      "combined_urls": "https://www.linkedin.com/jobs/view/4449001680/",
-      "id": "536",
-      "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7635,7 +7291,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/veho-tech-inc/18997293-a36e-4b7b-9250-834e3465aeb2",
       "id": "535",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7657,7 +7314,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://alice.io/positions/position-0f_e64",
       "id": "534",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7679,7 +7337,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.thorn.org/careers/application/?gh_jid=8662222002",
       "id": "533",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7701,7 +7360,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://openai.com/careers/product-policy-youth-policy-manager-san-francisco/",
       "id": "532",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "TSPA",
@@ -7723,7 +7383,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7664730219235985717",
       "id": "531",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -7745,7 +7406,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.tspa.org/join-us/",
       "id": "530",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -7767,7 +7429,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "489",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -7789,7 +7452,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSL459/lecturer-senior-lecturer-in-probation-and-community-justice",
       "id": "471",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -7811,7 +7475,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514770",
       "id": "420",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7833,7 +7498,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179513905",
       "id": "422",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7855,7 +7521,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179514093",
       "id": "421",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7877,7 +7544,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179511011",
       "id": "426",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7899,7 +7567,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179511012",
       "id": "425",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7921,7 +7590,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179511102",
       "id": "424",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -7943,7 +7613,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179511167",
       "id": "423",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -7961,11 +7632,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "2026-09-15",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://www.jjay.cuny.edu/",
-      "combined_urls": "https://www.jjay.cuny.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "419",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -7984,10 +7656,11 @@ window.JOBS_DATA = {
       "salary_currency": "",
       "salary_range": "",
       "job_url": "https://careers.acjs.org/job/assistant-professor/85301885/",
-      "combined_urls": "https://careers.acjs.org/job/assistant-professor/85301885/, https://www.fresnostate.edu/",
+      "combined_urls": "https://careers.acjs.org/job/assistant-professor/85301885/",
       "id": "418",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8009,7 +7682,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179510793",
       "id": "427",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -8031,7 +7705,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "481",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8053,7 +7728,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179509160",
       "id": "463",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -8075,7 +7751,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://ualr.edu/humanresources",
       "id": "401",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -8097,7 +7774,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://indiana.peopleadmin.com/postings/33579",
       "id": "400",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -8119,7 +7797,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://csucareers.calstate.edu/mob/cw/en-us/job/560229/assistant-professor-of-criminology-criminal-justice-and-emergency-management, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179508272",
       "id": "399",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -8141,7 +7820,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice-p10012987-r0087910/85238419/",
       "id": "398",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -8163,7 +7843,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "482",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8185,7 +7866,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSJ066/assistant-professor-in-criminology-teaching-and-curriculum-leadership-fixed-term",
       "id": "470",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8207,7 +7889,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSI990/lecturer-in-criminology-2acrim26",
       "id": "469",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8229,7 +7912,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSI997/senior-lecturer-in-criminology",
       "id": "465",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -8251,7 +7935,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "483",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8273,7 +7958,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179506852",
       "id": "464",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8295,7 +7981,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179505598",
       "id": "404",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8317,7 +8004,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSI157/lecturer-in-criminology-research-and-teaching",
       "id": "468",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -8339,7 +8027,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179505119",
       "id": "405",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -8361,7 +8050,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://academics.depaul.edu/faculty-jobs/Pages/position-detail.aspx?dpusearchbyid=921297",
       "id": "402",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -8383,7 +8073,8 @@ window.JOBS_DATA = {
       "combined_urls": "",
       "id": "484",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8405,7 +8096,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179503571",
       "id": "407",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8427,7 +8119,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179504056",
       "id": "406",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -8446,10 +8139,11 @@ window.JOBS_DATA = {
       "salary_currency": "",
       "salary_range": "",
       "job_url": "https://careers.acjs.org/job/assistant-professor-law-and-technology/85140316/",
-      "combined_urls": "https://careers.acjs.org/job/assistant-professor-law-and-technology/85140316/, https://www.sjsu.edu/",
+      "combined_urls": "https://careers.acjs.org/job/assistant-professor-law-and-technology/85140316/",
       "id": "378",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS, ASC",
@@ -8471,7 +8165,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/director-criminal-justice-and-criminology/85140880/, https://jobs.hr.txstate.edu/postings/57527",
       "id": "365",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8493,7 +8188,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179498852",
       "id": "408",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8515,7 +8211,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179500573",
       "id": "383",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -8537,7 +8234,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.hku.hk/en/job/536796/tenuretrack-assistant-professor-in-the-department-of-sociology",
       "id": "379",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -8555,11 +8253,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "Open until filled",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://www.unomaha.edu/",
-      "combined_urls": "https://www.unomaha.edu/, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179497128",
+      "job_url": "",
+      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179497128",
       "id": "358",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -8581,7 +8280,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/fouryear/details.cfm?JobCode=179494575&Title=Director%2C+Criminal+Justice+and+Criminology",
       "id": "638",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -8603,7 +8303,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.rutgers.edu/postings/278523",
       "id": "361",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "ASC, HigherEdJobs",
@@ -8625,7 +8326,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://csucareers.calstate.edu/en-us/job/559725/assistant-professor-department-of-criminal-justice-courts, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179495348",
       "id": "359",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -8643,11 +8345,12 @@ window.JOBS_DATA = {
       "deadline_or_review_date": "2026-08-14",
       "salary_currency": "",
       "salary_range": "",
-      "job_url": "https://www.berkeley.edu/",
-      "combined_urls": "https://www.berkeley.edu/",
+      "job_url": "",
+      "combined_urls": "",
       "id": "380",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": ""
     },
     {
       "source_site": "jobs.ac.uk",
@@ -8669,7 +8372,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSE379/lecturer-assistant-professor-in-criminology",
       "id": "467",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "ASC",
@@ -8691,7 +8395,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://apply.interfolio.com/186091",
       "id": "363",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8713,29 +8418,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/runway-ml/c3ebd871-ea78-4b71-80a2-7d3c824dc48d",
       "id": "357",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Senior / Principal Technical Program Manager, Child Safety Tech and Industry Adoption",
-      "institution": "Tech Coalition",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Remote",
-      "rank_type": "Other",
-      "area_specialization": "Program/Product Management",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://technologycoalition.org/careers/senior-technical-program-manager/",
-      "combined_urls": "https://technologycoalition.org/careers/senior-technical-program-manager/",
-      "id": "356",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8757,73 +8441,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.jobvite.com/resolver/job/oOgntfwE",
       "id": "354",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Staff Product Manager, AI Safety",
-      "institution": "Pinterest",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "San Francisco, CA; Remote",
-      "rank_type": "Other",
-      "area_specialization": "Program/Product Management",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.pinterestcareers.com/jobs/7718015/staff-product-manager-ai-safety/",
-      "combined_urls": "https://www.pinterestcareers.com/jobs/7718015/staff-product-manager-ai-safety/",
-      "id": "353",
-      "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Associate Director, Podcast Policy",
-      "institution": "Spotify",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "New York, NY",
-      "rank_type": "Other",
-      "area_specialization": "Policy",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://jobs.lever.co/spotify/16ee89e1-88b8-448a-9d73-a6085aef4fee",
-      "combined_urls": "https://jobs.lever.co/spotify/16ee89e1-88b8-448a-9d73-a6085aef4fee",
-      "id": "352",
-      "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Trust and Safety Support Specialist",
-      "institution": "Lovable",
-      "department_or_school": "",
-      "country": "Sweden",
-      "city_or_region": "Stockholm",
-      "rank_type": "Other",
-      "area_specialization": "Trust and Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://lovable.dev/careers/trust-and-safety-support-specialist-99fc7e",
-      "combined_urls": "https://lovable.dev/careers/trust-and-safety-support-specialist-99fc7e",
-      "id": "351",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8845,7 +8464,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7631711297880525109",
       "id": "350",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8867,7 +8487,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/19b9af1a-6a6e-42e3-824b-a9f3794fef2b",
       "id": "349",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8889,7 +8510,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/110174350807573190-policy-development-lead/",
       "id": "348",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8911,7 +8533,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.google.com/about/careers/applications/jobs/results/105277671478305478-technical-program-manager/",
       "id": "347",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8933,51 +8556,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://pixalate.applytojob.com/apply/6s6sZIUCJA",
       "id": "344",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Supervisor, Fraud Investigations",
-      "institution": "Airbnb",
-      "department_or_school": "",
-      "country": "India",
-      "city_or_region": "Gurugram",
-      "rank_type": "Other",
-      "area_specialization": "Trust and Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://careers.airbnb.com/positions/8007130/",
-      "combined_urls": "https://careers.airbnb.com/positions/8007130/",
-      "id": "343",
-      "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Program Manager I, Ops Trust",
-      "institution": "Amazon",
-      "department_or_school": "",
-      "country": "India",
-      "city_or_region": "Bengaluru, KA",
-      "rank_type": "Other",
-      "area_specialization": "Operations",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.amazon.jobs/en/jobs/10426671/program-manager-i-ops-trust",
-      "combined_urls": "https://www.amazon.jobs/en/jobs/10426671/program-manager-i-ops-trust",
-      "id": "342",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -8999,7 +8579,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://lifeattiktok.com/search/7637215793227204869",
       "id": "340",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -9021,29 +8602,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.tiktokusds.com/usds/position/7548083862623783175/detail",
       "id": "339",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "TSPA",
-      "job_title": "Trust and Safety Specialist",
-      "institution": "Fansly",
-      "department_or_school": "",
-      "country": "United States",
-      "city_or_region": "Remote",
-      "rank_type": "Other",
-      "area_specialization": "Trust and Safety",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-07-06",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://fansly.applytojob.com/apply/kgkF76DvyE/Trust-And-Safety-Specialist",
-      "combined_urls": "https://fansly.applytojob.com/apply/kgkF76DvyE/Trust-And-Safety-Specialist",
-      "id": "338",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -9065,7 +8625,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/g2/f7f0cb40-ce1d-4684-95b8-853e33f612ee",
       "id": "337",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -9087,7 +8648,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://job-boards.greenhouse.io/doordashusa/jobs/7071290",
       "id": "336",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -9109,7 +8671,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.instacart.careers/job?gh_jid=8001105",
       "id": "335",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "jobs.ac.uk",
@@ -9131,7 +8694,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.jobs.ac.uk/job/DSC583/postdoctoral-research-associate",
       "id": "472",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "TSPA",
@@ -9153,29 +8717,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://jobs.ashbyhq.com/openai/49a16d46-bf3e-4806-a8af-a0e48c26336c",
       "id": "114",
       "consortium_member": "",
-      "confidence": ""
-    },
-    {
-      "source_site": "ASC",
-      "job_title": "Assistant Professor, Administration of Justice",
-      "institution": "University of Hawaii at Hilo",
-      "department_or_school": "Administration of Justice Program",
-      "country": "United States",
-      "city_or_region": "Hilo, HI",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Administration of Justice; Law Enforcement",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-05-07",
-      "deadline_or_review_date": "Open until filled",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.neogov.com/",
-      "combined_urls": "https://www.neogov.com/",
-      "id": "170",
-      "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -9197,7 +8740,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179427595, https://www.higheredjobs.com/faculty/details.cfm?JobCode=179162553",
       "id": "587",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9219,7 +8763,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179427223",
       "id": "562",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9241,7 +8786,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179426238",
       "id": "827",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9263,7 +8809,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179422050",
       "id": "588",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9285,7 +8832,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179414706",
       "id": "593",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9307,7 +8855,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179410228",
       "id": "586",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9329,7 +8878,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179409669",
       "id": "555",
       "consortium_member": "",
-      "confidence": "0.93"
+      "confidence": "0.93",
+      "last_checked": ""
     },
     {
       "source_site": "ASC",
@@ -9351,7 +8901,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.purdue.edu/FW/job/Visiting-Instructor-in-Criminal-Justice/41388-en_US",
       "id": "4",
       "consortium_member": "",
-      "confidence": ""
+      "confidence": "",
+      "last_checked": "2026-09-26"
     },
     {
       "source_site": "HigherEdJobs",
@@ -9373,7 +8924,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179407040",
       "id": "767",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9395,7 +8947,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179382733",
       "id": "561",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9417,7 +8970,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179378190",
       "id": "560",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9439,7 +8993,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179370370",
       "id": "567",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9461,7 +9016,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179370062",
       "id": "563",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9483,7 +9039,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179366230",
       "id": "596",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9505,7 +9062,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179363452",
       "id": "631",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9527,7 +9085,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179361233",
       "id": "831",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9549,7 +9108,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179359995",
       "id": "622",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9571,7 +9131,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179359990",
       "id": "619",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9593,7 +9154,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179359710",
       "id": "866",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9615,7 +9177,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179359396",
       "id": "591",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9637,7 +9200,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179352554",
       "id": "853",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9659,7 +9223,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/state/details.cfm?JobCode=179347710&Title=Assistant+Professor+-+Criminology+%26+Criminal+Justice+Program=",
       "id": "779",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9681,7 +9246,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/region/details.cfm?JobCode=179348630&Title=Lecturer+-+Criminology",
       "id": "629",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9703,7 +9269,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179346682",
       "id": "777",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9725,7 +9292,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179342034",
       "id": "623",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9747,7 +9315,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179332104",
       "id": "856",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9769,7 +9338,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179313911",
       "id": "769",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9791,7 +9361,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179309745",
       "id": "590",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9813,7 +9384,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305599",
       "id": "770",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9835,7 +9407,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179305921",
       "id": "592",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9857,7 +9430,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179298371",
       "id": "558",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9879,7 +9453,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179296884",
       "id": "771",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9901,7 +9476,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179296186",
       "id": "570",
       "consortium_member": "",
-      "confidence": "0.92"
+      "confidence": "0.92",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9923,7 +9499,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179295207",
       "id": "597",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9945,7 +9522,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179294597",
       "id": "556",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9967,7 +9545,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179291637",
       "id": "764",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -9989,7 +9568,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179290983",
       "id": "857",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10011,7 +9591,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179290807",
       "id": "584",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10033,7 +9614,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179291098",
       "id": "569",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10055,7 +9637,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179290474",
       "id": "773",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10077,7 +9660,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179288431",
       "id": "829",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10099,7 +9683,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179286769",
       "id": "774",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10121,7 +9706,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179286719",
       "id": "612",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10143,7 +9729,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179285680",
       "id": "618",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10165,7 +9752,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179285864",
       "id": "611",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10187,7 +9775,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179279414",
       "id": "823",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10209,7 +9798,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179265698",
       "id": "772",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10231,7 +9821,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179263176",
       "id": "628",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10253,7 +9844,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179256818",
       "id": "828",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10275,7 +9867,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179255900",
       "id": "609",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10297,7 +9890,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179251798",
       "id": "864",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10319,7 +9913,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179249837",
       "id": "872",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10341,7 +9936,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179249984",
       "id": "574",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10363,7 +9959,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179247820",
       "id": "858",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10385,29 +9982,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179247707",
       "id": "603",
       "consortium_member": "",
-      "confidence": "0.90"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Tenure-Track, Criminology (Open Rank)",
-      "institution": "North Central College",
-      "department_or_school": "Department of Sociology, Criminology, and Anthropology",
-      "country": "USA",
-      "city_or_region": "Naperville, IL",
-      "rank_type": "Open Rank",
-      "area_specialization": "Criminology",
-      "contract_type": "Tenure-track",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2025-09-22",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179248852",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179248852",
-      "id": "576",
-      "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10429,7 +10005,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179247836",
       "id": "557",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10451,7 +10028,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179241098",
       "id": "634",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10473,7 +10051,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179238169",
       "id": "615",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10495,7 +10074,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179236543",
       "id": "613",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10517,7 +10097,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179232606",
       "id": "870",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -10539,7 +10120,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/professorassociate-professor-and-1-associate-dean-for-academic-affairs-student-services-and-2-associate-dean-for-research/79959164/",
       "id": "806",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10561,7 +10143,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179227344",
       "id": "621",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10583,7 +10166,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179222290",
       "id": "830",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10605,7 +10189,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179214555",
       "id": "860",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10627,7 +10212,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179206571",
       "id": "776",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10649,7 +10235,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179203983",
       "id": "835",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10671,7 +10258,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179191468",
       "id": "822",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10693,7 +10281,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179191099",
       "id": "869",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10715,7 +10304,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179179736",
       "id": "608",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10737,7 +10327,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179175398",
       "id": "868",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10759,7 +10350,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179160195",
       "id": "832",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10781,7 +10373,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179145345",
       "id": "607",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10803,7 +10396,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179140626",
       "id": "768",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10825,7 +10419,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179140626",
       "id": "601",
       "consortium_member": "",
-      "confidence": "0.88"
+      "confidence": "0.88",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10847,7 +10442,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179112663",
       "id": "605",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10869,7 +10465,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179074448",
       "id": "825",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10891,7 +10488,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179072948",
       "id": "575",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10913,7 +10511,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=179063642",
       "id": "594",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10935,7 +10534,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179059312",
       "id": "616",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10957,7 +10557,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179029642",
       "id": "781",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -10979,7 +10580,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179007175",
       "id": "636",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11001,7 +10603,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=178976702",
       "id": "871",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11023,7 +10626,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/region/details.cfm?JobCode=178952875&Title=Assistant+Professor+-+Criminology+",
       "id": "766",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11045,7 +10649,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/state/details.cfm?JobCode=178951570&Title=Assistant+Professor+-+Criminal+Justice",
       "id": "834",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11067,7 +10672,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=178951244",
       "id": "614",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11089,7 +10695,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178930124",
       "id": "637",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11111,7 +10718,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178921369",
       "id": "833",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     },
     {
       "source_site": "ACJS",
@@ -11133,7 +10741,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://careers.acjs.org/job/assistant-professor-of-criminal-justice/75029755/",
       "id": "809",
       "consortium_member": "",
-      "confidence": "0.95"
+      "confidence": "0.95",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11155,7 +10764,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178903270",
       "id": "763",
       "consortium_member": "",
-      "confidence": "0.90"
+      "confidence": "0.90",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11177,7 +10787,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/details.cfm?JobCode=178882104",
       "id": "836",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11199,7 +10810,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178341510",
       "id": "599",
       "consortium_member": "",
-      "confidence": "0.80"
+      "confidence": "0.80",
+      "last_checked": ""
     },
     {
       "source_site": "HigherEdJobs",
@@ -11221,7 +10833,8 @@ window.JOBS_DATA = {
       "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=177695685",
       "id": "780",
       "consortium_member": "",
-      "confidence": "0.85"
+      "confidence": "0.85",
+      "last_checked": ""
     }
   ]
 };
