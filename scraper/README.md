@@ -18,29 +18,71 @@ fetch  ->  extract  ->  merge/dedup/id  ->  write outputs
 ### Sources
 
 Every board is scraped directly first — one cheap request, exact listings, real
-URLs. If the fetch is refused (a bot wall, or a page that comes back empty), that
-source falls back to server-side web search for this run only, so a board behind
-Cloudflare still refreshes and goes back to being scraped as soon as the wall
-comes down. Nothing is pinned to the search path in config.
+URLs. If the fetch is refused, the page is fetched through Perplexity's
+`fetch_url` (it reaches pages our requests cannot) and then goes through the
+same extractor. Search-based enumeration is the last resort, because it is
+stochastic: the same board returned 33, 25 and 0 listings from identical code.
+Nothing is pinned to a fallback in config, so a board goes back to being scraped
+as soon as its wall comes down.
 
-| Source | Method | Status 2026-09-26 |
-|--------|--------|-------------------|
-| TSPA | WordPress AJAX endpoint (returns clean JSON) | scraped; no search fallback by design |
-| jobs.ac.uk | Direct fetch | scraped |
-| ASC | Direct fetch | fetch refused (Cloudflare) — was scraping fine through 2026-09-22 |
-| ACJS | Direct fetch | fetch refused (Cloudflare) — search fallback |
-| HigherEdJobs | Direct fetch | fetch refused (Incapsula) — search fallback |
+```
+scrape  ->  (if refused) proxy-fetch  ->  (if no proxy key) search
+```
 
-TSPA is deliberately excluded from the fallback: it returns clean JSON, so if
-that endpoint breaks we want the failure rather than a guess.
+| Source | Path | Listings 2026-09-26 |
+|--------|------|---------------------|
+| TSPA | WP AJAX endpoint (clean JSON) | 135 scraped |
+| jobs.ac.uk | Direct fetch | 8 scraped |
+| HigherEdJobs | Direct fetch (Incapsula; intermittent) | 25 scraped |
+| ASC | Proxy fetch (Cloudflare since ~2026-09-22) | 62 |
+| ACJS | Proxy fetch (Cloudflare) | 1 — see below |
+
+TSPA has no fallback by design: it returns clean JSON, so a break there should
+surface rather than be guessed at.
+
+**ACJS is the unsolved one.** Its listing page is JS-rendered, so `fetch_url`
+returns only one posting; its `robots.txt` refuses Perplexity's crawler on
+detail pages; and our own requests get a Cloudflare challenge. Searching finds
+real postings but only ~10 of 61 and sometimes none. It therefore trips the
+count sanity check most runs, which keeps its existing rows and adds nothing —
+the safe failure. Worth revisiting with a rendered fetch.
+
+### Retiring dead listings
+
+The board used to be purely append-only, so it accumulated postings that had
+already been taken down — one row still linked to a page reading "Position
+Deleted on 1/02/2026". Every refresh now re-checks stored postings:
+
+- a posting is retired only on a **definite** signal — HTTP 404/410, or a dead
+  marker in the page (`DEAD_MARKERS` in `fetch.py`). HigherEdJobs serves deleted
+  postings with HTTP 200, so the page has to be read, not just pinged.
+- anything unreadable (bot wall, timeout, 5xx) is **kept**. A board we cannot
+  read is not a board without jobs.
+- rows with no URL cannot be checked at all, so they age out after
+  `UNVERIFIABLE_MAX_AGE_DAYS`.
+
+Volume is what gets us blocked: 8 concurrent requests made higheredjobs.com
+report 144 of 154 postings unverifiable, and a few hundred checks in a day made
+it refuse all 154. So checks run one-at-a-time per host with a pause, capped at
+`LIVENESS_MAX_PER_HOST` per run, spending the budget on the least recently
+checked rows (`last_checked`) and working through the rest over later runs.
+Perplexity cannot stand in here — HigherEdJobs tells it "JavaScript is required"
+and ACJS's robots.txt refuses it.
 
 ### job_url
 
-A `job_url` is only kept if it parses as http(s) with a dotted host, and on the
-scraped path only if it actually appears in the page we handed over. The model
-will otherwise compose one: a posting whose text held the typo
-`https//www.cech.uc.edu/...` was recorded as `https://https//www.cech.uc.edu/...`,
-pointing at a host literally named `https`.
+A `job_url` is kept only if it is plausibly *that posting's* page:
+
+- it parses as http(s) with a dotted host. The model composes URLs otherwise: a
+  posting whose text held the typo `https//www.cech.uc.edu/...` was stored as
+  `https://https//www.cech.uc.edu/...`, a link to a host named `https`.
+- it is not a browse page. Search offered `/jobs/state/Massachusetts/` as a
+  professorship's URL, and rows held bare `https://www.berkeley.edu/`.
+  ATS links that name the posting in the query (`/jobs/?ashby_jid=...`) are kept.
+- on the scraped path it must appear in the page we handed over.
+
+A refresh also repairs rows already stored with an unusable URL rather than
+leaving a dead link on the site.
 
 ### Confidence + review
 
@@ -65,6 +107,7 @@ Provide an OpenAI API key —  create a `.env` file at the repo root (gitignored
 
 ```
 OPENAI_API_KEY=...
+PERPLEXITY_API_KEY=...   # optional; reaches bot-walled listing pages
 ```
 
 Then run:
@@ -102,6 +145,10 @@ returned by an extraction run.
 | `SEARCH` | gpt-6-luna, high effort | Model profile for the search fallback. High effort is required — at medium the model abandons the sweep and returns nothing. |
 | `SEARCH_MAX_SEARCHES` | `40` | Cap on server-side tool calls for a search-based source |
 | `SCRAPE_WORKERS` | `3` | Maximum source fetch/extraction calls running concurrently |
-| `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that *fell back to search* and returns fewer than this fraction of its current board count is treated as failed |
+| `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source enumerated indirectly (proxy or search) returning fewer than this fraction of its board count is treated as failed |
+| `PROXY` | gpt-6-luna via Perplexity | Profile for proxy-fetching a walled page |
+| `PRUNE_DEAD_LISTINGS` | `True` | Retire postings that are definitely gone |
+| `LIVENESS_MAX_PER_HOST` | `40` | Liveness checks per host per run |
+| `UNVERIFIABLE_MAX_AGE_DAYS` | `120` | Age-out for rows with no URL |
 | `SOURCES` | — | The five boards and their URLs |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |

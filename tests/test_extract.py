@@ -25,10 +25,39 @@ class ExtractTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], "")
 
+    def test_browse_pages_are_not_postings(self):
+        """Search offered "/jobs/state/Massachusetts/" as a professorship's URL."""
+        for url in ("https://careers.acjs.org/jobs/state/Massachusetts/",
+                    "https://careers.acjs.org/jobs/",
+                    "https://careers.acjs.org/jobs",
+                    "https://www.higheredjobs.com/search",
+                    "https://hrs.wsu.edu/careers",
+                    "https://asc41.org/",
+                    "https://example.org"):
+            with self.subTest(url=url):
+                self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], "")
+
+    def test_detail_pages_that_merely_sit_under_search_survive(self):
+        """HigherEdJobs serves real postings at /search/details.cfm, and TikTok
+        at /search/<id>; a blunt "/search/" rule wrongly dropped 5 live rows."""
+        for url in ("https://www.higheredjobs.com/search/details.cfm?JobCode=176574066",
+                    "https://lifeattiktok.com/search/7556619364734208264"):
+            with self.subTest(url=url):
+                self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], url)
+
+    def test_ats_links_that_name_the_job_in_the_query_survive(self):
+        """A bare /jobs/ is a landing page, but /jobs/?ashby_jid=... is not."""
+        for url in ("https://www.classdojo.com/jobs/?ashby_jid=050fee06",
+                    "https://cantina.com/careers?ashby_jid=fb9a1183",
+                    "https://boards.eu/careers?gh_jid=12345"):
+            with self.subTest(url=url):
+                self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], url)
+
     def test_good_urls_survive(self):
         for url in ("https://www.jobs.ac.uk/job/DSX170/senior-lecturer",
                     "http://example.edu/jobs/1",
                     "https://careers.acjs.org/job/x/86038559/",
+                    "https://careers.acjs.org/jobs/view/assistant-professor-of-cj/",
                     "https://httpsolutions.example.com/jobs/1"):
             with self.subTest(url=url):
                 self.assertEqual(extract._clean_urls([{"job_url": url}])[0]["job_url"], url)

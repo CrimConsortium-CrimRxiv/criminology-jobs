@@ -2,6 +2,7 @@
 
 import datetime
 import json
+import re
 import urllib.parse
 
 from openai import OpenAI
@@ -70,16 +71,49 @@ _SEARCH_TOOLS = [{
 }]
 
 
+# Paths that browse postings rather than being one. Searching a board turns
+# these up and the model offers them as a posting's URL — ACJS came back with
+# "/jobs/state/Massachusetts/" as the link for a named professorship.
+# Only facet paths, not any path containing "search": HigherEdJobs serves real
+# postings at /search/details.cfm?JobCode=... and TikTok at /search/<id>.
+_BROWSE_PATHS = ("/jobs/state/", "/jobs/category/", "/jobs/region/",
+                 "/jobs/country/", "/jobs/keyword/", "/jobs/city/",
+                 "/jobs/discipline/", "/jobs/institution/")
+_BROWSE_EXACT = ("", "/", "/jobs", "/jobs/", "/careers", "/careers/",
+                 "/search", "/positions", "/positions/")
+
+
+_POSTING_PARAMS = re.compile(
+    r"(^|&)[^=&]*(jid|job|jobid|jobcode|req|reqid|posting|vacancy|gh_jid|lever|"
+    r"opportunity|position)[^=&]*=[^&]+", re.I)
+
+
+def _identifies_a_posting(query):
+    return bool(query) and bool(_POSTING_PARAMS.search(query))
+
+
 def valid_url(url, page_text=None):
-    """True if we can stand behind this URL. See _clean_urls."""
+    """True if we can stand behind this URL as *this posting's* page.
+
+    See _clean_urls for the composed-URL case. Beyond syntax, a URL that browses
+    a board is not a posting, and a query-only pagination link is not either.
+    """
     url = (url or "").strip()
     parsed = urllib.parse.urlparse(url)
     # A dotted host is what rejects the composed case: "https://https//..."
     # parses to the host "https", which has no dot.
-    ok = (parsed.scheme in ("http", "https")
-          and "." in parsed.netloc
-          and " " not in url)
-    return ok and (page_text is None or url in page_text)
+    if (parsed.scheme not in ("http", "https")
+            or "." not in parsed.netloc
+            or " " in url):
+        return False
+    path = parsed.path.rstrip()
+    if path.lower() in _BROWSE_EXACT and not _identifies_a_posting(parsed.query):
+        # A bare /jobs/ or /careers is a landing page, but plenty of ATS links
+        # name the posting in the query instead: classdojo.com/jobs/?ashby_jid=...
+        return False
+    if any(fragment in path.lower() for fragment in _BROWSE_PATHS):
+        return False
+    return page_text is None or url in page_text
 
 
 def _clean_urls(jobs, page_text=None):

@@ -4,6 +4,7 @@ Usage:  python -m scraper.run
 
 Outputs: criminology_jobs.csv, data.js (site data), review.csv"""
 
+import collections
 import csv
 import datetime
 import json
@@ -15,7 +16,7 @@ from dataclasses import dataclass
 
 import pandas as pd
 
-from . import config, extract, fetch
+from . import config, extract, fetch, proxy
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 CSV_PATH = os.path.join(ROOT, "criminology_jobs.csv")
@@ -29,9 +30,13 @@ COLUMNS = [
     "contract_type", "teaching_expectations", "research_expectations",
     "posted_date", "deadline_or_review_date", "salary_currency",
     "salary_range", "job_url", "combined_urls", "id", "consortium_member",
-    "confidence",
+    "confidence", "last_checked",
 ]
-REVIEW_COLUMNS = COLUMNS[:-3] + ["confidence", "reason", "decision"]
+# Named rather than sliced off COLUMNS: as a slice this silently gained an "id"
+# column when COLUMNS grew.
+_NOT_REVIEWED = ("id", "consortium_member", "confidence", "last_checked")
+REVIEW_COLUMNS = ([c for c in COLUMNS if c not in _NOT_REVIEWED]
+                  + ["confidence", "reason", "decision"])
 
 
 @dataclass
@@ -71,6 +76,49 @@ def repair_urls(rows):
     return repaired
 
 
+def prune_dead(rows, today):
+    """Retire postings that are definitely gone, and unverifiable stale ones.
+
+    The board used to be purely append-only, so it kept listings the boards had
+    already taken down — a HigherEdJobs row still pointed at "Position Deleted
+    on 1/02/2026". A row is only retired on a definite signal (404/410, or a
+    dead marker on the page); anything we could not read is kept, so a board
+    behind a bot wall never empties the board. Rows with no URL cannot be
+    checked at all, so they age out after UNVERIFIABLE_MAX_AGE_DAYS instead.
+    Returns (kept, retired) where each retired row carries a "retired_reason".
+    """
+    # Spend the per-host budget on the least recently checked postings, so a
+    # board larger than the budget is worked through over successive runs
+    # instead of re-checking the same head of the list every week.
+    ordered = sorted(rows, key=lambda r: r.get("last_checked", ""))
+    states = fetch.listing_states([r.get("job_url", "") for r in ordered],
+                                  workers=config.LIVENESS_WORKERS,
+                                  max_per_host=config.LIVENESS_MAX_PER_HOST)
+    kept, retired = [], []
+    for row in rows:
+        url = row.get("job_url", "")
+        state = states.get(url, "unchecked") if url else "no-url"
+        if state in ("live", "dead"):
+            row["last_checked"] = today.isoformat()
+        if state == "dead":
+            retired.append({**row, "retired_reason": "listing gone"})
+            continue
+        if state == "no-url":
+            age = _age_days(row.get("posted_date", ""), today)
+            if age is not None and age > config.UNVERIFIABLE_MAX_AGE_DAYS:
+                retired.append({**row, "retired_reason": f"no url, {age}d old"})
+                continue
+        kept.append(row)
+    return kept, retired
+
+
+def _age_days(posted_date, today):
+    try:
+        return (today - datetime.date.fromisoformat(posted_date)).days
+    except ValueError:
+        return None
+
+
 def norm_key(row):
     """Match key: normalized title + institution"""
     return re.sub(r"[^a-z0-9]", "", (row["job_title"] + row["institution"]).lower())
@@ -94,6 +142,31 @@ def write_csv(path, rows, columns):
         writer.writerows({c: row.get(c, "") for c in columns} for row in rows)
 
 
+def _search_with_retries(name, board_count):
+    """Enumerate a board by search, retrying a thin result.
+
+    One attempt is not evidence of an empty board: ACJS returned 25 listings on
+    one attempt and 0 on the next with no code change. Attempts stop as soon as
+    one clears the floor, so the usual case still costs a single call.
+    Returns (jobs, summed usage, attempts made)."""
+    floor = board_count * config.SEARCH_COUNT_MIN_RATIO
+    total = {"input": 0, "cached": 0, "output": 0, "searches": 0}
+    best = []
+    attempt = 0
+    while attempt < config.SEARCH_ATTEMPTS:
+        attempt += 1
+        jobs, usage = extract.extract_jobs_via_search(
+            name, config.SOURCES[name]["urls"][0], board_count,
+            profile=config.SEARCH)
+        for key in total:
+            total[key] += usage.get(key, 0)
+        if len(jobs) > len(best):
+            best = jobs
+        if len(best) >= floor:
+            break
+    return best, total, attempt
+
+
 def _scrape_source(name, board_count):
     """Fetch and extract one source without mutating shared scraper state."""
     started = time.monotonic()
@@ -101,36 +174,55 @@ def _scrape_source(name, board_count):
     usage_note = ""
     try:
         note = ""
-        searched = False
+        # True when the listings came from a model reading a page we could not
+        # fetch (proxy or search) rather than from the page itself. Both get the
+        # count sanity check; a page we scraped needs no second opinion.
+        indirect = False
         try:
             profile = config.EXTRACT
             text, note = fetch.fetch_source(name)
             jobs, usage = extract.extract_jobs(name, text)
         except fetch.FetchError as fetch_error:
-            # Bot wall or a broken page: enumerate via search instead. A jmajax
-            # endpoint has no fallback, so its failure surfaces as a failure.
+            # A jmajax endpoint returns clean JSON; if that breaks we want the
+            # failure, not a guess from somewhere else.
             if config.SOURCES[name].get("kind") == "jmajax":
                 raise
-            searched = True
-            profile = config.SEARCH
-            note = f"(fetch refused: {fetch_error}; searched instead)"
-            jobs, usage = extract.extract_jobs_via_search(
-                name, config.SOURCES[name]["urls"][0], board_count, profile=profile)
+            if proxy.available():
+                # Perplexity's server-side fetch reaches pages our requests
+                # cannot, so the page still goes through the normal extractor.
+                hint = (f"The board is expected to list roughly {board_count} "
+                        f"postings. ") if board_count else ""
+                indirect = True
+                profile = config.PROXY
+                text, usage = proxy.fetch_listing(
+                    config.SOURCES[name]["urls"][0], hint)
+                jobs, extract_usage = extract.extract_jobs(name, text)
+                for key in usage:
+                    usage[key] += extract_usage.get(key, 0)
+                note = f"(fetch refused; proxy-fetched {len(text):,} chars)"
+            else:
+                indirect = True
+                profile = config.SEARCH
+                jobs, usage, attempts = _search_with_retries(name, board_count)
+                tries = f" over {attempts} attempts" if attempts > 1 else ""
+                note = f"(fetch refused: {fetch_error}; searched instead{tries})"
         cached = usage.get("cached", 0)  # discounted subset of usage["input"]
         cost = ((usage["input"] - cached) / 1e6 * profile["price_in"]
                 + cached / 1e6 * profile["price_cached"]
                 + usage["output"] / 1e6 * profile["price_out"]
-                + usage["searches"] * config.WEB_SEARCH_COST)
+                + usage["searches"] * (config.PROXY_SEARCH_COST
+                                       if profile is config.PROXY
+                                       else config.WEB_SEARCH_COST))
         searches = f", {usage['searches']} searches" if usage["searches"] else ""
         usage_note = (
             f" ({usage['input']:,} in / {usage['output']:,} out tokens"
             f"{searches}, ~${cost:.2f})"
         )
-        if searched:
+        if indirect:
             floor = board_count * config.SEARCH_COUNT_MIN_RATIO
             if len(jobs) < floor:
                 raise RuntimeError(
-                    f"sanity check: search found {len(jobs)} listings but the "
+                    f"sanity check: found {len(jobs)} listings but the "
                     f"board currently has {board_count} from {name} "
                     f"(floor {floor:.0f})")
         for job in jobs:
@@ -276,6 +368,12 @@ def main():
         published.append(row)
         unverified_jobs.append(row)
 
+    # Retire postings the boards have taken down. Done after merging so a
+    # posting re-seen in this run is checked too, and only on definite signals.
+    retired = []
+    if config.PRUNE_DEAD_LISTINGS:
+        published, retired = prune_dead(published, today)
+
     published.sort(key=lambda r: (r.get("posted_date", ""), int(r["id"]) if r["id"].isdigit() else 0), reverse=True)
 
     write_csv(CSV_PATH, published, COLUMNS)
@@ -292,6 +390,7 @@ def main():
         "pending_review_count": n_pending,
         "dropped_low_confidence_count": dropped_low,
         "unverified_jobs": unverified_jobs,
+        "retired_jobs": retired,
         "source_failures": failures,
         "estimated_api_cost_usd": total_cost,
     })
@@ -300,6 +399,10 @@ def main():
         print(f"WARNING: {failure} (its existing jobs were kept)")
     if repaired:
         print(f"{repaired} stored URL field(s) repaired (unusable URLs cleared)")
+    if retired:
+        reasons = collections.Counter(r["retired_reason"] for r in retired)
+        detail = ", ".join(f"{count} {reason}" for reason, count in reasons.most_common())
+        print(f"{len(retired)} listings retired ({detail})")
     if dropped_low:
         print(f"{dropped_low} listings auto-dropped below CONFIDENCE_DROP={config.CONFIDENCE_DROP}")
     print(f"Refresh: {today.isoformat()} (+{new_count} new, {n_pending} pending review)")

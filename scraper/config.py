@@ -33,6 +33,42 @@ SCRAPE_WORKERS = 3  # bound concurrent source fetch/extraction calls
 # the jobs the board currently lists from that source, the run is considered a failure
 # this is only helpful for initial testing against current infrastructure, will be phased out later
 SEARCH_COUNT_MIN_RATIO = 0.5
+# Search is stochastic in a way scraping is not: the same board enumerated 25
+# listings on one attempt and 0 on the next from identical code. A thin result is
+# therefore retried rather than believed, keeping the best attempt.
+SEARCH_ATTEMPTS = 3
+
+# Proxy fetch for bot-walled pages (Perplexity reaches what we cannot).
+# Perplexity prices its own search separately from tokens: fast is $1/1k calls,
+# standard $2.50/1k — both well under OpenAI's $10/1k.
+PROXY = {"model": "openai/gpt-6-luna", "effort": "medium",
+         "price_in": 0.10, "price_cached": 0.01, "price_out": 0.50}
+# The proxy uses fetch_url only, so it bills fetches rather than searches.
+# Perplexity search would be $1/1k (fast) or $2.50/1k (standard) if enabled;
+# adding it made the model summarize instead of transcribe, so it is not.
+PROXY_SEARCH_COST = 0.001
+PROXY_MAX_URLS = 10         # API caps fetch_url max_urls at 10
+PROXY_MAX_STEPS = 15        # fetch -> paginate -> transcribe needs several steps
+
+# --- Listing liveness -------------------------------------------------------
+# The board was append-only, so it accumulated postings that had already been
+# taken down (a HigherEdJobs row still linked to "Position Deleted on
+# 1/02/2026"). Every refresh now re-checks stored postings and retires the ones
+# that are definitely gone. Only a definite signal retires a row — a 404/410 or
+# a dead marker in the page — so a board we cannot read never empties the board.
+PRUNE_DEAD_LISTINGS = True
+LIVENESS_WORKERS = 8  # hosts checked in parallel (one request at a time each)
+# Checking every stored posting every week is both slow and rude, and volume is
+# what gets us blocked: after a few hundred checks in a day higheredjobs.com
+# refused all 154 of ours, which turns every posting unverifiable. So each run
+# checks at most this many per host, oldest-checked first, and the board works
+# through the rest over following runs. Perplexity cannot stand in here — it
+# gets "JavaScript is required" from HigherEdJobs and is refused by ACJS's
+# robots.txt — so politeness is the only lever.
+LIVENESS_MAX_PER_HOST = 40
+# A row with no URL cannot be checked. Those are kept, but they are also the
+# rows most likely to be stale, so they are retired after this many days.
+UNVERIFIABLE_MAX_AGE_DAYS = 120
 
 # --- Sources ----------------------------------------------------------------
 # Every source is scraped directly first — that gives exact listings and real

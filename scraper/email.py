@@ -82,6 +82,7 @@ def _html_job(row):
 def build_message(summary, sender, recipients, test=False):
     new_jobs = summary.get("new_jobs", [])
     unverified_jobs = summary.get("unverified_jobs", [])
+    retired_jobs = summary.get("retired_jobs", [])
     failures = summary.get("source_failures", [])
     run_date = summary.get("run_date", "unknown date")
     pending = summary.get("pending_review_count", 0)
@@ -107,6 +108,7 @@ def build_message(summary, sender, recipients, test=False):
         f"Pending manual review: {pending}",
         f"New results below confidence cutoff: {dropped_low}",
         f"Existing jobs not verified this run: {len(unverified_jobs)}",
+        f"Listings retired (taken down at the source): {len(retired_jobs)}",
         f"Estimated OpenAI API cost: ${api_cost:.2f}",
         "Job board: https://jobs.crimconsortium.com/",
         "",
@@ -151,6 +153,8 @@ def build_message(summary, sender, recipients, test=False):
         f"<strong>Pending manual review:</strong> {pending}<br>",
         f"<strong>New results below confidence cutoff:</strong> {dropped_low}<br>",
         f"<strong>Existing jobs not verified this run:</strong> {len(unverified_jobs)}<br>",
+        f"<strong>Listings retired (taken down at the source):</strong> "
+        f"{len(retired_jobs)}<br>",
         f"<strong>Estimated OpenAI API cost:</strong> ${api_cost:.2f}<br>",
         '<a href="https://jobs.crimconsortium.com/">Open the job board</a></p>',
         "<h3>New jobs by board</h3>",
