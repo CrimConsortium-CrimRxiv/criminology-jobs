@@ -921,7 +921,7 @@ window.JOBS_DATA = {
       "id": "801",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -944,7 +944,7 @@ window.JOBS_DATA = {
       "id": "800",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -967,7 +967,7 @@ window.JOBS_DATA = {
       "id": "799",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -990,7 +990,7 @@ window.JOBS_DATA = {
       "id": "798",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -1013,7 +1013,7 @@ window.JOBS_DATA = {
       "id": "797",
       "consortium_member": "",
       "confidence": "0.85",
-      "last_probed": ""
+      "last_probed": "2026-09-26"
     },
     {
       "source_site": "ACJS",
@@ -4397,52 +4397,6 @@ window.JOBS_DATA = {
       "last_probed": "2026-09-26"
     },
     {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminal Justice",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178674211",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178674211",
-      "id": "589",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Criminology and Criminal Justice",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology and Criminal Justice",
-      "contract_type": "",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-17",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178781531",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=178781531",
-      "id": "585",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": "2026-09-26"
-    },
-    {
       "source_site": "ACJS, ASC",
       "job_title": "Instructor of Administration of Justice, Position No. 87561",
       "institution": "University of Hawaii at Hilo",
@@ -4555,75 +4509,6 @@ window.JOBS_DATA = {
       "id": "578",
       "consortium_member": "",
       "confidence": "0.90",
-      "last_probed": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "PRODiG+ Fellow, Criminal Justice",
-      "institution": "SUNY Plattsburgh",
-      "department_or_school": "Department of Criminal Justice",
-      "country": "USA",
-      "city_or_region": "Plattsburgh, NY",
-      "rank_type": "Postdoctoral Fellow",
-      "area_specialization": "Criminal Justice",
-      "contract_type": "Postdoctoral fellowship",
-      "teaching_expectations": "",
-      "research_expectations": "Diversity-focused faculty pipeline research fellowship",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179342530",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179342530",
-      "id": "577",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Postdoctoral Researcher in Criminology",
-      "institution": "",
-      "department_or_school": "",
-      "country": "USA",
-      "city_or_region": "",
-      "rank_type": "Postdoctoral Researcher",
-      "area_specialization": "Criminology",
-      "contract_type": "Postdoctoral",
-      "teaching_expectations": "",
-      "research_expectations": "",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179254281",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179254281",
-      "id": "573",
-      "consortium_member": "",
-      "confidence": "0.85",
-      "last_probed": "2026-09-26"
-    },
-    {
-      "source_site": "HigherEdJobs",
-      "job_title": "Assistant Professor of Sociology & Criminology",
-      "institution": "University of Arkansas",
-      "department_or_school": "Department of Sociology and Criminology, Fulbright College",
-      "country": "USA",
-      "city_or_region": "Fayetteville, AR",
-      "rank_type": "Assistant Professor",
-      "area_specialization": "Criminology and Sociology",
-      "contract_type": "Full-time",
-      "teaching_expectations": "40% Teaching",
-      "research_expectations": "40% Research",
-      "posted_date": "2026-08-15",
-      "deadline_or_review_date": "",
-      "salary_currency": "",
-      "salary_range": "",
-      "job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179251987",
-      "combined_urls": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=179251987",
-      "id": "572",
-      "consortium_member": "",
-      "confidence": "0.85",
       "last_probed": "2026-09-26"
     },
     {
