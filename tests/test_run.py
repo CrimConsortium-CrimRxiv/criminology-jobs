@@ -366,6 +366,23 @@ class RunTests(unittest.TestCase):
         searched.assert_not_called()
         self.assertIn("proxy-fetched", result.log)
 
+    def test_a_failure_log_says_which_path_was_used(self):
+        """Without this the log cannot distinguish a bad page from a bad proxy
+        fetch — both just read "found 0 listings"."""
+        usage = {"input": 0, "cached": 0, "output": 0, "searches": 0}
+
+        with (
+            patch.object(run.proxy, "available", return_value=True),
+            patch.object(run.fetch, "fetch_source",
+                         side_effect=run.fetch.FetchError("blocked")),
+            patch.object(run.proxy, "fetch_listing", return_value=("t", dict(usage))),
+            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
+        ):
+            result = run._scrape_source("ACJS", 60)
+
+        self.assertIn("sanity check", result.failure)
+        self.assertIn("proxy-fetched", result.log)
+
     def test_a_thin_proxy_fetch_is_sanity_checked_too(self):
         """A proxy fetch is still a model reading a page we could not get."""
         usage = {"input": 0, "cached": 0, "output": 0, "searches": 0}

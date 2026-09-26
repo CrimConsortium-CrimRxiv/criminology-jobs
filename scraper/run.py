@@ -184,8 +184,8 @@ def _scrape_source(name, board_count):
     started = time.monotonic()
     cost = 0.0
     usage_note = ""
+    note = ""  # bound before the try so a failure log can still report the path
     try:
-        note = ""
         # True when the listings came from a model reading a page we could not
         # fetch (proxy or search) rather than from the page itself. Both get the
         # count sanity check; a page we scraped needs no second opinion.
@@ -259,7 +259,7 @@ def _scrape_source(name, board_count):
         failure = f"{name}: {error}"
         return SourceResult(
             [], failure, cost,
-            f"  {name}: FAILED - {error}{usage_note} [{elapsed:.1f}s]",
+            f"  {name}: FAILED - {error}{usage_note} {note} [{elapsed:.1f}s]",
         )
 
 
