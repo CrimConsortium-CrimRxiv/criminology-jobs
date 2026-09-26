@@ -218,6 +218,7 @@ class RunTests(unittest.TestCase):
 
         self.assertEqual([r["id"] for r in kept], ["fresh"])
         self.assertIn("no url", retired[0]["retired_reason"])
+        self.assertIn("d old", retired[0]["retired_detail"])
 
     def test_review_columns_do_not_leak_internal_fields(self):
         for field in ("id", "consortium_member", "last_probed"):

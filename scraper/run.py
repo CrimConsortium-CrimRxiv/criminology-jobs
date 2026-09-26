@@ -109,14 +109,16 @@ def prune_dead(rows, today):
         age = _age_days(row.get("posted_date", ""), today)
         if state == "no-url":
             if age is not None and age > config.UNVERIFIABLE_MAX_AGE_DAYS:
-                retired.append({**row, "retired_reason": f"no url, {age}d old"})
+                retired.append({**row, "retired_reason": "no url, too old",
+                                "retired_detail": f"{age}d old"})
                 continue
         elif (state != "live" and age is not None
                 and age > config.MAX_AGE_DAYS):
             # Old and unconfirmed. Only a positive "live" keeps a posting this
             # old, because the hosts that will not answer a check are exactly
             # the ones whose stale rows would otherwise never leave the board.
-            retired.append({**row, "retired_reason": f"{age}d old, not confirmed open"})
+            retired.append({**row, "retired_reason": "too old, not confirmed open",
+                            "retired_detail": f"{age}d old"})
             continue
         kept.append(row)
     return kept, retired
