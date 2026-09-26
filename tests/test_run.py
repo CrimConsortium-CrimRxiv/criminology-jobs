@@ -287,6 +287,8 @@ class RunTests(unittest.TestCase):
             review_path = root / "review.csv"
             data_js_path = root / "data.js"
             summary_path = root / "refresh_summary.json"
+            index_path = root / "index.html"
+            index_path.write_text('<script src="data.js"></script>', encoding="utf-8")
             run.write_csv(csv_path, [job()], run.COLUMNS)
 
             new_job = job(
@@ -304,6 +306,10 @@ class RunTests(unittest.TestCase):
                 patch.object(run, "REVIEW_PATH", review_path),
                 patch.object(run, "DATA_JS_PATH", data_js_path),
                 patch.object(run, "SUMMARY_PATH", summary_path),
+                # INDEX_PATH too: main() stamps the data version into it, and
+                # leaving it unpatched had the suite rewriting the repo's real
+                # index.html with a temp file's hash.
+                patch.object(run, "INDEX_PATH", index_path),
                 patch.object(run.config, "load_env"),
                 patch.object(run.fetch, "listing_states", return_value={}),
                 patch.object(run, "scrape", return_value=([new_job], [], 0.12)),
@@ -329,6 +335,8 @@ class RunTests(unittest.TestCase):
                 ["https://example.edu/existing"],
             )
             self.assertEqual(summary["estimated_api_cost_usd"], 0.12)
+            self.assertRegex(index_path.read_text(encoding="utf-8"),
+                             r'src="data\.js\?v=[0-9a-f]{12}"')
 
     def test_a_fetch_that_finds_no_listings_falls_back(self):
         """An Incapsula interstitial got past _blocked, so the "successful"
