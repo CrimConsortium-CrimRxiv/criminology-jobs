@@ -35,10 +35,10 @@ The refresh is automated by a Python pipeline in `scraper/`:
 
 1. **Fetch** — `scraper/fetch.py` pulls each board's listing pages (TSPA via
    its WordPress AJAX endpoint).
-2. **Extract** — `scraper/extract.py` sends the page text to the Claude API,
+2. **Extract** — `scraper/extract.py` sends the page text to the OpenAI API,
    which returns structured rows plus a **confidence score (0–0.99)** that
    each job fits the coverage rules above. HigherEdJobs blocks direct
-   fetching, so Claude's server-side web search enumerates it instead, with
+   fetching, so the model's server-side web search enumerates it instead, with
    a sanity check against the board's current count so an incomplete search
    can never silently thin the site.
 3. **Merge** — `scraper/run.py` dedups across boards, keeps stable ids for
@@ -50,7 +50,7 @@ The refresh is automated by a Python pipeline in `scraper/`:
    and filter criteria are all in `scraper/config.py`.
 
 Run locally with `python -m scraper.run` (needs `pip install -r
-requirements.txt` and an `ANTHROPIC_API_KEY` — env var or a `.env` file at
+requirements.txt` and an `OPENAI_API_KEY` — env var or a `.env` file at
 the repo root).
 
 ## Local preview

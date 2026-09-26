@@ -9,16 +9,27 @@ import os
 CONFIDENCE_PUBLISH = 0.80
 CONFIDENCE_DROP = 0.30
 
-EXTRACT = {"model": "claude-haiku-4-5", "effort": None, "price_in": 1.00, "price_out": 5.00}
-SEARCH = {"model": "claude-haiku-4-5", "effort": None, "price_in": 1.00, "price_out": 5.00}
-SEARCH_LARGE = {"model": "claude-sonnet-5", "effort": None, "price_in": 3.00, "price_out": 15.00}
+# Model profiles. gpt-6-luna: $0.10/M in, $0.01/M cached in, $0.50/M out,
+# 1.05M context, 128k max output. Long-context rates (2x in, 1.5x out) start
+# above 272k input tokens, which MAX_INPUT_CHARS keeps us well under.
+EXTRACT = {"model": "gpt-6-luna", "effort": "medium",
+           "price_in": 0.10, "price_cached": 0.01, "price_out": 0.50}
+# High effort is what makes the search sources work: at medium the model gives
+# up after ~9 searches and returns nothing, at high it keeps sweeping (~28
+# searches) and enumerates the board.
+SEARCH = {"model": "gpt-6-luna", "effort": "high",
+          "price_in": 0.10, "price_cached": 0.01, "price_out": 0.50}
 # Model parameters
 MAX_OUTPUT_TOKENS = 64000
 MAX_INPUT_CHARS = 300_000
-SEARCH_MAX_SEARCHES = 20  # cap on web searches per claude_search
+SEARCH_MAX_SEARCHES = 40  # cap on server-side tool calls per search source
+# (a full board enumeration observed ~28 calls; 20 cut it off mid-sweep)
+WEB_SEARCH_COST = 0.01  # $10 per 1k web_search calls
+REQUEST_TIMEOUT = 900  # seconds; search sources run a long server-side tool loop
+MAX_RETRIES = 3  # SDK-level retries for transient API errors
 SCRAPE_WORKERS = 3  # bound concurrent source fetch/extraction calls
 
-# Sanity check for claude_search sources: if results return fewer than X fraction of the jobs the
+# Sanity check for model_search sources: if results return fewer than X fraction of the jobs the
 # board currently lists from that source, fetch is considered a failure
 # this is only helpful for initial testing against current infrastructure, will be phased out later
 SEARCH_COUNT_MIN_RATIO = 0.5
@@ -27,21 +38,27 @@ SEARCH_COUNT_MIN_RATIO = 0.5
 # "urls": pages fetched and handed to the LLM (extra pages are cheap insurance
 #         against pagination; duplicate listings are deduped downstream).
 # "kind": "jmajax"        = WP Job Manager AJAX endpoint (TSPA).
-#         "claude_search" = bot-walled site we can't fetch directly; Claude's
-#                           server-side web search/fetch tools enumerate the
-#                           listings instead (billed to the same Anthropic key).
+#         "model_search"  = bot-walled site we can't fetch directly; the
+#                           model's server-side web search enumerates the
+#                           listings instead (billed to the same OpenAI key).
+# "search_domain": required for model_search — the board's own domain. Search
+#         itself is not restricted to it (that returns nothing), but a reported
+#         job_url outside it is dropped: enumerating via general search turns up
+#         the same posting on mirror/aggregator sites, and a wrong link is worse
+#         than none.
 SOURCES = {
     "ACJS": {
         "urls": ["https://careers.acjs.org/jobs/"],
-        "kind": "claude_search",
+        "kind": "model_search",
+        "search_domain": "acjs.org",
     },
     "ASC": {
         "urls": ["https://asc41.org/career-center/position-postings/"],
     },
     "HigherEdJobs": {
         "urls": ["https://www.higheredjobs.com/faculty/search.cfm?JobCat=156"],
-        "kind": "claude_search",
-        "large_context": True,
+        "kind": "model_search",
+        "search_domain": "higheredjobs.com",
     },
     "jobs.ac.uk": {
         "urls": ["https://www.jobs.ac.uk/search/?keywords=criminology"],

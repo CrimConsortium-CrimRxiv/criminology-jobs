@@ -1,6 +1,6 @@
 # scraper/ — automated job-board refresh
 
-Python pipeline that refreshes the criminology jobs board: it collects postings from the sources of interest, uses Anthropic API to extract postings and score each one for relevance, merges the results against the current board, and refreshes the site. Independent sources run concurrently with a bounded worker pool.
+Python pipeline that refreshes the criminology jobs board: it collects postings from the sources of interest, uses the OpenAI API to extract postings and score each one for relevance, merges the results against the current board, and refreshes the site. Independent sources run concurrently with a bounded worker pool.
 
 ## How it works
 
@@ -19,11 +19,11 @@ fetch  ->  extract  ->  merge/dedup/id  ->  write outputs
 
 | Source | Method |
 |--------|--------|
-| ACJS | Cloudflare-protected; Claude web search fetches the postings |
+| ACJS | Cloudflare-protected; server-side web search finds the postings |
 | ASC | Direct fetch |
 | jobs.ac.uk | Direct fetch |
 | TSPA | WordPress AJAX endpoint (returns clean JSON) |
-| HigherEdJobs | Blocked for scraping; Claude web search fetches the postings |
+| HigherEdJobs | Blocked for scraping; server-side web search finds the postings |
 
 ### Confidence + review
 
@@ -44,10 +44,10 @@ From the repository root:
 pip install -r requirements.txt
 ```
 
-Provide an Anthropic API key —  create a `.env` file at the repo root (gitignored) containing:
+Provide an OpenAI API key —  create a `.env` file at the repo root (gitignored) containing:
 
 ```
-ANTHROPIC_API_KEY=...
+OPENAI_API_KEY=...
 ```
 
 Then run:
@@ -81,11 +81,10 @@ returned by an extraction run.
 |---------|---------|---------|
 | `CONFIDENCE_PUBLISH` | `0.80` | Auto-publish at/above this score |
 | `CONFIDENCE_DROP` | `0.30` | Auto-discard below this score |
-| `EXTRACT` | Claude Haiku 4.5, default effort | Model profile for direct-fetch sources |
-| `SEARCH` | Claude Haiku 4.5, default effort | Model profile for bot-protected source searches |
-| `SEARCH_LARGE` | Claude Sonnet 5, default effort | Larger-context profile used only for HigherEdJobs |
-| `SEARCH_MAX_SEARCHES` | `20` | Cap on web searches for a search-based source |
+| `EXTRACT` | gpt-6-luna, medium effort | Model profile for direct-fetch sources |
+| `SEARCH` | gpt-6-luna, high effort | Model profile for bot-protected source searches. High effort is required — at medium the model abandons the sweep and returns nothing. |
+| `SEARCH_MAX_SEARCHES` | `40` | Cap on server-side tool calls for a search-based source |
 | `SCRAPE_WORKERS` | `3` | Maximum source fetch/extraction calls running concurrently |
 | `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that returns fewer than this fraction of its current board count is treated as a failed fetch |
-| `SOURCES` | — | The five boards, their URLs, and fetch method |
+| `SOURCES` | — | The five boards, their URLs, fetch method, and (for search sources) their own domain |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |

@@ -50,7 +50,7 @@ class EmailTests(unittest.TestCase):
         self.assertIn("JOBS NOT VERIFIED IN THIS RUN", plain)
         self.assertIn("Existing jobs verified: 8", plain)
         self.assertIn("New results below confidence cutoff: 3", plain)
-        self.assertIn("Estimated Anthropic API cost: $0.42", plain)
+        self.assertIn("Estimated OpenAI API cost: $0.42", plain)
         self.assertIn("HigherEdJobs: sanity check failed", plain)
         self.assertIn("https://example.edu/new", html)
 

@@ -107,7 +107,7 @@ def build_message(summary, sender, recipients, test=False):
         f"Pending manual review: {pending}",
         f"New results below confidence cutoff: {dropped_low}",
         f"Existing jobs not verified this run: {len(unverified_jobs)}",
-        f"Estimated Anthropic API cost: ${api_cost:.2f}",
+        f"Estimated OpenAI API cost: ${api_cost:.2f}",
         "Job board: https://jobs.crimconsortium.com/",
         "",
         "NEW JOBS BY BOARD",
@@ -151,7 +151,7 @@ def build_message(summary, sender, recipients, test=False):
         f"<strong>Pending manual review:</strong> {pending}<br>",
         f"<strong>New results below confidence cutoff:</strong> {dropped_low}<br>",
         f"<strong>Existing jobs not verified this run:</strong> {len(unverified_jobs)}<br>",
-        f"<strong>Estimated Anthropic API cost:</strong> ${api_cost:.2f}<br>",
+        f"<strong>Estimated OpenAI API cost:</strong> ${api_cost:.2f}<br>",
         '<a href="https://jobs.crimconsortium.com/">Open the job board</a></p>',
         "<h3>New jobs by board</h3>",
     ]

@@ -45,9 +45,9 @@ class SourceResult:
 def require_api_key():
     """Load and validate the credential before doing any network or file work."""
     config.load_env()
-    if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+    if not os.environ.get("OPENAI_API_KEY", "").strip():
         raise RuntimeError(
-            "ANTHROPIC_API_KEY is not set. Add it as a GitHub Actions "
+            "OPENAI_API_KEY is not set. Add it as a GitHub Actions "
             "repository secret or provide it in the local environment."
         )
 
@@ -82,24 +82,26 @@ def _scrape_source(name, board_count):
     usage_note = ""
     try:
         note = ""
-        if config.SOURCES[name].get("kind") == "claude_search":
-            profile = (config.SEARCH_LARGE if config.SOURCES[name].get("large_context")
-                       else config.SEARCH)
+        if config.SOURCES[name].get("kind") == "model_search":
+            profile = config.SEARCH
             jobs, usage = extract.extract_jobs_via_search(
-                name, config.SOURCES[name]["urls"][0], board_count, profile=profile)
+                name, config.SOURCES[name]["urls"][0], board_count, profile=profile,
+                domain=config.SOURCES[name].get("search_domain"))
         else:
             profile = config.EXTRACT
             text, note = fetch.fetch_source(name)
             jobs, usage = extract.extract_jobs(name, text)
-        cost = (usage["input"] / 1e6 * profile["price_in"]
+        cached = usage.get("cached", 0)  # discounted subset of usage["input"]
+        cost = ((usage["input"] - cached) / 1e6 * profile["price_in"]
+                + cached / 1e6 * profile["price_cached"]
                 + usage["output"] / 1e6 * profile["price_out"]
-                + usage["searches"] * 0.01)
+                + usage["searches"] * config.WEB_SEARCH_COST)
         searches = f", {usage['searches']} searches" if usage["searches"] else ""
         usage_note = (
             f" ({usage['input']:,} in / {usage['output']:,} out tokens"
             f"{searches}, ~${cost:.2f})"
         )
-        if config.SOURCES[name].get("kind") == "claude_search":
+        if config.SOURCES[name].get("kind") == "model_search":
             floor = board_count * config.SEARCH_COUNT_MIN_RATIO
             if len(jobs) < floor:
                 raise RuntimeError(

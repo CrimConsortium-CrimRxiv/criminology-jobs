@@ -1,2 +1,2 @@
-anthropic>=0.90
+openai>=2.44
 pandas

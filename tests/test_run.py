@@ -52,8 +52,8 @@ class RunTests(unittest.TestCase):
         self.assertEqual(failures, [])
         self.assertEqual(cost, 0.0)
 
-    def test_higher_ed_uses_large_context_profile_without_effort(self):
-        usage = {"input": 0, "output": 0, "searches": 0}
+    def test_search_sources_get_the_search_profile_and_their_own_domain(self):
+        usage = {"input": 0, "cached": 0, "output": 0, "searches": 0}
 
         with patch.object(
             run.extract,
@@ -63,18 +63,18 @@ class RunTests(unittest.TestCase):
             result = run._scrape_source("HigherEdJobs", 0)
 
         self.assertIsNone(result.failure)
-        self.assertIsNone(run.config.SEARCH_LARGE["effort"])
-        self.assertEqual(
-            extraction.call_args.kwargs["profile"],
-            run.config.SEARCH_LARGE,
-        )
+        self.assertEqual(extraction.call_args.kwargs["profile"], run.config.SEARCH)
+        self.assertEqual(extraction.call_args.kwargs["domain"], "higheredjobs.com")
 
-    def test_other_sources_use_cheaper_haiku_profile_without_effort(self):
-        self.assertEqual(run.config.EXTRACT["model"], "claude-haiku-4-5")
-        self.assertEqual(run.config.SEARCH["model"], "claude-haiku-4-5")
-        self.assertIsNone(run.config.EXTRACT["effort"])
-        self.assertIsNone(run.config.SEARCH["effort"])
-        self.assertLess(run.config.SEARCH["price_in"], run.config.SEARCH_LARGE["price_in"])
+    def test_all_profiles_use_the_cheap_luna_model(self):
+        for profile in (run.config.EXTRACT, run.config.SEARCH):
+            self.assertEqual(profile["model"], "gpt-6-luna")
+            self.assertLess(profile["price_cached"], profile["price_in"])
+            self.assertLess(profile["price_in"], profile["price_out"])
+
+    def test_search_runs_at_high_effort(self):
+        """At medium effort the model abandons the sweep and returns no jobs."""
+        self.assertEqual(run.config.SEARCH["effort"], "high")
 
     def test_refresh_fails_before_scraping_when_api_key_is_missing(self):
         with (
@@ -82,7 +82,7 @@ class RunTests(unittest.TestCase):
             patch.object(run.config, "load_env"),
             patch.object(run, "scrape") as scrape,
         ):
-            with self.assertRaisesRegex(RuntimeError, "ANTHROPIC_API_KEY is not set"):
+            with self.assertRaisesRegex(RuntimeError, "OPENAI_API_KEY is not set"):
                 run.main()
 
         scrape.assert_not_called()
@@ -124,7 +124,7 @@ class RunTests(unittest.TestCase):
             )
 
             with (
-                patch.dict(os.environ, {"ANTHROPIC_API_KEY": "test-key"}),
+                patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}),
                 patch.object(run, "CSV_PATH", csv_path),
                 patch.object(run, "REVIEW_PATH", review_path),
                 patch.object(run, "DATA_JS_PATH", data_js_path),
@@ -155,11 +155,11 @@ class RunTests(unittest.TestCase):
             self.assertEqual(summary["estimated_api_cost_usd"], 0.12)
 
     def test_failed_search_is_included_in_reported_api_cost(self):
-        usage = {"input": 1_000, "output": 100, "searches": 1}
+        usage = {"input": 1_000, "cached": 400, "output": 100, "searches": 1}
         sources = {
             "ProtectedBoard": {
                 "urls": ["https://example.edu/jobs"],
-                "kind": "claude_search",
+                "kind": "model_search",
             }
         }
 

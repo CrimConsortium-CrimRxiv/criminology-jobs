@@ -1,7 +1,10 @@
+"""Extract structured job rows from board content using the OpenAI Responses API."""
+
 import datetime
 import json
+import urllib.parse
 
-from anthropic import Anthropic
+from openai import OpenAI
 
 from . import config
 
@@ -26,6 +29,7 @@ _JOB_PROPS = {
     "reason": {"type": "string"},
 }
 
+# Strict json_schema: every field required, no extra properties at either level.
 _SCHEMA = {
     "type": "object",
     "properties": {
@@ -51,47 +55,72 @@ values. Dates as YYYY-MM-DD when given.
 
 {config.CRITERIA}"""
 
-_SEARCH_TOOLS = [
-    {"type": "web_search_20260209", "name": "web_search",
-     "max_uses": config.SEARCH_MAX_SEARCHES, "allowed_callers": ["direct"]},
-    {"type": "web_fetch_20260209", "name": "web_fetch",
-     "allowed_callers": ["direct"]},
-]
+
+# Server-side search for the bot-walled sources. The Responses API runs the tool
+# loop itself, so one create() call returns the finished answer.
+# return_token_budget "unlimited" is load-bearing: under the default budget the
+# model runs out of room mid-enumeration and returns no jobs at all for these
+# boards. The search is deliberately NOT domain-filtered — these listings are
+# only reachable through the wider web, and restricting it to the source's own
+# domain returns nothing at all. _keep_own_urls guards the output instead.
+_SEARCH_TOOLS = [{
+    "type": "web_search",
+    "search_context_size": "high",
+    "return_token_budget": "unlimited",
+}]
+
+
+def _keep_own_urls(jobs, domain):
+    """Blank any job_url that is not on the source's own domain.
+
+    Enumerating a walled board through general search turns up the same posting
+    on mirror and aggregator sites, and the model will happily report one of
+    those as the listing's URL. A wrong link is worse than none, and the board
+    already carries these rows with an empty job_url."""
+    if not domain:
+        return jobs
+    for job in jobs:
+        host = urllib.parse.urlparse(job.get("job_url", "")).hostname or ""
+        if host != domain and not host.endswith("." + domain):
+            job["job_url"] = ""
+    return jobs
 
 
 def _call(user_content, profile, tools=None):
     """Run one extraction request; returns (job dicts, usage dict)."""
     config.load_env()
-    client = Anthropic()
-    messages = [{"role": "user", "content": user_content}]
-    usage = {"input": 0, "output": 0, "searches": 0}
-    output_config = {"format": {"type": "json_schema", "schema": _SCHEMA}}
+    client = OpenAI(timeout=config.REQUEST_TIMEOUT, max_retries=config.MAX_RETRIES)
+    request = {
+        "model": profile["model"],
+        "instructions": _SYSTEM,
+        "input": user_content,
+        "max_output_tokens": config.MAX_OUTPUT_TOKENS,
+        "text": {"format": {"type": "json_schema", "name": "criminology_jobs",
+                            "strict": True, "schema": _SCHEMA}},
+    }
     if profile.get("effort"):
-        output_config["effort"] = profile["effort"]  # omitted for models like Haiku
-    for _ in range(5):  # server-tool turns can pause; resume until finished
-        with client.messages.stream(
-            model=profile["model"],
-            max_tokens=config.MAX_OUTPUT_TOKENS,
-            system=_SYSTEM,
-            messages=messages,
-            output_config=output_config,
-            **({"tools": tools} if tools else {}),
-        ) as stream:
-            message = stream.get_final_message()
-        u = message.usage
-        usage["input"] += (u.input_tokens + (u.cache_read_input_tokens or 0)
-                          + (u.cache_creation_input_tokens or 0))
-        usage["output"] += u.output_tokens
-        server_tools = getattr(u, "server_tool_use", None)
-        if server_tools is not None:
-            usage["searches"] += getattr(server_tools, "web_search_requests", 0) or 0
-        if message.stop_reason != "pause_turn":
-            break
-        messages = messages + [{"role": "assistant", "content": message.content}]
-    if message.stop_reason == "max_tokens":
-        raise RuntimeError(f"output truncated at {config.MAX_OUTPUT_TOKENS} tokens")
-    payload = next(b.text for b in message.content if b.type == "text")
-    return json.loads(payload)["jobs"], usage
+        request["reasoning"] = {"effort": profile["effort"]}
+    if tools:
+        request["tools"] = tools
+        request["max_tool_calls"] = config.SEARCH_MAX_SEARCHES
+    response = client.responses.create(**request)
+
+    if response.status != "completed":
+        reason = getattr(response.incomplete_details, "reason", None)
+        if reason == "max_output_tokens":
+            raise RuntimeError(f"output truncated at {config.MAX_OUTPUT_TOKENS} tokens")
+        raise RuntimeError(f"response {response.status}: {reason or 'no detail given'}")
+
+    u = response.usage
+    # input_tokens is the total; cached tokens are a discounted subset of it.
+    cached = getattr(u.input_tokens_details, "cached_tokens", 0) or 0
+    usage = {
+        "input": u.input_tokens,
+        "cached": cached,
+        "output": u.output_tokens,
+        "searches": sum(1 for item in response.output if item.type == "web_search_call"),
+    }
+    return json.loads(response.output_text)["jobs"], usage
 
 
 def extract_jobs(source_name, text):
@@ -107,14 +136,15 @@ def extract_jobs(source_name, text):
     )  # returns (jobs, usage)
 
 
-def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=None):
-    """Bot-walled path: Claude's server-side web search/fetch enumerates the
+def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=None,
+                            domain=None):
+    """Bot-walled path: the model's server-side web search enumerates the
     listings, since the site blocks our own downloads."""
     expectation = (
         f"The board currently tracks roughly {expected_count} listings from "
         f"this source, so a comparable number likely exists now. "
     ) if expected_count else ""
-    return _call(
+    jobs, usage = _call(
         f"Source site: {source_name}\n"
         f"Today's date: {datetime.date.today().isoformat()}\n\n"
         f"Enumerate EVERY job posting currently listed in this job-board "
@@ -133,4 +163,5 @@ def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=
         f"be the listing's page on the source site.",
         profile or config.SEARCH,
         tools=_SEARCH_TOOLS,
-    )  # returns (jobs, usage)
+    )
+    return _keep_own_urls(jobs, domain), usage
