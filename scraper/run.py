@@ -182,6 +182,12 @@ def _scrape_source(name, board_count):
             profile = config.EXTRACT
             text, note = fetch.fetch_source(name)
             jobs, usage = extract.extract_jobs(name, text)
+            if not jobs and config.SOURCES[name].get("kind") != "jmajax":
+                # A page that yields no listings was not the listing page — a
+                # bot-check interstitial that got past _blocked looks like this.
+                # Treat it as a refused fetch so the proxy gets its turn.
+                raise fetch.FetchError(
+                    f"fetched {len(text):,} chars but found no listings")
         except fetch.FetchError as fetch_error:
             # A jmajax endpoint returns clean JSON; if that breaks we want the
             # failure, not a guess from somewhere else.
@@ -199,7 +205,8 @@ def _scrape_source(name, board_count):
                 jobs, extract_usage = extract.extract_jobs(name, text)
                 for key in usage:
                     usage[key] += extract_usage.get(key, 0)
-                note = f"(fetch refused; proxy-fetched {len(text):,} chars)"
+                note = (f"(fetch refused: {fetch_error}; "
+                        f"proxy-fetched {len(text):,} chars)")
             else:
                 indirect = True
                 profile = config.SEARCH

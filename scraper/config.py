@@ -65,7 +65,12 @@ LIVENESS_WORKERS = 8  # hosts checked in parallel (one request at a time each)
 # through the rest over following runs. Perplexity cannot stand in here — it
 # gets "JavaScript is required" from HigherEdJobs and is refused by ACJS's
 # robots.txt — so politeness is the only lever.
-LIVENESS_MAX_PER_HOST = 40
+# 200 covers every host on the board today (the largest is ~150 postings) at
+# about 0.7s each, so roughly two minutes for that host while others run in
+# parallel. What got us refused was several hundred checks within minutes during
+# development, not one pass a week. The cap stays as a guard for a host that
+# grows past it — those rows are picked up by the following runs.
+LIVENESS_MAX_PER_HOST = 200
 # A row with no URL cannot be checked. Those are kept, but they are also the
 # rows most likely to be stale, so they are retired after this many days.
 UNVERIFIABLE_MAX_AGE_DAYS = 120

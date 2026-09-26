@@ -25,6 +25,19 @@ class FetchTests(unittest.TestCase):
 
 
 class LivenessTests(unittest.TestCase):
+    def test_challenge_pages_are_detected_despite_being_large(self):
+        """A 92KB Incapsula interstitial passed the size check and cost 41k
+        input tokens before returning zero listings."""
+        for marker in (b"Incapsula", b"JavaScript is required",
+                       b"Enable JavaScript and cookies to continue",
+                       b"cf-browser-verification"):
+            with self.subTest(marker=marker):
+                page = b"<html>" + b"x" * 90_000 + marker + b"</html>"
+                self.assertTrue(fetch._blocked(page))
+
+    def test_a_real_page_is_not_flagged(self):
+        self.assertFalse(fetch._blocked(b"<html>" + b"job listing " * 500 + b"</html>"))
+
     def test_dead_markers_cover_the_reported_case(self):
         """HigherEdJobs serves "Position Deleted on 1/02/2026" with HTTP 200, so
         a status check alone would keep it on the board forever."""

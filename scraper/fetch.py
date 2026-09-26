@@ -67,14 +67,31 @@ def _decompress(body, encoding):
     return body
 
 
+# Challenge pages are large and look like real HTML, so they pass a size check
+# and get handed to the extractor. A 92KB Incapsula interstitial cost 41k input
+# tokens and returned zero listings, and because the fetch "succeeded" nothing
+# fell back to the proxy.
+_BLOCK_MARKERS = (
+    b"Incapsula",
+    b"_Incapsula_Resource",
+    b"Request unsuccessful",
+    b"challenges.cloudflare.com",
+    b"cf-browser-verification",
+    b"__cf_chl",
+    b"cf_chl_opt",
+    b"<title>Just a moment...</title>",
+    b"Checking if the site connection is secure",
+    b"Enable JavaScript and cookies to continue",
+    b"Please enable JavaScript to view",
+    b"JavaScript is required",
+    b"captcha-delivery.com",
+    b"Access Denied",
+    b"Attention Required!",
+)
+
+
 def _blocked(body):
-    markers = (
-        b"Incapsula",
-        b"_Incapsula_Resource",
-        b"challenges.cloudflare.com",
-        b"<title>Just a moment...</title>",
-    )
-    return len(body) < 2000 or any(marker in body for marker in markers)
+    return len(body) < 2000 or any(marker in body for marker in _BLOCK_MARKERS)
 
 
 def _get(url):

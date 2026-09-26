@@ -69,18 +69,21 @@ class RunTests(unittest.TestCase):
         self.assertEqual(searched.call_args.kwargs["profile"], run.config.SEARCH)
         self.assertIn("fetch refused", result.log)
 
-    def test_a_working_fetch_never_pays_for_search(self):
+    def test_a_working_fetch_never_pays_for_search_or_proxy(self):
         usage = {"input": 10, "cached": 0, "output": 5, "searches": 0}
+        found = [{"job_url": "https://asc41.org/job/1", "confidence": "0.9"}]
 
         with (
             patch.object(run.fetch, "fetch_source", return_value=("page text", "")),
-            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
+            patch.object(run.extract, "extract_jobs", return_value=(found, usage)),
             patch.object(run.extract, "extract_jobs_via_search") as searched,
+            patch.object(run.proxy, "fetch_listing") as proxied,
         ):
             result = run._scrape_source("ASC", 0)
 
         self.assertIsNone(result.failure)
         searched.assert_not_called()
+        proxied.assert_not_called()
 
     def test_jmajax_failure_is_not_papered_over_by_search(self):
         """TSPA returns clean JSON; if that breaks we want the failure."""
@@ -273,6 +276,40 @@ class RunTests(unittest.TestCase):
                 ["https://example.edu/existing"],
             )
             self.assertEqual(summary["estimated_api_cost_usd"], 0.12)
+
+    def test_a_fetch_that_finds_no_listings_falls_back(self):
+        """An Incapsula interstitial got past _blocked, so the "successful"
+        fetch returned 0 jobs and the proxy never got its turn."""
+        empty = {"input": 41_219, "cached": 0, "output": 2_884, "searches": 0}
+        good = {"input": 10, "cached": 0, "output": 5, "searches": 0}
+
+        with (
+            patch.object(run.proxy, "available", return_value=True),
+            patch.object(run.fetch, "fetch_source", return_value=("challenge page", "")),
+            patch.object(run.extract, "extract_jobs",
+                         side_effect=[([], empty),
+                                      ([{"job_url": "", "confidence": "0.9"}], good)]),
+            patch.object(run.proxy, "fetch_listing", return_value=("real page", good)),
+        ):
+            result = run._scrape_source("HigherEdJobs", 0)
+
+        self.assertIsNone(result.failure)
+        self.assertEqual(len(result.rows), 1)
+        self.assertIn("found no listings", result.log)
+
+    def test_an_empty_jmajax_response_does_not_fall_back(self):
+        usage = {"input": 1, "cached": 0, "output": 1, "searches": 0}
+
+        with (
+            patch.object(run.proxy, "available", return_value=True),
+            patch.object(run.fetch, "fetch_source", return_value=("{}", "")),
+            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
+            patch.object(run.proxy, "fetch_listing") as proxied,
+        ):
+            result = run._scrape_source("TSPA", 0)
+
+        self.assertIsNone(result.failure)
+        proxied.assert_not_called()
 
     def test_a_refused_fetch_prefers_the_proxy_over_search(self):
         """Proxy fetch returns the real page, so it beats stochastic search."""
