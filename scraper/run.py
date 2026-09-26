@@ -52,6 +52,25 @@ def require_api_key():
         )
 
 
+def repair_urls(rows):
+    """Drop stored URLs that never pointed anywhere.
+
+    Rows written before job_url was validated can hold a URL the model composed
+    rather than copied — id 874 carried
+    "https://https//www.cech.uc.edu/..." — so a refresh repairs them in place
+    instead of leaving a dead link on the site."""
+    repaired = 0
+    for row in rows:
+        for field in ("job_url", "combined_urls"):
+            kept = [u for u in (p.strip() for p in row.get(field, "").split(","))
+                    if u and extract.valid_url(u)]
+            original = row.get(field, "")
+            row[field] = ", ".join(kept)
+            if row[field] != original:
+                repaired += 1
+    return repaired
+
+
 def norm_key(row):
     """Match key: normalized title + institution"""
     return re.sub(r"[^a-z0-9]", "", (row["job_title"] + row["institution"]).lower())
@@ -82,15 +101,21 @@ def _scrape_source(name, board_count):
     usage_note = ""
     try:
         note = ""
-        if config.SOURCES[name].get("kind") == "model_search":
-            profile = config.SEARCH
-            jobs, usage = extract.extract_jobs_via_search(
-                name, config.SOURCES[name]["urls"][0], board_count, profile=profile,
-                domain=config.SOURCES[name].get("search_domain"))
-        else:
+        searched = False
+        try:
             profile = config.EXTRACT
             text, note = fetch.fetch_source(name)
             jobs, usage = extract.extract_jobs(name, text)
+        except fetch.FetchError as fetch_error:
+            # Bot wall or a broken page: enumerate via search instead. A jmajax
+            # endpoint has no fallback, so its failure surfaces as a failure.
+            if config.SOURCES[name].get("kind") == "jmajax":
+                raise
+            searched = True
+            profile = config.SEARCH
+            note = f"(fetch refused: {fetch_error}; searched instead)"
+            jobs, usage = extract.extract_jobs_via_search(
+                name, config.SOURCES[name]["urls"][0], board_count, profile=profile)
         cached = usage.get("cached", 0)  # discounted subset of usage["input"]
         cost = ((usage["input"] - cached) / 1e6 * profile["price_in"]
                 + cached / 1e6 * profile["price_cached"]
@@ -101,7 +126,7 @@ def _scrape_source(name, board_count):
             f" ({usage['input']:,} in / {usage['output']:,} out tokens"
             f"{searches}, ~${cost:.2f})"
         )
-        if config.SOURCES[name].get("kind") == "model_search":
+        if searched:
             floor = board_count * config.SEARCH_COUNT_MIN_RATIO
             if len(jobs) < floor:
                 raise RuntimeError(
@@ -185,6 +210,7 @@ def main():
     today = datetime.date.today()
 
     existing = read_csv(CSV_PATH)
+    repaired = repair_urls(existing)
     review = read_csv(REVIEW_PATH)
     decisions = {}  # url -> "include" | "exclude"
     for row in review:
@@ -272,6 +298,8 @@ def main():
 
     for failure in failures:
         print(f"WARNING: {failure} (its existing jobs were kept)")
+    if repaired:
+        print(f"{repaired} stored URL field(s) repaired (unusable URLs cleared)")
     if dropped_low:
         print(f"{dropped_low} listings auto-dropped below CONFIDENCE_DROP={config.CONFIDENCE_DROP}")
     print(f"Refresh: {today.isoformat()} (+{new_count} new, {n_pending} pending review)")

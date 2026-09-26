@@ -17,13 +17,30 @@ fetch  ->  extract  ->  merge/dedup/id  ->  write outputs
 
 ### Sources
 
-| Source | Method |
-|--------|--------|
-| ACJS | Cloudflare-protected; server-side web search finds the postings |
-| ASC | Direct fetch |
-| jobs.ac.uk | Direct fetch |
-| TSPA | WordPress AJAX endpoint (returns clean JSON) |
-| HigherEdJobs | Blocked for scraping; server-side web search finds the postings |
+Every board is scraped directly first — one cheap request, exact listings, real
+URLs. If the fetch is refused (a bot wall, or a page that comes back empty), that
+source falls back to server-side web search for this run only, so a board behind
+Cloudflare still refreshes and goes back to being scraped as soon as the wall
+comes down. Nothing is pinned to the search path in config.
+
+| Source | Method | Status 2026-09-26 |
+|--------|--------|-------------------|
+| TSPA | WordPress AJAX endpoint (returns clean JSON) | scraped; no search fallback by design |
+| jobs.ac.uk | Direct fetch | scraped |
+| ASC | Direct fetch | fetch refused (Cloudflare) — was scraping fine through 2026-09-22 |
+| ACJS | Direct fetch | fetch refused (Cloudflare) — search fallback |
+| HigherEdJobs | Direct fetch | fetch refused (Incapsula) — search fallback |
+
+TSPA is deliberately excluded from the fallback: it returns clean JSON, so if
+that endpoint breaks we want the failure rather than a guess.
+
+### job_url
+
+A `job_url` is only kept if it parses as http(s) with a dotted host, and on the
+scraped path only if it actually appears in the page we handed over. The model
+will otherwise compose one: a posting whose text held the typo
+`https//www.cech.uc.edu/...` was recorded as `https://https//www.cech.uc.edu/...`,
+pointing at a host literally named `https`.
 
 ### Confidence + review
 
@@ -82,9 +99,9 @@ returned by an extraction run.
 | `CONFIDENCE_PUBLISH` | `0.80` | Auto-publish at/above this score |
 | `CONFIDENCE_DROP` | `0.30` | Auto-discard below this score |
 | `EXTRACT` | gpt-6-luna, medium effort | Model profile for direct-fetch sources |
-| `SEARCH` | gpt-6-luna, high effort | Model profile for bot-protected source searches. High effort is required — at medium the model abandons the sweep and returns nothing. |
+| `SEARCH` | gpt-6-luna, high effort | Model profile for the search fallback. High effort is required — at medium the model abandons the sweep and returns nothing. |
 | `SEARCH_MAX_SEARCHES` | `40` | Cap on server-side tool calls for a search-based source |
 | `SCRAPE_WORKERS` | `3` | Maximum source fetch/extraction calls running concurrently |
-| `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that returns fewer than this fraction of its current board count is treated as a failed fetch |
-| `SOURCES` | — | The five boards, their URLs, fetch method, and (for search sources) their own domain |
+| `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source that *fell back to search* and returns fewer than this fraction of its current board count is treated as failed |
+| `SOURCES` | — | The five boards and their URLs |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |

@@ -52,19 +52,58 @@ class RunTests(unittest.TestCase):
         self.assertEqual(failures, [])
         self.assertEqual(cost, 0.0)
 
-    def test_search_sources_get_the_search_profile_and_their_own_domain(self):
+    def test_a_refused_fetch_falls_back_to_search(self):
         usage = {"input": 0, "cached": 0, "output": 0, "searches": 0}
+        blocked = run.fetch.FetchError("blocked/empty page")
 
-        with patch.object(
-            run.extract,
-            "extract_jobs_via_search",
-            return_value=([], usage),
-        ) as extraction:
-            result = run._scrape_source("HigherEdJobs", 0)
+        with (
+            patch.object(run.fetch, "fetch_source", side_effect=blocked),
+            patch.object(run.extract, "extract_jobs_via_search",
+                         return_value=([], usage)) as searched,
+        ):
+            result = run._scrape_source("ASC", 0)
 
         self.assertIsNone(result.failure)
-        self.assertEqual(extraction.call_args.kwargs["profile"], run.config.SEARCH)
-        self.assertEqual(extraction.call_args.kwargs["domain"], "higheredjobs.com")
+        self.assertEqual(searched.call_args.kwargs["profile"], run.config.SEARCH)
+        self.assertIn("fetch refused", result.log)
+
+    def test_a_working_fetch_never_pays_for_search(self):
+        usage = {"input": 10, "cached": 0, "output": 5, "searches": 0}
+
+        with (
+            patch.object(run.fetch, "fetch_source", return_value=("page text", "")),
+            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
+            patch.object(run.extract, "extract_jobs_via_search") as searched,
+        ):
+            result = run._scrape_source("ASC", 0)
+
+        self.assertIsNone(result.failure)
+        searched.assert_not_called()
+
+    def test_jmajax_failure_is_not_papered_over_by_search(self):
+        """TSPA returns clean JSON; if that breaks we want the failure."""
+        with (
+            patch.object(run.fetch, "fetch_source",
+                         side_effect=run.fetch.FetchError("endpoint moved")),
+            patch.object(run.extract, "extract_jobs_via_search") as searched,
+        ):
+            result = run._scrape_source("TSPA", 0)
+
+        self.assertIn("endpoint moved", result.failure)
+        searched.assert_not_called()
+
+    def test_search_fallback_still_enforces_the_count_floor(self):
+        usage = {"input": 0, "cached": 0, "output": 0, "searches": 3}
+
+        with (
+            patch.object(run.fetch, "fetch_source",
+                         side_effect=run.fetch.FetchError("blocked")),
+            patch.object(run.extract, "extract_jobs_via_search",
+                         return_value=([], usage)),
+        ):
+            result = run._scrape_source("ACJS", 40)
+
+        self.assertIn("sanity check", result.failure)
 
     def test_all_profiles_use_the_cheap_luna_model(self):
         for profile in (run.config.EXTRACT, run.config.SEARCH):
@@ -86,6 +125,26 @@ class RunTests(unittest.TestCase):
                 run.main()
 
         scrape.assert_not_called()
+
+    def test_stored_unusable_urls_are_repaired(self):
+        """The live board carried id 874 with a URL the model composed:
+        "https://https//www.cech.uc.edu/..." — a host literally named "https"."""
+        rows = [{
+            "job_url": "https://https//www.cech.uc.edu/Academics/school.html",
+            "combined_urls": ("https://https//www.cech.uc.edu/Academics/school.html, "
+                              "https://asc41.org/real-posting/"),
+        }]
+
+        repaired = run.repair_urls(rows)
+
+        self.assertEqual(rows[0]["job_url"], "")
+        self.assertEqual(rows[0]["combined_urls"], "https://asc41.org/real-posting/")
+        self.assertEqual(repaired, 2)
+
+    def test_repair_leaves_good_rows_alone(self):
+        rows = [{"job_url": "https://asc41.org/x/", "combined_urls": "https://asc41.org/x/"}]
+        self.assertEqual(run.repair_urls(rows), 0)
+        self.assertEqual(rows[0]["job_url"], "https://asc41.org/x/")
 
     def test_dedup_combines_sources_urls_and_uses_highest_confidence(self):
         first = job()
@@ -159,12 +218,13 @@ class RunTests(unittest.TestCase):
         sources = {
             "ProtectedBoard": {
                 "urls": ["https://example.edu/jobs"],
-                "kind": "model_search",
             }
         }
 
         with (
             patch.object(run.config, "SOURCES", sources),
+            patch.object(run.fetch, "fetch_source",
+                         side_effect=run.fetch.FetchError("blocked")),
             patch.object(
                 run.extract,
                 "extract_jobs_via_search",

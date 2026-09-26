@@ -37,10 +37,11 @@ The refresh is automated by a Python pipeline in `scraper/`:
    its WordPress AJAX endpoint).
 2. **Extract** — `scraper/extract.py` sends the page text to the OpenAI API,
    which returns structured rows plus a **confidence score (0–0.99)** that
-   each job fits the coverage rules above. HigherEdJobs blocks direct
-   fetching, so the model's server-side web search enumerates it instead, with
-   a sanity check against the board's current count so an incomplete search
-   can never silently thin the site.
+   each job fits the coverage rules above. A board that refuses the fetch
+   (ACJS, ASC and HigherEdJobs currently sit behind bot walls) falls back to
+   the model's server-side web search for that run, with a sanity check
+   against the board's current count so an incomplete search can never
+   silently thin the site.
 3. **Merge** — `scraper/run.py` dedups across boards, keeps stable ids for
    jobs already on the board, and adds newly discovered jobs. The published
    board is append-only: refreshes never automatically remove existing jobs.

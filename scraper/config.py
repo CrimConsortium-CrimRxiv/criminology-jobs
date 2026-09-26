@@ -29,36 +29,33 @@ REQUEST_TIMEOUT = 900  # seconds; search sources run a long server-side tool loo
 MAX_RETRIES = 3  # SDK-level retries for transient API errors
 SCRAPE_WORKERS = 3  # bound concurrent source fetch/extraction calls
 
-# Sanity check for model_search sources: if results return fewer than X fraction of the jobs the
-# board currently lists from that source, fetch is considered a failure
+# Sanity check for sources that fell back to search: if results return fewer than X fraction of
+# the jobs the board currently lists from that source, the run is considered a failure
 # this is only helpful for initial testing against current infrastructure, will be phased out later
 SEARCH_COUNT_MIN_RATIO = 0.5
 
 # --- Sources ----------------------------------------------------------------
+# Every source is scraped directly first — that gives exact listings and real
+# URLs off one cheap request. Search is only a fallback for when the fetch is
+# refused, so a board behind a bot wall still refreshes, and goes back to being
+# scraped the moment the wall comes down. ACJS, ASC and HigherEdJobs sit behind
+# Cloudflare/Incapsula JS challenges as of 2026-09-26 and take the fallback;
+# ASC was still scraping normally through 2026-09-22.
+#
 # "urls": pages fetched and handed to the LLM (extra pages are cheap insurance
 #         against pagination; duplicate listings are deduped downstream).
-# "kind": "jmajax"        = WP Job Manager AJAX endpoint (TSPA).
-#         "model_search"  = bot-walled site we can't fetch directly; the
-#                           model's server-side web search enumerates the
-#                           listings instead (billed to the same OpenAI key).
-# "search_domain": required for model_search — the board's own domain. Search
-#         itself is not restricted to it (that returns nothing), but a reported
-#         job_url outside it is dropped: enumerating via general search turns up
-#         the same posting on mirror/aggregator sites, and a wrong link is worse
-#         than none.
+# "kind": "jmajax" = WP Job Manager AJAX endpoint (TSPA), JSON rather than HTML.
+#         A jmajax source has no search fallback — if its endpoint breaks we
+#         want the failure, not a guess.
 SOURCES = {
     "ACJS": {
         "urls": ["https://careers.acjs.org/jobs/"],
-        "kind": "model_search",
-        "search_domain": "acjs.org",
     },
     "ASC": {
         "urls": ["https://asc41.org/career-center/position-postings/"],
     },
     "HigherEdJobs": {
         "urls": ["https://www.higheredjobs.com/faculty/search.cfm?JobCat=156"],
-        "kind": "model_search",
-        "search_domain": "higheredjobs.com",
     },
     "jobs.ac.uk": {
         "urls": ["https://www.jobs.ac.uk/search/?keywords=criminology"],

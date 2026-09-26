@@ -70,19 +70,30 @@ _SEARCH_TOOLS = [{
 }]
 
 
-def _keep_own_urls(jobs, domain):
-    """Blank any job_url that is not on the source's own domain.
+def valid_url(url, page_text=None):
+    """True if we can stand behind this URL. See _clean_urls."""
+    url = (url or "").strip()
+    parsed = urllib.parse.urlparse(url)
+    # A dotted host is what rejects the composed case: "https://https//..."
+    # parses to the host "https", which has no dot.
+    ok = (parsed.scheme in ("http", "https")
+          and "." in parsed.netloc
+          and " " not in url)
+    return ok and (page_text is None or url in page_text)
 
-    Enumerating a walled board through general search turns up the same posting
-    on mirror and aggregator sites, and the model will happily report one of
-    those as the listing's URL. A wrong link is worse than none, and the board
-    already carries these rows with an empty job_url."""
-    if not domain:
-        return jobs
+
+def _clean_urls(jobs, page_text=None):
+    """Blank any job_url we cannot stand behind.
+
+    The model will compose a URL out of whatever the posting happens to contain:
+    a listing whose text held the typo "https//www.cech.uc.edu/..." came back as
+    "https://https//www.cech.uc.edu/...", a link to a host literally named
+    "https". So a URL has to parse as http(s) with a dotted host, and on the
+    fetched-page path it also has to appear in the text we handed over — the
+    only URLs we can vouch for there are the ones the page actually contained."""
     for job in jobs:
-        host = urllib.parse.urlparse(job.get("job_url", "")).hostname or ""
-        if host != domain and not host.endswith("." + domain):
-            job["job_url"] = ""
+        url = (job.get("job_url") or "").strip()
+        job["job_url"] = url if valid_url(url, page_text) else ""
     return jobs
 
 
@@ -125,7 +136,7 @@ def _call(user_content, profile, tools=None):
 
 def extract_jobs(source_name, text):
     """Fetched-page path: extract jobs from page text we downloaded ourselves."""
-    return _call(
+    jobs, usage = _call(
         f"Source site: {source_name}\n"
         f"Today's date: {datetime.date.today().isoformat()} "
         f"(use it to resolve relative dates like 'Posted 4 days ago')\n\n"
@@ -133,11 +144,11 @@ def extract_jobs(source_name, text):
         f"inlined in [brackets]); pick the one linking to that job's detail "
         f"page.\n\nPage text:\n\n{text}",
         config.EXTRACT,
-    )  # returns (jobs, usage)
+    )
+    return _clean_urls(jobs, page_text=text), usage
 
 
-def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=None,
-                            domain=None):
+def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=None):
     """Bot-walled path: the model's server-side web search enumerates the
     listings, since the site blocks our own downloads."""
     expectation = (
@@ -156,12 +167,16 @@ def extract_jobs_via_search(source_name, listing_url, expected_count=0, profile=
         f"instructor, postdoc, criminology, criminal justice; site-specific "
         f"queries) and keep going until new searches stop surfacing listings "
         f"you haven't already collected. {expectation}One or two searches is "
-        f"not enough. Only include postings on the source site itself, not "
-        f"other job boards that appear in results. Report only real postings "
-        f"you actually saw in a fetch or search result — finding fewer than "
-        f"expected is acceptable, inventing or padding is not. job_url should "
-        f"be the listing's page on the source site.",
+        f"not enough. This board is usually unreachable directly, so most "
+        f"listings will surface on the hiring institution's own site, on "
+        f"aggregators, or in search snippets rather than on the board itself — "
+        f"that is expected, and such a posting still counts as long as it is a "
+        f"posting this board carries. Report only real postings you actually "
+        f"saw in a fetch or search result — finding fewer than expected is "
+        f"acceptable, inventing or padding is not. For job_url give the "
+        f"board's own listing page when you can reach it, otherwise the page "
+        f"where you actually saw the posting; never assemble a URL yourself.",
         profile or config.SEARCH,
         tools=_SEARCH_TOOLS,
     )
-    return _keep_own_urls(jobs, domain), usage
+    return _clean_urls(jobs), usage

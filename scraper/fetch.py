@@ -1,9 +1,11 @@
 """Fetch job-board pages and reduce them to plain text for extraction"""
 
+import gzip
 import json
 import subprocess
 import urllib.parse
 import urllib.request
+import zlib
 from html.parser import HTMLParser
 
 from . import config
@@ -11,23 +13,48 @@ from . import config
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
+# A bare UA is enough for an ordinary site but not for the ones behind a bot
+# check, which also look at the rest of a real navigation request.
+BROWSER_HEADERS = {
+    "User-Agent": UA,
+    "Accept": ("text/html,application/xhtml+xml,application/xml;q=0.9,"
+               "image/avif,image/webp,*/*;q=0.8"),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+}
+
 
 class FetchError(Exception):
     pass
 
 
 def _http(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
+    req = urllib.request.Request(url, headers=BROWSER_HEADERS)
     with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read()
+        return _decompress(r.read(), r.headers.get("Content-Encoding", ""))
 
 
 def _curl(url):
-    r = subprocess.run(["curl", "-s", "-L", "-A", UA, "--max-time", "40", url],
-                       capture_output=True, timeout=60)
+    """curl negotiates HTTP/2 and a real TLS fingerprint, which urllib cannot."""
+    cmd = ["curl", "-s", "-L", "--compressed", "--http2", "--max-time", "40"]
+    for key, value in BROWSER_HEADERS.items():
+        cmd += ["-H", f"{key}: {value}"]
+    r = subprocess.run(cmd + [url], capture_output=True, timeout=60)
     if r.returncode != 0 or not r.stdout:
         raise FetchError(f"curl failed for {url}")
     return r.stdout
+
+
+def _decompress(body, encoding):
+    if "gzip" in encoding:
+        return gzip.decompress(body)
+    if "deflate" in encoding:
+        return zlib.decompress(body, -zlib.MAX_WBITS)
+    return body
 
 
 def _blocked(body):
