@@ -151,20 +151,24 @@ class RunTests(unittest.TestCase):
         self.assertEqual([r["id"] for r in kept], ["1", "3", "4"])
         self.assertEqual(retired[0]["retired_reason"], "listing gone")
 
-    def test_checked_rows_record_the_date_so_budget_rotates(self):
+    def test_probed_rows_record_the_attempt_so_the_budget_rotates(self):
+        """Recording only successes would retry the same refused rows forever."""
         rows = [{"id": "1", "job_url": "https://b.example/live", "posted_date": "2026-09-01"},
-                {"id": "2", "job_url": "https://b.example/unchecked", "posted_date": "2026-09-01"}]
+                {"id": "2", "job_url": "https://b.example/refused", "posted_date": "2026-09-01"},
+                {"id": "3", "job_url": "https://b.example/skipped", "posted_date": "2026-09-01"}]
 
         with patch.object(run.fetch, "listing_states",
-                          return_value={"https://b.example/live": "live"}):
+                          return_value={"https://b.example/live": "live",
+                                        "https://b.example/refused": "unknown"}):
             kept, _ = run.prune_dead(rows, datetime.date(2026, 9, 26))
 
-        self.assertEqual(kept[0]["last_checked"], "2026-09-26")
-        self.assertNotIn("last_checked", kept[1])  # untouched, so checked first next run
+        self.assertEqual(kept[0]["last_probed"], "2026-09-26")
+        self.assertEqual(kept[1]["last_probed"], "2026-09-26")  # refused, still probed
+        self.assertNotIn("last_probed", kept[2])  # never reached, so goes first next run
 
-    def test_least_recently_checked_are_checked_first(self):
-        rows = [{"id": "new", "job_url": "https://b.example/1", "last_checked": "2026-09-25"},
-                {"id": "old", "job_url": "https://b.example/2", "last_checked": "2026-01-01"},
+    def test_least_recently_probed_are_probed_first(self):
+        rows = [{"id": "new", "job_url": "https://b.example/1", "last_probed": "2026-09-25"},
+                {"id": "old", "job_url": "https://b.example/2", "last_probed": "2026-01-01"},
                 {"id": "never", "job_url": "https://b.example/3"}]
 
         with patch.object(run.fetch, "listing_states", return_value={}) as probe:
@@ -186,7 +190,7 @@ class RunTests(unittest.TestCase):
         self.assertIn("no url", retired[0]["retired_reason"])
 
     def test_review_columns_do_not_leak_internal_fields(self):
-        for field in ("id", "consortium_member", "last_checked"):
+        for field in ("id", "consortium_member", "last_probed"):
             self.assertNotIn(field, run.REVIEW_COLUMNS)
 
     def test_stored_unusable_urls_are_repaired(self):

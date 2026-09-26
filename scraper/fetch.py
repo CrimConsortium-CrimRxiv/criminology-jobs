@@ -193,7 +193,13 @@ DEAD_MARKERS = (
     "job is no longer posted",
 )
 
-HOST_REQUEST_DELAY = 0.7  # seconds between requests to the same host
+HOST_REQUEST_DELAY = 2.0  # seconds between requests to the same host
+# A rate-limited host answers a handful of checks and then refuses everything.
+# higheredjobs.com gave definite answers for 20 of 154 postings and returned a
+# bot check for the rest, so continuing only deepens the block. Give up on a
+# host after this many unreadable replies in a row and leave the remainder for
+# the next run, which starts with the rows this one never reached.
+HOST_UNKNOWN_STREAK = 5
 
 # Never conclude "dead" from these — they mean we could not see the page.
 LIVE_UNKNOWN_STATUSES = (401, 403, 405, 429, 500, 502, 503, 504)
@@ -271,10 +277,15 @@ def listing_states(urls, workers=8, max_per_host=None):
 
     def check_host(host_urls):
         out = {}
+        streak = 0
         for index, url in enumerate(host_urls):
             if index:
                 time.sleep(HOST_REQUEST_DELAY)
-            out[url] = listing_state(url)
+            state = listing_state(url)
+            out[url] = state
+            streak = streak + 1 if state == "unknown" else 0
+            if streak >= HOST_UNKNOWN_STREAK:
+                break  # host is refusing us; the rest waits for the next run
         return out
 
     states = {}

@@ -52,6 +52,32 @@ class LivenessTests(unittest.TestCase):
         self.assertEqual(probe.call_count, 3)  # 2 from a.example, 1 from b.example
         self.assertEqual(len(states), 3)
 
+    def test_a_refusing_host_is_abandoned_for_this_run(self):
+        """higheredjobs.com answered 20 of 154 checks then bot-checked the rest;
+        pressing on only deepens the block."""
+        urls = [f"https://a.example/{i}" for i in range(40)]
+
+        with (
+            mock.patch.object(fetch, "listing_state", return_value="unknown") as probe,
+            mock.patch.object(fetch.time, "sleep"),
+        ):
+            fetch.listing_states(urls, workers=1)
+
+        self.assertEqual(probe.call_count, fetch.HOST_UNKNOWN_STREAK)
+
+    def test_an_answering_host_is_checked_all_the_way(self):
+        urls = [f"https://a.example/{i}" for i in range(12)]
+        answers = ["live", "unknown", "dead", "unknown", "unknown", "live"] * 2
+
+        with (
+            mock.patch.object(fetch, "listing_state", side_effect=answers) as probe,
+            mock.patch.object(fetch.time, "sleep"),
+        ):
+            states = fetch.listing_states(urls, workers=1)
+
+        self.assertEqual(probe.call_count, 12)  # streak keeps resetting
+        self.assertEqual(len(states), 12)
+
     def test_requests_to_one_host_are_serialized(self):
         urls = [f"https://a.example/{i}" for i in range(3)]
 

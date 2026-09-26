@@ -65,7 +65,10 @@ Volume is what gets us blocked: 8 concurrent requests made higheredjobs.com
 report 144 of 154 postings unverifiable, and a few hundred checks in a day made
 it refuse all 154. So checks run one-at-a-time per host with a pause, capped at
 `LIVENESS_MAX_PER_HOST` per run, spending the budget on the least recently
-checked rows (`last_checked`) and working through the rest over later runs.
+probed rows (`last_probed`, which records the attempt rather than the
+outcome so a refusing host does not soak up the budget every run) and working
+through the rest over later runs. A host is abandoned for the run after five
+unreadable replies in a row, since pressing on only deepens the block.
 Perplexity cannot stand in here — HigherEdJobs tells it "JavaScript is required"
 and ACJS's robots.txt refuses it.
 
@@ -148,7 +151,7 @@ returned by an extraction run.
 | `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source enumerated indirectly (proxy or search) returning fewer than this fraction of its board count is treated as failed |
 | `PROXY` | gpt-6-luna via Perplexity | Profile for proxy-fetching a walled page |
 | `PRUNE_DEAD_LISTINGS` | `True` | Retire postings that are definitely gone |
-| `LIVENESS_MAX_PER_HOST` | `40` | Liveness checks per host per run |
+| `LIVENESS_MAX_PER_HOST` | `200` | Liveness checks per host per run |
 | `UNVERIFIABLE_MAX_AGE_DAYS` | `120` | Age-out for rows with no URL |
 | `SOURCES` | — | The five boards and their URLs |
 | `CRITERIA` | — | Relevance rules, fed to the model verbatim |

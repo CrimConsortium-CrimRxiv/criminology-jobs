@@ -30,11 +30,11 @@ COLUMNS = [
     "contract_type", "teaching_expectations", "research_expectations",
     "posted_date", "deadline_or_review_date", "salary_currency",
     "salary_range", "job_url", "combined_urls", "id", "consortium_member",
-    "confidence", "last_checked",
+    "confidence", "last_probed",
 ]
 # Named rather than sliced off COLUMNS: as a slice this silently gained an "id"
 # column when COLUMNS grew.
-_NOT_REVIEWED = ("id", "consortium_member", "confidence", "last_checked")
+_NOT_REVIEWED = ("id", "consortium_member", "confidence", "last_probed")
 REVIEW_COLUMNS = ([c for c in COLUMNS if c not in _NOT_REVIEWED]
                   + ["confidence", "reason", "decision"])
 
@@ -87,19 +87,22 @@ def prune_dead(rows, today):
     checked at all, so they age out after UNVERIFIABLE_MAX_AGE_DAYS instead.
     Returns (kept, retired) where each retired row carries a "retired_reason".
     """
-    # Spend the per-host budget on the least recently checked postings, so a
+    # Spend the per-host budget on the least recently probed postings, so a
     # board larger than the budget is worked through over successive runs
     # instead of re-checking the same head of the list every week.
-    ordered = sorted(rows, key=lambda r: r.get("last_checked", ""))
+    ordered = sorted(rows, key=lambda r: r.get("last_probed", ""))
     states = fetch.listing_states([r.get("job_url", "") for r in ordered],
                                   workers=config.LIVENESS_WORKERS,
                                   max_per_host=config.LIVENESS_MAX_PER_HOST)
     kept, retired = [], []
     for row in rows:
         url = row.get("job_url", "")
-        state = states.get(url, "unchecked") if url else "no-url"
-        if state in ("live", "dead"):
-            row["last_checked"] = today.isoformat()
+        state = states.get(url, "unprobed") if url else "no-url"
+        if state != "unprobed":
+            # Records the attempt, not the outcome: a host that refuses us
+            # returns "unknown", and without marking those the rotation would
+            # retry the same refused rows every run and never reach the rest.
+            row["last_probed"] = today.isoformat()
         if state == "dead":
             retired.append({**row, "retired_reason": "listing gone"})
             continue
