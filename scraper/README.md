@@ -43,9 +43,10 @@ surface rather than be guessed at.
 **ACJS is the unsolved one.** Its listing page is JS-rendered, so `fetch_url`
 returns only one posting; its `robots.txt` refuses Perplexity's crawler on
 detail pages; and our own requests get a Cloudflare challenge. Searching finds
-real postings but only ~10 of 61 and sometimes none. It therefore trips the
-count sanity check most runs, which keeps its existing rows and adds nothing —
-the safe failure. Worth revisiting with a rendered fetch.
+real postings but only ~10 of 61 and sometimes none. A short or empty result
+is still merged — stored rows leave only through the liveness and age checks
+below, not because this run found fewer of them. Worth revisiting with a
+rendered fetch.
 
 ### Retiring dead listings
 
@@ -153,7 +154,7 @@ returned by an extraction run.
 | `SEARCH` | gpt-6-luna, high effort | Model profile for the search fallback. High effort is required — at medium the model abandons the sweep and returns nothing. |
 | `SEARCH_MAX_SEARCHES` | `40` | Cap on server-side tool calls for a search-based source |
 | `SCRAPE_WORKERS` | `3` | Maximum source fetch/extraction calls running concurrently |
-| `SEARCH_COUNT_MIN_RATIO` | `0.5` | A source enumerated indirectly (proxy or search) returning fewer than this fraction of its board count is treated as failed |
+| `SEARCH_ATTEMPTS` | `3` | Empty search enumerations are retried, keeping the best attempt. Any listings found are merged. |
 | `PROXY` | gpt-6-luna via Perplexity | Profile for proxy-fetching a walled page |
 | `PRUNE_DEAD_LISTINGS` | `True` | Retire postings that are definitely gone |
 | `LIVENESS_MAX_PER_HOST` | `200` | Liveness checks per host per run |

@@ -38,13 +38,15 @@ The refresh is automated by a Python pipeline in `scraper/`:
 2. **Extract** — `scraper/extract.py` sends the page text to the OpenAI API,
    which returns structured rows plus a **confidence score (0–0.99)** that
    each job fits the coverage rules above. A board that refuses the fetch
-   (ACJS, ASC and HigherEdJobs currently sit behind bot walls) falls back to
-   the model's server-side web search for that run, with a sanity check
-   against the board's current count so an incomplete search can never
-   silently thin the site.
+   (ACJS, ASC and HigherEdJobs currently sit behind bot walls) is fetched
+   through a proxy, or enumerated by web search if that is unavailable.
+   Whatever that fallback returns is merged; a short or empty result adds
+   only what it found.
 3. **Merge** — `scraper/run.py` dedups across boards, keeps stable ids for
-   jobs already on the board, and adds newly discovered jobs. The published
-   board is append-only: refreshes never automatically remove existing jobs.
+   jobs already on the board, and adds newly discovered jobs. A listing
+   leaves the board only when a liveness check shows it is gone (404/410 or
+   dead wording on the page), or when it ages past the limits in
+   `scraper/config.py`.
 4. **Review** — jobs scoring below the publish threshold land in
    `review.csv` instead of the site. Type `include` or `exclude` in its
    `decision` column; the next run applies the decision. Thresholds, model,

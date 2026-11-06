@@ -98,20 +98,6 @@ class RunTests(unittest.TestCase):
         self.assertIn("endpoint moved", result.failure)
         searched.assert_not_called()
 
-    def test_search_fallback_still_enforces_the_count_floor(self):
-        usage = {"input": 0, "cached": 0, "output": 0, "searches": 3}
-
-        with (
-            patch.object(run.proxy, "available", return_value=False),
-            patch.object(run.fetch, "fetch_source",
-                         side_effect=run.fetch.FetchError("blocked")),
-            patch.object(run.extract, "extract_jobs_via_search",
-                         return_value=([], usage)),
-        ):
-            result = run._scrape_source("ACJS", 40)
-
-        self.assertIn("sanity check", result.failure)
-
     def test_all_profiles_use_the_cheap_luna_model(self):
         for profile in (run.config.EXTRACT, run.config.SEARCH):
             self.assertEqual(profile["model"], "gpt-6-luna")
@@ -402,15 +388,18 @@ class RunTests(unittest.TestCase):
             patch.object(run.fetch, "fetch_source",
                          side_effect=run.fetch.FetchError("blocked")),
             patch.object(run.proxy, "fetch_listing", return_value=("t", dict(usage))),
-            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
+            patch.object(run.extract, "extract_jobs",
+                         side_effect=RuntimeError("extractor blew up")),
         ):
             result = run._scrape_source("ACJS", 60)
 
-        self.assertIn("sanity check", result.failure)
+        self.assertIn("extractor blew up", result.failure)
         self.assertIn("proxy-fetched", result.log)
+        self.assertEqual(result.rows, [])
 
-    def test_a_thin_proxy_fetch_is_sanity_checked_too(self):
-        """A proxy fetch is still a model reading a page we could not get."""
+    def test_an_empty_proxy_result_adds_nothing(self):
+        """Zero listings is not a failed board: nothing new is added, and the
+        rows already stored still go through the normal liveness checks."""
         usage = {"input": 0, "cached": 0, "output": 0, "searches": 0}
 
         with (
@@ -418,12 +407,89 @@ class RunTests(unittest.TestCase):
             patch.object(run.fetch, "fetch_source",
                          side_effect=run.fetch.FetchError("blocked")),
             patch.object(run.proxy, "fetch_listing", return_value=("t", dict(usage))),
-            patch.object(run.extract, "extract_jobs",
-                         return_value=([{"job_url": "", "confidence": "0.9"}], usage)),
+            patch.object(run.extract, "extract_jobs", return_value=([], usage)),
         ):
-            result = run._scrape_source("ACJS", 60)
+            result = run._scrape_source("ACJS", 141)
 
-        self.assertIn("sanity check", result.failure)
+        self.assertIsNone(result.failure)
+        self.assertEqual(result.rows, [])
+        self.assertIn("proxy-fetched", result.log)
+
+    def test_a_small_indirect_result_is_still_merged(self):
+        """Stored rows accumulate, so an indirect scrape can be far smaller
+        than the board (ASC returned ~58 against 141 stored rows). Those
+        listings are still merged; a short count is not a reason to drop them."""
+        existing = [
+            job(
+                id=str(i),
+                source_site="ASC",
+                job_title=f"Stored posting {i}",
+                institution=f"University {i}",
+                job_url=f"https://example.edu/stored-{i}",
+                combined_urls=f"https://example.edu/stored-{i}",
+                posted_date="2026-09-01",
+            )
+            for i in range(1, 9)
+        ]
+        usage = {"input": 10, "cached": 0, "output": 5, "searches": 1}
+        found = [{
+            "job_title": "Assistant Professor of Criminology",
+            "institution": "New University",
+            "job_url": "https://example.edu/new-asc",
+            "confidence": "0.92",
+        }]
+        sources = {
+            "ASC": {"urls": ["https://asc41.org/career-center/position-postings/"]},
+        }
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            csv_path = root / "criminology_jobs.csv"
+            review_path = root / "review.csv"
+            data_js_path = root / "data.js"
+            summary_path = root / "refresh_summary.json"
+            index_path = root / "index.html"
+            index_path.write_text('<script src="data.js"></script>', encoding="utf-8")
+            run.write_csv(csv_path, existing, run.COLUMNS)
+
+            with (
+                patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}),
+                patch.object(run, "CSV_PATH", csv_path),
+                patch.object(run, "REVIEW_PATH", review_path),
+                patch.object(run, "DATA_JS_PATH", data_js_path),
+                patch.object(run, "SUMMARY_PATH", summary_path),
+                patch.object(run, "INDEX_PATH", index_path),
+                patch.object(run.config, "load_env"),
+                patch.object(run.config, "SOURCES", sources),
+                patch.object(run.proxy, "available", return_value=True),
+                patch.object(run.fetch, "fetch_source",
+                             side_effect=run.fetch.FetchError("blocked")),
+                patch.object(run.proxy, "fetch_listing",
+                             return_value=("listing text", dict(usage))),
+                patch.object(run.extract, "extract_jobs", return_value=(found, usage)),
+                patch.object(run.fetch, "listing_states", return_value={}),
+                redirect_stdout(StringIO()) as output,
+            ):
+                run.main()
+
+            with csv_path.open(encoding="utf-8", newline="") as handle:
+                refreshed = list(csv.DictReader(handle))
+            with summary_path.open(encoding="utf-8") as handle:
+                summary = json.load(handle)
+
+        urls = {row["job_url"] for row in refreshed}
+        self.assertEqual(len(refreshed), 9)
+        self.assertIn("https://example.edu/new-asc", urls)
+        self.assertTrue(all(f"https://example.edu/stored-{i}" in urls for i in range(1, 9)))
+        self.assertEqual(
+            [row["job_url"] for row in summary["new_jobs"]],
+            ["https://example.edu/new-asc"],
+        )
+        self.assertEqual(summary["source_failures"], [])
+        self.assertEqual(summary["retired_jobs"], [])
+        self.assertIn("+1 new", output.getvalue())
+        self.assertNotIn("sanity check", output.getvalue())
+        self.assertNotIn("FAILED", output.getvalue())
 
     def test_proxy_billing_uses_the_perplexity_search_rate(self):
         """Perplexity bills search separately from OpenAI's $10/1k."""
@@ -442,40 +508,43 @@ class RunTests(unittest.TestCase):
 
         self.assertAlmostEqual(result.cost, 10 * run.config.PROXY_SEARCH_COST, places=6)
 
-    def test_a_thin_search_is_retried_and_the_best_attempt_kept(self):
-        """One attempt is not evidence of an empty board."""
-        thin = ([{"job_url": "", "confidence": "0.9"}], {"input": 1, "cached": 0,
-                                                        "output": 1, "searches": 1})
-        full = ([{"job_url": "", "confidence": "0.9"} for _ in range(9)],
-                {"input": 1, "cached": 0, "output": 1, "searches": 1})
+    def test_an_empty_search_is_retried_and_the_best_attempt_kept(self):
+        """One empty attempt is not evidence of an empty board."""
+        empty = ([], {"input": 1, "cached": 0, "output": 1, "searches": 1})
+        found = ([{"job_url": "", "confidence": "0.9"} for _ in range(3)],
+                 {"input": 1, "cached": 0, "output": 1, "searches": 1})
 
         with (
             patch.object(run.proxy, "available", return_value=False),
             patch.object(run.fetch, "fetch_source",
                          side_effect=run.fetch.FetchError("blocked")),
             patch.object(run.extract, "extract_jobs_via_search",
-                         side_effect=[thin, full]) as searched,
+                         side_effect=[empty, found]) as searched,
         ):
-            result = run._scrape_source("ACJS", 10)
+            result = run._scrape_source("ACJS", 141)
 
-        self.assertIsNone(result.failure)          # floor is 5, second attempt clears it
-        self.assertEqual(len(result.rows), 9)      # best attempt kept
-        self.assertEqual(searched.call_count, 2)   # stopped as soon as it cleared
+        self.assertIsNone(result.failure)
+        self.assertEqual(len(result.rows), 3)      # best attempt kept, well under the stored count
+        self.assertEqual(searched.call_count, 2)   # stopped once a result came back
         self.assertIn("2 attempts", result.log)
 
-    def test_a_search_that_clears_the_floor_is_not_retried(self):
-        good = ([{"job_url": "", "confidence": "0.9"} for _ in range(9)],
-                {"input": 1, "cached": 0, "output": 1, "searches": 1})
+    def test_a_small_search_is_not_retried(self):
+        """A short result is a result. One listing stops the loop even when the
+        board already holds many more rows."""
+        small = ([{"job_url": "https://example.edu/one", "confidence": "0.9"}],
+                 {"input": 1, "cached": 0, "output": 1, "searches": 1})
 
         with (
             patch.object(run.proxy, "available", return_value=False),
             patch.object(run.fetch, "fetch_source",
                          side_effect=run.fetch.FetchError("blocked")),
             patch.object(run.extract, "extract_jobs_via_search",
-                         return_value=good) as searched,
+                         return_value=small) as searched,
         ):
-            result = run._scrape_source("ACJS", 10)
+            result = run._scrape_source("ACJS", 141)
 
+        self.assertIsNone(result.failure)
+        self.assertEqual(len(result.rows), 1)
         self.assertEqual(searched.call_count, 1)
         self.assertNotIn("attempts", result.log)
 
@@ -492,11 +561,12 @@ class RunTests(unittest.TestCase):
             result = run._scrape_source("ACJS", 10)
 
         self.assertEqual(searched.call_count, run.config.SEARCH_ATTEMPTS)
-        self.assertIn("sanity check", result.failure)
+        self.assertIsNone(result.failure)
+        self.assertEqual(result.rows, [])
         # every attempt is billed, so every attempt is reported
         self.assertGreater(result.cost, run.config.SEARCH_ATTEMPTS * 0.009)
 
-    def test_failed_search_is_included_in_reported_api_cost(self):
+    def test_an_empty_search_is_billed_and_adds_nothing(self):
         usage = {"input": 1_000, "cached": 400, "output": 100, "searches": 1}
         sources = {
             "ProtectedBoard": {
@@ -520,8 +590,7 @@ class RunTests(unittest.TestCase):
             rows, failures, cost = run.scrape({"ProtectedBoard": 8})
 
         self.assertEqual(rows, [])
-        self.assertEqual(len(failures), 1)
-        self.assertIn("sanity check", failures[0])
+        self.assertEqual(failures, [])
         # one search per attempt, all attempts billed
         self.assertIn(f"{run.config.SEARCH_ATTEMPTS} searches", output.getvalue())
         self.assertIn(f"API cost this run: ~${0.01 * run.config.SEARCH_ATTEMPTS:.2f}",

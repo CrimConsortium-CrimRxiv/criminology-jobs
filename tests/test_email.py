@@ -31,7 +31,7 @@ SUMMARY = {
             "job_url": "https://example.edu/unverified",
         }
     ],
-    "source_failures": ["HigherEdJobs: sanity check failed"],
+    "source_failures": ["HigherEdJobs: fetch refused"],
 }
 
 
@@ -54,7 +54,7 @@ class EmailTests(unittest.TestCase):
         self.assertIn("New results below confidence cutoff: 3", plain)
         self.assertIn("Estimated OpenAI API cost: $0.42", plain)
         self.assertIn("Listings retired (taken down at the source): 1", plain)
-        self.assertIn("HigherEdJobs: sanity check failed", plain)
+        self.assertIn("HigherEdJobs: fetch refused", plain)
         self.assertIn("https://example.edu/new", html)
 
     def test_send_uses_ssl_and_accepts_comma_or_semicolon_recipients(self):

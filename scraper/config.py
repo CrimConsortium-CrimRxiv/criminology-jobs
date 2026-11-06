@@ -29,13 +29,11 @@ REQUEST_TIMEOUT = 900  # seconds; search sources run a long server-side tool loo
 MAX_RETRIES = 3  # SDK-level retries for transient API errors
 SCRAPE_WORKERS = 3  # bound concurrent source fetch/extraction calls
 
-# Sanity check for sources that fell back to search: if results return fewer than X fraction of
-# the jobs the board currently lists from that source, the run is considered a failure
-# this is only helpful for initial testing against current infrastructure, will be phased out later
-SEARCH_COUNT_MIN_RATIO = 0.5
 # Search is stochastic in a way scraping is not: the same board enumerated 25
-# listings on one attempt and 0 on the next from identical code. A thin result is
-# therefore retried rather than believed, keeping the best attempt.
+# listings on one attempt and 0 on the next from identical code. An empty result
+# is therefore retried rather than believed, keeping the best attempt. Any
+# listings that come back are merged, however few compared with rows already
+# stored — those leave only through the liveness and age checks below.
 SEARCH_ATTEMPTS = 3
 
 # Proxy fetch for bot-walled pages (Perplexity reaches what we cannot).

@@ -157,13 +157,13 @@ def write_csv(path, rows, columns):
 
 
 def _search_with_retries(name, board_count):
-    """Enumerate a board by search, retrying a thin result.
+    """Enumerate a board by search, retrying an empty result.
 
     One attempt is not evidence of an empty board: ACJS returned 25 listings on
     one attempt and 0 on the next with no code change. Attempts stop as soon as
-    one clears the floor, so the usual case still costs a single call.
+    one returns any listings, so the usual case still costs a single call, and
+    a short result is kept rather than measured against rows already stored.
     Returns (jobs, summed usage, attempts made)."""
-    floor = board_count * config.SEARCH_COUNT_MIN_RATIO
     total = {"input": 0, "cached": 0, "output": 0, "searches": 0}
     best = []
     attempt = 0
@@ -176,7 +176,7 @@ def _search_with_retries(name, board_count):
             total[key] += usage.get(key, 0)
         if len(jobs) > len(best):
             best = jobs
-        if len(best) >= floor:
+        if best:
             break
     return best, total, attempt
 
@@ -188,10 +188,6 @@ def _scrape_source(name, board_count):
     usage_note = ""
     note = ""  # bound before the try so a failure log can still report the path
     try:
-        # True when the listings came from a model reading a page we could not
-        # fetch (proxy or search) rather than from the page itself. Both get the
-        # count sanity check; a page we scraped needs no second opinion.
-        indirect = False
         try:
             profile = config.EXTRACT
             text, note = fetch.fetch_source(name)
@@ -212,21 +208,22 @@ def _scrape_source(name, board_count):
                 # cannot, so the page still goes through the normal extractor.
                 hint = (f"The board is expected to list roughly {board_count} "
                         f"postings. ") if board_count else ""
-                indirect = True
                 profile = config.PROXY
                 text, usage = proxy.fetch_listing(
                     config.SOURCES[name]["urls"][0], hint)
+                # Set before extraction so a later failure still names the path.
+                note = (f"(fetch refused: {fetch_error}; "
+                        f"proxy-fetched {len(text):,} chars)")
                 jobs, extract_usage = extract.extract_jobs(name, text)
                 for key in usage:
                     usage[key] += extract_usage.get(key, 0)
-                note = (f"(fetch refused: {fetch_error}; "
-                        f"proxy-fetched {len(text):,} chars)")
             else:
-                indirect = True
                 profile = config.SEARCH
+                note = f"(fetch refused: {fetch_error}; searched instead)"
                 jobs, usage, attempts = _search_with_retries(name, board_count)
-                tries = f" over {attempts} attempts" if attempts > 1 else ""
-                note = f"(fetch refused: {fetch_error}; searched instead{tries})"
+                if attempts > 1:
+                    note = (f"(fetch refused: {fetch_error}; "
+                            f"searched instead over {attempts} attempts)")
         cached = usage.get("cached", 0)  # discounted subset of usage["input"]
         cost = ((usage["input"] - cached) / 1e6 * profile["price_in"]
                 + cached / 1e6 * profile["price_cached"]
@@ -239,13 +236,6 @@ def _scrape_source(name, board_count):
             f" ({usage['input']:,} in / {usage['output']:,} out tokens"
             f"{searches}, ~${cost:.2f})"
         )
-        if indirect:
-            floor = board_count * config.SEARCH_COUNT_MIN_RATIO
-            if len(jobs) < floor:
-                raise RuntimeError(
-                    f"sanity check: found {len(jobs)} listings but the "
-                    f"board currently has {board_count} from {name} "
-                    f"(floor {floor:.0f})")
         for job in jobs:
             job["source_site"] = name
             job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
@@ -268,8 +258,10 @@ def _scrape_source(name, board_count):
 def scrape(board_counts):
     """Fetch + extract sources concurrently. Returns (rows, failures, cost).
 
-    board_counts: how many jobs the board currently lists per source, used for
-    preliminary sanity checks
+    board_counts: how many jobs the board currently lists per source. Passed to
+    the proxy and search fallbacks as a thoroughness hint. A short or empty
+    result is still returned; rows leave the board only through liveness and
+    age checks.
     """
     rows, failures = [], []
     total_cost = 0.0
