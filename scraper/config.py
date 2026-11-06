@@ -69,8 +69,9 @@ LIVENESS_WORKERS = 8  # hosts checked in parallel (one request at a time each)
 # development, not one pass a week. The cap stays as a guard for a host that
 # grows past it — those rows are picked up by the following runs.
 LIVENESS_MAX_PER_HOST = 200
-# A row with no URL cannot be checked. Those are kept, but they are also the
-# rows most likely to be stale, so they are retired after this many days.
+# Publish never writes a row that has no http(s) link (see drop_linkless).
+# This age-out remains only as a backstop: if a linkless row is still in the
+# list handed to prune_dead, it does not stay past this many days.
 UNVERIFIABLE_MAX_AGE_DAYS = 120
 # An upper bound on age for everything else. Chasing a bot wall cannot clear old
 # cruft: the posting reported as dead was 329 days old and higheredjobs.com will

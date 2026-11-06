@@ -335,7 +335,8 @@ class RunTests(unittest.TestCase):
             patch.object(run.fetch, "fetch_source", return_value=("challenge page", "")),
             patch.object(run.extract, "extract_jobs",
                          side_effect=[([], empty),
-                                      ([{"job_url": "", "confidence": "0.9"}], good)]),
+                                      ([{"job_url": "https://www.higheredjobs.com/faculty/details.cfm?JobCode=1",
+                                         "confidence": "0.9"}], good)]),
             patch.object(run.proxy, "fetch_listing", return_value=("real page", good)),
         ):
             result = run._scrape_source("HigherEdJobs", 0)
@@ -369,7 +370,7 @@ class RunTests(unittest.TestCase):
             patch.object(run.proxy, "fetch_listing",
                          return_value=("Lecturer [https://acjs.org/job/1]", usage)),
             patch.object(run.extract, "extract_jobs",
-                         return_value=([{"job_url": "", "confidence": "0.9"}], usage)),
+                         return_value=([{"job_url": "https://acjs.org/job/1", "confidence": "0.9"}], usage)),
             patch.object(run.extract, "extract_jobs_via_search") as searched,
         ):
             result = run._scrape_source("ACJS", 0)
@@ -501,7 +502,7 @@ class RunTests(unittest.TestCase):
                          side_effect=run.fetch.FetchError("blocked")),
             patch.object(run.proxy, "fetch_listing", return_value=("text", dict(usage))),
             patch.object(run.extract, "extract_jobs",
-                         return_value=([{"job_url": "", "confidence": "0.9"}],
+                         return_value=([{"job_url": "https://example.edu/one", "confidence": "0.9"}],
                                        {"input": 0, "cached": 0, "output": 0, "searches": 0})),
         ):
             result = run._scrape_source("ACJS", 0)
@@ -511,7 +512,7 @@ class RunTests(unittest.TestCase):
     def test_an_empty_search_is_retried_and_the_best_attempt_kept(self):
         """One empty attempt is not evidence of an empty board."""
         empty = ([], {"input": 1, "cached": 0, "output": 1, "searches": 1})
-        found = ([{"job_url": "", "confidence": "0.9"} for _ in range(3)],
+        found = ([{"job_url": f"https://example.edu/{i}", "confidence": "0.9"} for i in range(3)],
                  {"input": 1, "cached": 0, "output": 1, "searches": 1})
 
         with (
@@ -596,6 +597,260 @@ class RunTests(unittest.TestCase):
         self.assertIn(f"API cost this run: ~${0.01 * run.config.SEARCH_ATTEMPTS:.2f}",
                       output.getvalue())
         self.assertGreater(cost, 0.01)
+
+    def test_an_extracted_job_without_a_link_is_dropped(self):
+        """A listing with no http(s) URL is not a result we keep."""
+        usage = {"input": 1, "cached": 0, "output": 1, "searches": 0}
+        found = [
+            {"job_title": "No Link Role", "institution": "Nowhere College",
+             "job_url": "", "confidence": "0.9"},
+            {"job_title": "Linked Role", "institution": "Somewhere University",
+             "job_url": "https://example.edu/job", "confidence": "0.9"},
+            {"job_title": "Bad Scheme Role", "institution": "Files University",
+             "job_url": "ftp://files.example.edu/ad", "confidence": "0.9"},
+        ]
+
+        with (
+            patch.object(run.fetch, "fetch_source", return_value=("page text", "")),
+            patch.object(run.extract, "extract_jobs", return_value=(found, usage)),
+            redirect_stdout(StringIO()) as output,
+        ):
+            result = run._scrape_source("ASC", 0)
+
+        self.assertIsNone(result.failure)
+        self.assertEqual([row["job_url"] for row in result.rows], ["https://example.edu/job"])
+        self.assertIn("no working http(s) link", output.getvalue())
+        self.assertIn("No Link Role", output.getvalue())
+        self.assertIn("Bad Scheme Role", output.getvalue())
+
+    def test_a_job_without_a_link_is_never_written(self):
+        rows = [
+            job(id="1"),
+            job(id="2", job_title="No Link Lecturer", institution="No Link University",
+                job_url="", combined_urls=""),
+            job(id="3", job_title="Bad Scheme Professor", institution="Scheme University",
+                job_url="ftp://files.example.edu/ad", combined_urls="notaurl"),
+            job(id="4", job_title="Combined Only", institution="Combined University",
+                job_url="", combined_urls="https://example.edu/from-combined"),
+        ]
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            csv_path = root / "criminology_jobs.csv"
+            data_js_path = root / "data.js"
+            with (
+                patch.object(run, "CSV_PATH", csv_path),
+                patch.object(run, "DATA_JS_PATH", data_js_path),
+                redirect_stdout(StringIO()) as output,
+            ):
+                written = run.write_outputs(rows, datetime.date(2026, 11, 6))
+
+            with csv_path.open(encoding="utf-8", newline="") as handle:
+                saved = list(csv.DictReader(handle))
+            text = data_js_path.read_text(encoding="utf-8")
+
+        self.assertEqual([row["id"] for row in written], ["1", "4"])
+        self.assertEqual([row["id"] for row in saved], ["1", "4"])
+        self.assertEqual(saved[1]["job_url"], "https://example.edu/from-combined")
+        self.assertIn("https://example.edu/from-combined", text)
+        self.assertNotIn("No Link Lecturer", text)
+        self.assertNotIn("ftp://", text)
+        self.assertNotIn('"job_url": ""', text)
+        self.assertIn("no working http(s) link", output.getvalue())
+
+    def test_linkless_jobs_are_not_published_or_queued(self):
+        existing = [
+            job(id="10", posted_date="2026-09-01"),
+            job(id="11", job_title="Stored Without Link", institution="Old University",
+                job_url="", combined_urls="", posted_date="2026-09-01"),
+        ]
+        review_candidate = job(
+            id="",
+            job_title="Maybe Analyst",
+            institution="Borderline College",
+            job_url="",
+            combined_urls="",
+            confidence="0.55",
+        )
+        publish_candidate = job(
+            id="",
+            job_title="Professor of Policing",
+            institution="Scheme University",
+            job_url="ftp://files.example.edu/policing",
+            combined_urls="",
+            confidence="0.95",
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            csv_path = root / "criminology_jobs.csv"
+            review_path = root / "review.csv"
+            data_js_path = root / "data.js"
+            summary_path = root / "refresh_summary.json"
+            index_path = root / "index.html"
+            index_path.write_text('<script src="data.js"></script>', encoding="utf-8")
+            run.write_csv(csv_path, existing, run.COLUMNS)
+            run.write_csv(review_path, [], run.REVIEW_COLUMNS)
+
+            with (
+                patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}),
+                patch.object(run, "CSV_PATH", csv_path),
+                patch.object(run, "REVIEW_PATH", review_path),
+                patch.object(run, "DATA_JS_PATH", data_js_path),
+                patch.object(run, "SUMMARY_PATH", summary_path),
+                patch.object(run, "INDEX_PATH", index_path),
+                patch.object(run.config, "load_env"),
+                patch.object(run.fetch, "listing_states", return_value={}),
+                patch.object(run, "scrape", return_value=([review_candidate, publish_candidate], [], 0.0)),
+                redirect_stdout(StringIO()) as output,
+            ):
+                run.main()
+
+            with csv_path.open(encoding="utf-8", newline="") as handle:
+                refreshed = list(csv.DictReader(handle))
+            review_text = review_path.read_text(encoding="utf-8")
+            data_text = data_js_path.read_text(encoding="utf-8")
+
+        self.assertEqual([row["id"] for row in refreshed], ["10"])
+        self.assertTrue(all(row["job_url"].startswith("https://") for row in refreshed))
+        self.assertNotIn("Maybe Analyst", review_text)
+        self.assertNotIn("Professor of Policing", review_text)
+        self.assertNotIn("Stored Without Link", data_text)
+        self.assertIn("no working http(s) link", output.getvalue())
+        self.assertIn("+0 new, 0 pending review", output.getvalue())
+
+    def test_dedup_merges_reordered_titles_and_parenthetical_job_codes(self):
+        """ACJS id 1172 and HigherEdJobs id 1138 are the same Mankato posting."""
+        acjs = job(
+            id="1172",
+            source_site="ACJS",
+            job_title="Criminal Justice Assistant Professor",
+            institution="Minnesota State University Mankato",
+            job_url="https://careers.acjs.org/job/criminal-justice-assistant-professor/1/",
+            combined_urls="",
+            confidence="0.90",
+        )
+        highered = job(
+            id="1138",
+            source_site="HigherEdJobs",
+            job_title="Assistant Professor, Criminal Justice (AA28027)",
+            institution="Minnesota State University, Mankato",
+            job_url="https://www.higheredjobs.com/faculty/details.cfm?JobCode=179597637",
+            combined_urls="",
+            confidence="0.93",
+        )
+
+        [merged] = run.dedup([acjs, highered])
+
+        self.assertEqual(merged["source_site"], "ACJS, HigherEdJobs")
+        self.assertIn("careers.acjs.org", merged["combined_urls"])
+        self.assertIn("higheredjobs.com", merged["combined_urls"])
+        self.assertTrue(merged["job_url"].startswith("https://"))
+        self.assertEqual(run.posting_key(acjs), run.posting_key(highered))
+
+    def test_dedup_keeps_distinct_specializations_and_institutions(self):
+        courts = job(
+            id="1",
+            job_title="Assistant Professor, Department of Criminal Justice (COURTS)",
+            institution="California State University, Fullerton",
+            job_url="https://example.edu/courts",
+        )
+        race = job(
+            id="2",
+            source_site="HigherEdJobs",
+            job_title="Assistant Professor, Department of Criminal Justice (RACE & INEQUALITY)",
+            institution="California State University, Fullerton",
+            job_url="https://example.edu/race",
+        )
+        other_school = job(
+            id="3",
+            job_title="Assistant Professor of Criminology",
+            institution="Other University",
+            job_url="https://example.edu/other",
+        )
+        same_title = job(
+            id="4",
+            source_site="ASC",
+            job_title="Assistant Professor of Criminology",
+            institution="Existing University",
+            job_url="https://example.edu/same",
+        )
+
+        merged = run.dedup([courts, race, other_school, same_title, job()])
+
+        self.assertEqual(len(merged), 4)
+        fullerton = [row["job_title"] for row in merged if "Fullerton" in row["institution"]]
+        self.assertEqual(len(fullerton), 2)
+
+    def test_refresh_merges_a_near_duplicate_into_the_existing_row(self):
+        existing = job(
+            id="1138",
+            source_site="HigherEdJobs",
+            job_title="Assistant Professor, Criminal Justice (AA28027)",
+            institution="Minnesota State University, Mankato",
+            job_url="https://www.higheredjobs.com/faculty/details.cfm?JobCode=179597637",
+            combined_urls="https://www.higheredjobs.com/faculty/details.cfm?JobCode=179597637",
+            posted_date="2026-10-23",
+            confidence="0.93",
+        )
+        incoming = job(
+            id="",
+            source_site="ACJS",
+            job_title="Criminal Justice Assistant Professor",
+            institution="Minnesota State University Mankato",
+            job_url="https://careers.acjs.org/job/criminal-justice-assistant-professor/1/",
+            combined_urls="",
+            confidence="0.93",
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            csv_path = root / "criminology_jobs.csv"
+            review_path = root / "review.csv"
+            data_js_path = root / "data.js"
+            summary_path = root / "refresh_summary.json"
+            index_path = root / "index.html"
+            index_path.write_text('<script src="data.js"></script>', encoding="utf-8")
+            run.write_csv(csv_path, [existing], run.COLUMNS)
+
+            with (
+                patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}),
+                patch.object(run, "CSV_PATH", csv_path),
+                patch.object(run, "REVIEW_PATH", review_path),
+                patch.object(run, "DATA_JS_PATH", data_js_path),
+                patch.object(run, "SUMMARY_PATH", summary_path),
+                patch.object(run, "INDEX_PATH", index_path),
+                patch.object(run.config, "load_env"),
+                patch.object(run.fetch, "listing_states", return_value={}),
+                patch.object(run, "scrape", return_value=([incoming], [], 0.0)),
+                redirect_stdout(StringIO()),
+            ):
+                run.main()
+
+            with csv_path.open(encoding="utf-8", newline="") as handle:
+                refreshed = list(csv.DictReader(handle))
+
+        self.assertEqual([row["id"] for row in refreshed], ["1138"])
+        self.assertEqual(refreshed[0]["source_site"], "HigherEdJobs")
+
+    def test_published_board_has_no_empty_job_url(self):
+        """The files the site serves never contain a row without a link."""
+        import re
+        from scraper import extract
+
+        rows = run.read_csv(run.CSV_PATH)
+        self.assertTrue(rows)
+        self.assertTrue(all(extract.is_http_url(row["job_url"]) for row in rows))
+        ids = {row["id"] for row in rows}
+        self.assertNotIn("1172", ids)
+        self.assertIn("1138", ids)
+
+        text = Path(run.DATA_JS_PATH).read_text(encoding="utf-8")
+        payload = json.loads(re.search(r"window\.JOBS_DATA = (\{.*\});\s*$", text, re.S).group(1))
+        jobs = payload["jobs"]
+        self.assertEqual({job["id"] for job in jobs}, ids)
+        self.assertTrue(all(extract.is_http_url(job["job_url"]) for job in jobs))
+        self.assertNotIn('"job_url": ""', text)
 
 
 if __name__ == "__main__":

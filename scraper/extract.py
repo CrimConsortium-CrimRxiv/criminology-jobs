@@ -144,6 +144,72 @@ def valid_url(url, page_text=None):
     return page_text is None or url in page_text
 
 
+def is_http_url(url):
+    """True for an http(s) URL with a real host.
+
+    "https://https//..." parses, but its host is the word "https", so a dotted
+    host is required. Anything else — empty, ftp, a bare word — is not a link
+    we can publish.
+    """
+    url = (url or "").strip()
+    if not url or any(ch.isspace() for ch in url):
+        return False
+    parsed = urllib.parse.urlparse(url)
+    return parsed.scheme in ("http", "https") and "." in parsed.netloc
+
+
+def working_urls(row):
+    """http(s) URLs from job_url and combined_urls, in first-seen order."""
+    found = []
+    for field in ("job_url", "combined_urls"):
+        for part in (row.get(field) or "").split(","):
+            url = part.strip()
+            if is_http_url(url) and url not in found:
+                found.append(url)
+    return found
+
+
+def ensure_working_link(row):
+    """True when the row has an http(s) URL.
+
+    A merged row can carry the only good link in combined_urls while job_url
+    is still blank. Copy one into job_url so a published row always has a link
+    in the field the board treats as the posting.
+    """
+    urls = working_urls(row)
+    if not urls:
+        return False
+    if not is_http_url(row.get("job_url")):
+        row["job_url"] = urls[0]
+    if not working_urls({"combined_urls": row.get("combined_urls", "")}):
+        row["combined_urls"] = ", ".join(urls)
+    return True
+
+
+def drop_linkless(rows):
+    """Drop rows with no http(s) URL. They are not published and not reviewed.
+
+    Logs each drop. Rows that only had a link in combined_urls keep that link,
+    promoted into job_url.
+    """
+    kept, dropped = [], []
+    for row in rows:
+        if ensure_working_link(row):
+            kept.append(row)
+        else:
+            dropped.append(row)
+    if dropped:
+        print(
+            f"dropped {len(dropped)} listing(s) with no working http(s) link",
+            flush=True,
+        )
+        for row in dropped:
+            title = (row.get("job_title") or "").strip() or "(untitled)"
+            institution = (row.get("institution") or "").strip() or "(no institution)"
+            print(f"  no link: {title} | {institution}", flush=True)
+    return kept
+
+
 def _clean_urls(jobs, page_text=None):
     """Blank any job_url we cannot stand behind.
 

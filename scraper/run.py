@@ -15,8 +15,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 
-import pandas as pd
-
 from . import config, extract, fetch, proxy
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
@@ -85,8 +83,9 @@ def prune_dead(rows, today):
     already taken down — a HigherEdJobs row still pointed at "Position Deleted
     on 1/02/2026". A row is only retired on a definite signal (404/410, or a
     dead marker on the page); anything we could not read is kept, so a board
-    behind a bot wall never empties the board. Rows with no URL cannot be
-    checked at all, so they age out after UNVERIFIABLE_MAX_AGE_DAYS instead.
+    behind a bot wall never empties the board. Linkless rows are dropped before
+    publish; the age-out below is only a backstop for a linkless row that is
+    still in this list, retired after UNVERIFIABLE_MAX_AGE_DAYS.
     Returns (kept, retired) where each retired row carries a "retired_reason".
     """
     # Spend the per-host budget on the least recently probed postings, so a
@@ -134,8 +133,64 @@ def _age_days(posted_date, today):
 
 
 def norm_key(row):
-    """Match key: normalized title + institution"""
-    return re.sub(r"[^a-z0-9]", "", (row["job_title"] + row["institution"]).lower())
+    """Match key: normalized title + institution, punctuation removed."""
+    title = row.get("job_title", "")
+    institution = row.get("institution", "")
+    return re.sub(r"[^a-z0-9]", "", (title + institution).lower())
+
+
+# Parenthetical / bracketed requisition ids, not specializations.
+# "(AA28027)" and "(P10012987 / R0087910)" are codes; "(COURTS)" is not.
+_CODE_GROUP = re.compile(r"[\(\[]([^()\[\]]*)[\)\]]")
+_CODE_PART = re.compile(r"[A-Za-z]*\d[A-Za-z0-9-]*")
+_TITLE_STOPWORDS = frozenset({
+    "a", "an", "the", "of", "and", "or", "in", "for", "at", "to", "on",
+})
+
+
+def norm_institution(name):
+    """Lowercase institution with punctuation collapsed to spaces.
+
+    "Minnesota State University, Mankato" and "Minnesota State University
+    Mankato" are the same campus.
+    """
+    return re.sub(r"[^a-z0-9]+", " ", (name or "").lower()).strip()
+
+
+def _strip_job_codes(title):
+    def repl(match):
+        parts = [part.strip() for part in re.split(r"\s*/\s*|\s*,\s*", match.group(1)) if part.strip()]
+        if parts and all(_CODE_PART.fullmatch(part) for part in parts):
+            return " "
+        return match.group(0)
+    return _CODE_GROUP.sub(repl, title or "")
+
+
+def title_tokens(title):
+    """Order-independent title tokens, job codes removed.
+
+    "(AA28027)" and a trailing requisition id do not make a second posting,
+    and "Criminal Justice Assistant Professor" shares its tokens with
+    "Assistant Professor, Criminal Justice".
+    """
+    text = re.sub(r"[^a-z0-9]+", " ", _strip_job_codes(title).lower())
+    return frozenset(
+        token for token in text.split()
+        if token not in _TITLE_STOPWORDS and not _CODE_PART.fullmatch(token)
+    )
+
+
+def posting_key(row):
+    """Fuzzy identity: same institution and the same title tokens.
+
+    None when there is nothing to compare, so blank rows are not merged
+    with each other.
+    """
+    institution = norm_institution(row.get("institution", ""))
+    tokens = title_tokens(row.get("job_title", ""))
+    if institution and tokens:
+        return ("inst", institution, tokens)
+    return None
 
 
 def urls_of(row):
@@ -239,6 +294,10 @@ def _scrape_source(name, board_count):
         for job in jobs:
             job["source_site"] = name
             job["confidence"] = f"{min(max(float(job['confidence']), 0.0), 0.99):.2f}"
+        # After the empty-board check above: a page that yielded listings is
+        # not a blocked fetch, but a listing with no http(s) URL is dropped
+        # here so it never reaches publish or the review queue.
+        jobs = extract.drop_linkless(jobs)
         elapsed = time.monotonic() - started
         return SourceResult(
             jobs,
@@ -292,22 +351,93 @@ def scrape(board_counts):
     return rows, failures, total_cost
 
 
+def _join_unique(values):
+    return ", ".join(dict.fromkeys(v.strip() for v in values if v and str(v).strip()))
+
+
+def _merge_group(group):
+    """One posting seen on several boards: first row's fields, every source and URL."""
+    merged = dict(group[0])
+    merged["source_site"] = _join_unique(row.get("source_site", "") for row in group)
+    urls = []
+    for row in group:
+        url = (row.get("job_url") or "").strip()
+        if url and url not in urls:
+            urls.append(url)
+    merged["combined_urls"] = ", ".join(urls)
+    http_urls = [url for url in urls if extract.is_http_url(url)]
+    merged["job_url"] = http_urls[0] if http_urls else (urls[0] if urls else "")
+    merged["confidence"] = f"{max(float(row['confidence']) for row in group):.2f}"
+    return merged
+
+
 def dedup(rows):
-    """Same job on several boards -> one row; merge sources + urls"""
+    """Same job on several boards -> one row; merge sources + urls.
+
+    Two rows are the same posting when the legacy punctuation-stripped
+    title+institution key matches, or when the institutions match once
+    commas and other punctuation are removed and the titles have the same
+    tokens (job codes such as "(AA28027)" stripped, word order ignored).
+    Different institutions never merge. A specialization left in parentheses,
+    such as "(COURTS)" versus "(RACE & INEQUALITY)", keeps the titles apart.
+    """
     if not rows:
         return []
-    df = pd.DataFrame(rows)
-    df["combined_urls"] = df["job_url"]
-    df["confidence"] = df["confidence"].astype(float)
-    df["_key"] = (df["job_title"] + df["institution"]).str.lower().str.replace(r"[^a-z0-9]", "", regex=True)
-    join_unique = lambda values: ", ".join(dict.fromkeys(i for i in values if i))
-    agg = {col: "first" for col in df.columns if col not in ("_key", "source_site", "combined_urls", "confidence")}
-    agg["source_site"] = join_unique
-    agg["combined_urls"] = join_unique
-    agg["confidence"] = "max"
-    merged = df.groupby("_key", sort=False).agg(agg).reset_index(drop=True)
-    merged["confidence"] = merged["confidence"].map(lambda c: f"{c:.2f}")
-    return merged.to_dict("records")
+    parent = list(range(len(rows)))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i, j):
+        ri, rj = find(i), find(j)
+        if ri == rj:
+            return
+        if ri < rj:
+            parent[rj] = ri
+        else:
+            parent[ri] = rj
+
+    buckets = {}
+    for index, row in enumerate(rows):
+        keys = []
+        fuzzy = posting_key(row)
+        if fuzzy:
+            keys.append(fuzzy)
+        legacy = norm_key(row)
+        if legacy:
+            keys.append(("legacy", legacy))
+        for key in keys:
+            if key in buckets:
+                union(buckets[key], index)
+            else:
+                buckets[key] = index
+
+    groups = {}
+    order = []
+    for index, row in enumerate(rows):
+        root = find(index)
+        if root not in groups:
+            groups[root] = []
+            order.append(root)
+        groups[root].append(row)
+    return [_merge_group(groups[root]) for root in order]
+
+
+def match_existing(row, by_url, by_posting, by_legacy):
+    """Find the curated row this scrape is a duplicate of, if any."""
+    for url in urls_of(row):
+        if url in by_url:
+            return by_url[url]
+    fuzzy = posting_key(row)
+    if fuzzy and fuzzy in by_posting:
+        return by_posting[fuzzy]
+    legacy = norm_key(row)
+    if legacy and legacy in by_legacy:
+        return by_legacy[legacy]
+    return None
 
 
 def main():
@@ -332,10 +462,21 @@ def main():
     print("Fetching sources...", flush=True)
     scraped, failures, total_cost = scrape(board_counts)
     scraped = dedup(scraped)
+    # Merged rows can still be linkless when every copy lacked an http(s) URL.
+    # Drop them before the publish/review decision so they never reach either.
+    scraped = extract.drop_linkless(scraped)
 
-    # Index existing rows for matching (by URL, then by normalized title+institution).
+    # Index existing rows for matching (by URL, then fuzzy title+institution,
+    # then the legacy punctuation-stripped key).
     by_url = {url: row for row in existing for url in urls_of(row)}
-    by_key = {norm_key(row): row for row in existing}
+    by_posting, by_legacy = {}, {}
+    for row in existing:
+        legacy = norm_key(row)
+        if legacy:
+            by_legacy[legacy] = row
+        fuzzy = posting_key(row)
+        if fuzzy:
+            by_posting[fuzzy] = row
     max_id = max((int(row["id"]) for row in existing if row["id"].isdigit()), default=0)
 
     published, pending, seen_existing = [], [], set()
@@ -343,8 +484,13 @@ def main():
     new_count = dropped_low = 0
 
     for row in scraped:
-        match = next((by_url[u] for u in urls_of(row) if u in by_url), None) or by_key.get(norm_key(row))
+        match = match_existing(row, by_url, by_posting, by_legacy)
         if match is not None:
+            # A curated row with no link must not shadow a scrape that has one,
+            # or the write step would drop the only copy that can be published.
+            if not extract.ensure_working_link(match) and extract.ensure_working_link(row):
+                match["job_url"] = row["job_url"]
+                match["combined_urls"] = row.get("combined_urls") or row["job_url"]
             # Already on the board: keep the curated row (stable id, posted_date, edits).
             if id(match) not in seen_existing:
                 seen_existing.add(id(match))
@@ -389,9 +535,8 @@ def main():
 
     published.sort(key=lambda r: (r.get("posted_date", ""), int(r["id"]) if r["id"].isdigit() else 0), reverse=True)
 
-    write_csv(CSV_PATH, published, COLUMNS)
+    published = write_outputs(published, today)
     write_csv(REVIEW_PATH, pending, REVIEW_COLUMNS)
-    write_data_js(published, today)
     stamp_data_version(DATA_JS_PATH, INDEX_PATH)
 
     n_pending = sum(1 for p in pending if not p["decision"])
@@ -449,7 +594,21 @@ def stamp_data_version(data_js_path, index_path):
     return version
 
 
+def write_outputs(rows, today):
+    """Write criminology_jobs.csv and data.js, never with a linkless row.
+
+    This is the final gate. A row whose job_url and combined_urls are empty
+    or not http(s) is dropped and logged here even if an earlier stage let
+    it through.
+    """
+    rows = extract.drop_linkless(rows)
+    write_csv(CSV_PATH, rows, COLUMNS)
+    write_data_js(rows, today)
+    return rows
+
+
 def write_data_js(rows, today):
+    rows = extract.drop_linkless(rows)
     payload = {
         "compiled": f"{today:%B} {today.day}, {today.year}",
         "consortium_url": "https://crimconsortium.com",
